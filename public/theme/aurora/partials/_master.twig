@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang={{ htmllang() }}>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{- config.get('general/sitename') -}}</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="{{- config.get('general/sitename') -}}" content="{{- config.get('general/payoff') -}}" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{{ asset('vendors/bootstrap/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/animate/animate.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/fontawesome/css/all.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/jarallax/jarallax.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/jquery-magnific-popup/jquery.magnific-popup.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/nouislider/nouislider.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/nouislider/nouislider.pips.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/odometer/odometer.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/swiper/swiper.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/moniz-icons/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendors/tiny-slider/tiny-slider.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/reey-font/stylesheet.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/owl-carousel/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/owl-carousel/owl.theme.default.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/twentytwenty/twentytwenty.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/bxslider/jquery.bxslider.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/bootstrap-select/css/bootstrap-select.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/vegas/vegas.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/jquery-ui/jquery-ui.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vendors/timepicker/timePicker.css') }}" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="{{ asset('css/moniz.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/moniz-responsive.css') }}" />
+
+    <!-- color css -->
+    <link rel="stylesheet" id="jssDefault" href="{{ asset('css/colors/color-default.css') }}">
+    <link rel="stylesheet" id="jssMode" href="{{ asset('css/modes/moniz-normal.css') }}">
+
+
+</head>
+
+<body>
+
+{#
+<div class="preloader">
+    <img class="preloader__image" width="60" src="assets/images/loader.png" alt="" />
+</div>
+<!-- /.preloader -->
+#}
+{% include 'partials/_header.twig' %}
+{% block main %}
+    Hello
+{% endblock %}
+
+{% include '/partials/_footer.twig' %}
+
+</body>
+
+</html>
