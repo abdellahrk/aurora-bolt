@@ -1,0 +1,40 @@
+<section class="we-make">
+    <div class="we-make-bg" style="background-image: url(assets/images/backgrounds/we-make-bg.jpg)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-7 col-lg-6">
+                <div class="we-make__left">
+                    <div class="section-title text-left">
+                        <span class="section-title__tagline">Corporate business theme</span>
+                        <h2 class="section-title__title">We make the quality design & developments</h2>
+                    </div>
+                    <div class="we-make__person">
+                        <div class="we-make__person-img">
+                            <img src="{{ asset('images/resources/person-img-1.png') }}" alt="">
+                        </div>
+                        <div class="we-make__person-text">
+                            <p>Abdel Ramadan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-6">
+                {% setcontent services = 'services' limit 4 %}
+                <div class="we-make__right">
+                    <div class="we-make__progress">
+                        {% for service in services %}
+                            <div class="we-make__progress-single">
+                                <h4 class="we-make__progress-title">{{ service.title }}</h4>
+                                <div class="bar">
+                                    <div class="bar-inner count-bar" data-percent="{{ service.percentage }}%">
+                                        <div class="count-text">{{ service.percentage }}%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

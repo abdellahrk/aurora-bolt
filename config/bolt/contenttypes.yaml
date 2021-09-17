@@ -295,10 +295,36 @@ services:
             user: title
         excerpt:
             type: text
-        icon:
+        iconImage:
             type: text
+        percentage:
+            type: number
     record_template: service.twig
     listing_template: listing.twig
+
+# Faq type
+faq:
+    name: FAQs
+    singular_name: faq
+    fields:
+        title:
+            type: text
+        body:
+            type: html
+    viewless: true
+
+# Testimonials
+testimonials:
+    name: Testimonial
+    singular_name: testimonials
+    fields:
+        author:
+            type: text
+        body:
+            type: html
+        image:
+            type: image
+    viewless: true
 
 # Possible field types:
 #
