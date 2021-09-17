@@ -1,0 +1,59 @@
+<section class="testimonial-one">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-5">
+                <div class="testimonial-one__left">
+                    <div class="section-title text-left">
+                        <span class="section-title__tagline">Customer feedback</span>
+                        <h2 class="section-title__title">What they are talking about moniz?</h2>
+                    </div>
+                    <div class="testimonial-one__btn-box">
+                        <a href="about.html" class="thm-btn testimonial-one__btn"><span>All feedbacks</span></a>
+                        <div class="testimonial-one__btn-shape"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-7">
+                <div class="testimonial-one__slider">
+
+                    {% setcontent testimonials = 'testimonials' %}
+                    <div class="swiper-container" id="testimonials-one__thumb">
+                        <div class="swiper-wrapper">
+                            {% for testimonial in testimonials %}
+                                <div class="swiper-slide">
+                                    <div class="testimonial-one__img-holder">
+                                        <img src="{{ asset('images/testimonial/testimonials-1-1.png') }}" alt="">
+                                        <div class="testimonial-one__quote">
+
+                                        </div>
+                                    </div>
+                                </div><!-- /.swiper-slide -->
+                            {% endfor %}
+                        </div><!-- /.swiper-wrapper -->
+                    </div><!-- /#testimonials-one__thumb.swiper-container -->
+
+                    <div class="testimonials-one__main-content">
+                        <div class="swiper-container" id="testimonials-one__carousel">
+                            <div class="swiper-wrapper">
+                                {% for testimonial in testimonials %}
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-one__conent-box">
+                                            <p class="testimonial-one__text">{{ testimonial.body }}</p>
+                                            <div class="testimonial-one__client-details">
+                                                <h4 class="testimonial-one__client-name">{{ testimonial.author }}</h4>
+                                                <span class="testimonial-one__clinet-title">Satisfied
+                                                            customers</span>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.swiper-slide -->
+                                {% endfor %}
+                            </div><!-- /.swiper-wrapper -->
+                            <div id="testimonials-one__carousel-pagination"></div>
+                            <!-- /#testimonials-one__carousel-pagination -->
+                        </div><!-- /#testimonials-one__thumb.swiper-container -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

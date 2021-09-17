@@ -1,0 +1,70 @@
+{% setcontent faqs = 'faqs' limit 3 %}
+<section class="we-change">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="we-change__left-faqs">
+                    <div class="section-title text-left">
+                        <span class="section-title__tagline">Frequently asked questions</span>
+                        <h2 class="section-title__title">We’re here to change your business look</h2>
+                    </div>
+                    <div class="we-change__faqs">
+                        <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
+                            {% for faq in faqs %}
+                                <div class="accrodion ">
+                                    <div class="accrodion-title">
+                                        <h4>{{ faq.title }}</h4>
+                                    </div>
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>{{ faq.body }}</p>
+                                        </div><!-- /.inner -->
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            {#
+                            <div class="accrodion">
+                                <div class="accrodion-title">
+                                    <h4>Few resons why you should choose us</h4>
+                                </div>
+                                <div class="accrodion-content">
+                                    <div class="inner">
+                                        <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum
+                                            leo ligula, vitae commodo nisl.</p>
+                                    </div><!-- /.inner -->
+                                </div>
+                            </div>
+                            <div class="accrodion last-chiled">
+                                <div class="accrodion-title">
+                                    <h4>Few resons why you should choose us</h4>
+                                </div>
+                                <div class="accrodion-content">
+                                    <div class="inner">
+                                        <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum
+                                            leo ligula, vitae commodo nisl.</p>
+                                    </div><!-- /.inner -->
+                                </div>
+                            </div>
+                            #}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="we-change__right">
+                    <div class="we-change__right-img">
+                        <img src="{{ asset('images/resources/we-change-right-img-1.jpg') }}" alt="">
+                        <div class="we-change__agency">
+                            <div class="we-change__agency-icon">
+                                <span class="icon-development"></span>
+                            </div>
+                            <div class="we-change__agency-text">
+                                <h3>Our agency is one of the most <br> successful agency.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

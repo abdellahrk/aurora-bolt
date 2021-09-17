@@ -13,10 +13,10 @@
                     <!--Services One Single-->
                     <div class="services-one__single wow fadeInUp" data-wow-delay="100ms">
                         <div class="services-one__icon">
-                            <span class="icon-color-sample"></span>
+                            <span class="{{ service.iconImage }}"></span>
                         </div>
                         <h3 class="services-one__title"><a href="{{ service|link }}">{{ service.title }}</a></h3>
-                        <p class="services-one__text">{{ service.excerpt }}</p>
+                        <p class="services-one__text">{{ service.excerpt }} </p>
                         <a href="{{ service|link }}" class="service-one__arrow"><span
                                 class="icon-right-arrow"></span></a>
                     </div>
