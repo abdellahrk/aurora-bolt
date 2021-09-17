@@ -1,0 +1,140 @@
+{% extends 'partials/_master.twig' %}
+
+{% block main %}
+<!--Page Header Start-->
+<section class="page-header" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg);">
+    <div class="page-header-shape-1"></div>
+    <div class="page-header-shape-2"></div>
+    <div class="container">
+        <div class="page-header__inner">
+            <ul class="thm-breadcrumb list-unstyled">
+                <li><a href="index.html">Home</a></li>
+                <li><span>.</span></li>
+                <li>Service Details</li>
+            </ul>
+            <h2>{{ service.title }}</h2>
+        </div>
+    </div>
+</section>
+<!--Page Header End-->
+
+<!--Service Details Start-->
+<section class="service-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-7">
+                <div class="service-details__left">
+                    <div class="service-details__img">
+                        <img src="assets/images/resources/service-details-img.jpg" alt="">
+                    </div>
+                    <div class="service-details__icon-box">
+                        <span class="icon-front-end"></span>
+                    </div>
+                    <h3 class="service-details__title">{{ service.title }}</h3>
+                    <p class="service-details__text-1">{{ service.description|raw }}</p>
+                    <h3 class="service-details__title">{{ service.innerTitle }}</h3>
+                    <p class="service-details__text-2">{{ service.innerDescription }}</p>
+                    <ul class="list-unstyled service-details__list">
+                        <li>
+                            <div class="icon">
+                                <span class="icon-tick"></span>
+                            </div>
+                            <div class="text">
+                                <h5>Research beyond the business plan not work here</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <span class="icon-tick"></span>
+                            </div>
+                            <div class="text">
+                                <h5>Marketing options and rates lipsum simply</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <span class="icon-tick"></span>
+                            </div>
+                            <div class="text">
+                                <h5> The ability to turnaround consulting work on it</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <span class="icon-tick"></span>
+                            </div>
+                            <div class="text">
+                                <h5>Customer engagement matters not at all</h5>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="service-details__text-3">{{ service.innerDescription2 }}</p>
+                    <div class="service-details__faq">
+                        <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
+                            <div class="accrodion active">
+                                <div class="accrodion-title">
+                                    <h4>Few resons why you should choose us</h4>
+                                </div>
+                                <div class="accrodion-content">
+                                    <div class="inner">
+                                        <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum
+                                            leo ligula, vitae commodo nisl.</p>
+                                    </div><!-- /.inner -->
+                                </div>
+                            </div>
+                            <div class="accrodion">
+                                <div class="accrodion-title">
+                                    <h4>Few resons why you should choose us</h4>
+                                </div>
+                                <div class="accrodion-content">
+                                    <div class="inner">
+                                        <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum
+                                            leo ligula, vitae commodo nisl.</p>
+                                    </div><!-- /.inner -->
+                                </div>
+                            </div>
+                            <div class="accrodion last-chiled">
+                                <div class="accrodion-title">
+                                    <h4>Few resons why you should choose us</h4>
+                                </div>
+                                <div class="accrodion-content">
+                                    <div class="inner">
+                                        <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum
+                                            leo ligula, vitae commodo nisl.</p>
+                                    </div><!-- /.inner -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% include 'partials/_sidebar-services-list.twig' %}
+        </div>
+    </div>
+</section>
+<!--Service Details End-->
+
+<!--CTA Two Start-->
+<section class="cta-two">
+    <div class="cta-two-shape-1"></div>
+    <div class="cta-two-shape-2"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="cta-two__inner">
+                    <div class="cta-two__title">
+                        <h2>Making your business ideas come true</h2>
+                    </div>
+                    <div class="cta-two__btn-box">
+                            <span><a href="contact.html"
+                                     class="thm-btn cta-two__btn thm-btn--dark thm-btn--dark--light-hover"><span>Free
+                                        Consultation</span></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--CTA Two End-->
+
+{% endblock main %}
