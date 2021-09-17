@@ -1,0 +1,31 @@
+{% setcontent services = 'services' %}
+<div class="col-xl-4 col-lg-5">
+    <div class="service-details__sidebar">
+        <div class="service-details__sidebar-category">
+            <h3 class="service-details__sidebar-title">Categories</h3>
+            <ul class="service-details__sidebar-category-list list-unstyled">
+                {% for service in services %}
+                    <li><a href="{{ service|link }}">{{ service.title }} <span
+                                class="fa fa-angle-right"></span></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="service-details__need-help">
+            <div class="service-details__need-help-bg"
+                 style="background-image: url(assets/images/resources/ser-dtl-need-help-bg.jpg)">
+            </div>
+            <h3 class="service-details__need-help-title">Need help</h3>
+            <p class="service-details__need-help-text">Prefer speaking with a human to filling out a
+                form? call corporate office and we will connect you with a team member who can help.
+            </p>
+            <div class="service-details__need-help-phone">
+                <div class="service-details__need-help-phone-icon">
+                    <span class="icon-phone-call"></span>
+                </div>
+                <div class="service-details__need-help-phone-number">
+                    <h4><a href="tel:">92 666 888 0000</a></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

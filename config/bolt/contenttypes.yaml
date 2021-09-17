@@ -271,6 +271,35 @@ products:
     icon_many: "fa:gifts"
     icon_one: "fa:gift"
 
+services:
+    name: Services
+    singular_name: Service
+    fields:
+        title:
+            type: text
+        description:
+            type: html
+        headerBackgroud:
+            type: image
+        image:
+            type: image
+        innerTitle: 
+            type: text
+        innerDescription:
+            type: html
+        
+        innerDescription2:
+            type: html
+        slug:
+            type: slug
+            user: title
+        excerpt:
+            type: text
+        icon:
+            type: text
+    record_template: service.twig
+    listing_template: listing.twig
+
 # Possible field types:
 #
 # text - varchar(256) - input type text.
