@@ -1,7 +1,8 @@
 {% extends 'partials/_master.twig' %}
 
 {% block main %}
-
+    {% setcontent aboutservices = 'works/services' %}
+    {% setcontent services = 'services' %}
     <!--Page Header Start-->
     <section class="page-header" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg);">
         <div class="page-header-shape-1"></div>
@@ -9,11 +10,11 @@
         <div class="container">
             <div class="page-header__inner">
                 <ul class="thm-breadcrumb list-unstyled">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{ path('homepage') }}">Home</a></li>
                     <li><span>.</span></li>
-                    <li>Services</li>
+                    <li>{{ aboutservices.title }}</li>
                 </ul>
-                <h2>Services</h2>
+                <h2>{{ aboutservices.title }}</h2>
             </div>
         </div>
     </section>
@@ -28,89 +29,37 @@
                         <div class="areas-of-practice__top-left">
                             <div class="section-title text-left">
                                 <span class="section-title__tagline">Areas of practice</span>
-                                <h2 class="section-title__title">We’re good at these areas to work</h2>
+                                <h2 class="section-title__title">{{ aboutservices.caption }}</h2>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6">
                         <div class="areas-of-practice__top-right">
-                            <p class="areas-of-practice__top-right-text">Lorem ipsum is simply free text dolor sit
-                                amett consectetur adipiscing elit. When an unknown printer took a galley of type and
-                                scrambled it to make a type specimen book.</p>
+                            <p class="areas-of-practice__top-right-text">{{ aboutservices.description }}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="areas-of-practice__bottom">
                 <div class="row">
-                    <div class="col-xl-3 col-lg-6 col-md-6">
-                        <!--Areas of Practice Single-->
-                        <div class="areas-of-practice__single">
-                            <div class="areas-of-practice__icon-box">
-                                <div class="areas-of-practice__icon">
-                                    <span class="icon-color-sample"></span>
+                    {% for service in services %}
+                        <div class="col-xl-3 col-lg-6 col-md-6">
+                            <!--Areas of Practice Single-->
+                            <div class="areas-of-practice__single">
+                                <div class="areas-of-practice__icon-box">
+                                    <div class="areas-of-practice__icon">
+                                        <span class="{{ service.iconImage }}"></span>
+                                    </div>
+                                    <div class="areas-of-practice__title">
+                                        <h3><a href="{{ service|link }}">{{ service.title }}</a></h3>
+                                    </div>
                                 </div>
-                                <div class="areas-of-practice__title">
-                                    <h3><a href="website-design.html">Website design</a></h3>
-                                </div>
+                                <p class="areas-of-practice__text">{{ service.excerpt }}</p>
+                                <a href="{{ service|link }}" class="areas-of-practice__read-more"><i
+                                        class="icon-right-arrow"></i></a>
                             </div>
-                            <p class="areas-of-practice__text">Lorem ipsum is simply free text dolor amett consec
-                                adipisc.</p>
-                            <a href="website-design.html" class="areas-of-practice__read-more"><i
-                                    class="icon-right-arrow"></i></a>
                         </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6">
-                        <!--Areas of Practice Single-->
-                        <div class="areas-of-practice__single">
-                            <div class="areas-of-practice__icon-box">
-                                <div class="areas-of-practice__icon">
-                                    <span class="icon-front-end"></span>
-                                </div>
-                                <div class="areas-of-practice__title">
-                                    <h3><a href="web-development.html">Web development</a></h3>
-                                </div>
-                            </div>
-                            <p class="areas-of-practice__text">Lorem ipsum is simply free text dolor amett consec
-                                adipisc.</p>
-                            <a href="web-development.html" class="areas-of-practice__read-more"><i
-                                    class="icon-right-arrow"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6">
-                        <!--Areas of Practice Single-->
-                        <div class="areas-of-practice__single">
-                            <div class="areas-of-practice__icon-box">
-                                <div class="areas-of-practice__icon">
-                                    <span class="icon-online-shopping"></span>
-                                </div>
-                                <div class="areas-of-practice__title">
-                                    <h3><a href="web-application.html">Web applications</a></h3>
-                                </div>
-                            </div>
-                            <p class="areas-of-practice__text">Lorem ipsum is simply free text dolor amett consec
-                                adipisc.</p>
-                            <a href="web-application.html" class="areas-of-practice__read-more"><i
-                                    class="icon-right-arrow"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6">
-                        <!--Areas of Practice Single-->
-                        <div class="areas-of-practice__single">
-                            <div class="areas-of-practice__icon-box">
-                                <div class="areas-of-practice__icon">
-                                    <span class="icon-graphic-design"></span>
-                                </div>
-                                <div class="areas-of-practice__title">
-                                    <h3><a href="content-writing.html">Content writting</a></h3>
-                                </div>
-                            </div>
-                            <p class="areas-of-practice__text">Lorem ipsum is simply free text dolor amett consec
-                                adipisc.</p>
-                            <a href="content-writing.html" class="areas-of-practice__read-more"><i
-                                    class="icon-right-arrow"></i></a>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -294,106 +243,7 @@
     <!--Services One End-->
 
     <!--Testimonial One Start-->
-    <section class="testimonial-one testimonial-two">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-5">
-                    <div class="testimonial-one__left">
-                        <div class="section-title text-left">
-                            <span class="section-title__tagline">Customer feedback</span>
-                            <h2 class="section-title__title">What they are talking about moniz?</h2>
-                        </div>
-                        <div class="testimonial-one__btn-box">
-                            <a href="about.html" class="thm-btn testimonial-one__btn"><span>All feedbacks</span></a>
-                            <div class="testimonial-one__btn-shape"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-8 col-lg-7">
-                    <div class="testimonial-one__slider">
-
-
-                        <div class="swiper-container" id="testimonials-one__thumb">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="testimonial-one__img-holder">
-                                        <img src="assets/images/testimonial/testimonials-1-1.png" alt="">
-                                        <div class="testimonial-one__quote">
-
-                                        </div>
-                                    </div>
-                                </div><!-- /.swiper-slide -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-one__img-holder">
-                                        <img src="assets/images/testimonial/testimonials-1-2.png" alt="">
-                                        <div class="testimonial-one__quote">
-
-                                        </div>
-                                    </div>
-                                </div><!-- /.swiper-slide -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-one__img-holder">
-                                        <img src="assets/images/testimonial/testimonials-1-3.png" alt="">
-                                        <div class="testimonial-one__quote">
-
-                                        </div>
-                                    </div>
-                                </div><!-- /.swiper-slide -->
-                            </div><!-- /.swiper-wrapper -->
-                        </div><!-- /#testimonials-one__thumb.swiper-container -->
-
-                        <div class="testimonials-one__main-content">
-                            <div class="swiper-container" id="testimonials-one__carousel">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-one__conent-box">
-                                            <p class="testimonial-one__text">This is due to their excellent service,
-                                                competitive pricing and customer support. It’s throughly refresing
-                                                to
-                                                get such a personal touch. Duis aute lorem ipsum is simply.</p>
-                                            <div class="testimonial-one__client-details">
-                                                <h4 class="testimonial-one__client-name">Aleesha brown</h4>
-                                                <span class="testimonial-one__clinet-title">Satisfied
-                                                            customers</span>
-                                            </div>
-                                        </div>
-                                    </div><!-- /.swiper-slide -->
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-one__conent-box">
-                                            <p class="testimonial-one__text">This is due to their excellent service,
-                                                competitive pricing and customer support. It’s throughly refresing
-                                                to
-                                                get such a personal touch. Duis aute lorem ipsum is simply.</p>
-                                            <div class="testimonial-one__client-details">
-                                                <h4 class="testimonial-one__client-name">Aleesha brown</h4>
-                                                <span class="testimonial-one__clinet-title">Satisfied
-                                                            customers</span>
-                                            </div>
-                                        </div>
-                                    </div><!-- /.swiper-slide -->
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-one__conent-box">
-                                            <p class="testimonial-one__text">This is due to their excellent service,
-                                                competitive pricing and customer support. It’s throughly refresing
-                                                to
-                                                get such a personal touch. Duis aute lorem ipsum is simply.</p>
-                                            <div class="testimonial-one__client-details">
-                                                <h4 class="testimonial-one__client-name">Aleesha brown</h4>
-                                                <span class="testimonial-one__clinet-title">Satisfied
-                                                            customers</span>
-                                            </div>
-                                        </div>
-                                    </div><!-- /.swiper-slide -->
-                                </div><!-- /.swiper-wrapper -->
-                                <div id="testimonials-one__carousel-pagination"></div>
-                                <!-- /#testimonials-one__carousel-pagination -->
-                            </div><!-- /#testimonials-one__thumb.swiper-container -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {{ include('partials/index/testimonials.twig') }}
     <!--Testimonial One End-->
 
     <!--CTA Two Start-->

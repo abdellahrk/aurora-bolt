@@ -6,6 +6,9 @@ main:
     title: This is the <b>first<b> menu item.
     link: homepage
     class: homepage
+  - label: Services
+    link: works
+    class: works
   - label: About
     link: page/2
     submenu:
