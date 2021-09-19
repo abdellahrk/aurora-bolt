@@ -40,10 +40,10 @@
                             America</p>
                         <div class="footer-widget__contact-info">
                             <p>
-                                <a href="tel:92-666-888-0000" class="footer-widget__contact-phone">92 666 888
-                                    0000</a>
-                                <a href="mailto:needhelp@company.com"
-                                   class="footer-widget__contact-mail">needhelp@company.com</a>
+                                <a href="tel:{{ config.get('theme/address/phone') }}" class="footer-widget__contact-phone">
+                                    {{ config.get('theme/address/phone') }}</a>
+                                <a href="mailto:{{ config.get('theme/address/email') }}"
+                                   class="footer-widget__contact-mail">{{ config.get('theme/address/email') }}</a>
                             </p>
                         </div>
                     </div>
@@ -76,8 +76,8 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="site-footer-bottom__inner">
-                        <p class="site-footer-bottom__copy-right">© Copyright 2021 by <a
-                                href="#">Layerdrops.com</a></p>
+                        <p class="site-footer-bottom__copy-right">© Copyright {{ "now"|date('Y')}} by <a
+                                href="https://aurora.cm">{{ config.get('general/sitename') }}</a></p>
                     </div>
                 </div>
             </div>
@@ -97,7 +97,7 @@
         <span class="mobile-nav__close mobile-nav__toggler"></span>
 
         <div class="logo-box">
-            <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo.png" width="155"
+            <a href="#" aria-label="logo image"><img src="assets/images/resources/logo.png" width="155"
                                                               alt="" /></a>
         </div>
         <!-- /.logo-box -->
@@ -107,11 +107,11 @@
         <ul class="mobile-nav__contact list-unstyled">
             <li>
                 <i class="fa fa-envelope"></i>
-                <a href="mailto:needhelp@packageName__.com">needhelp@moniz.com</a>
+                <a href="mailto:{{ config.get('theme/address/email') }}">{{ config.get('theme/address/email') }}</a>
             </li>
             <li>
                 <i class="fa fa-phone-alt"></i>
-                <a href="tel:666-888-0000">666 888 0000</a>
+                <a href="tel:{{ config.get('theme/address/phone') }}">{{ config.get('theme/address/phone') }}</a>
             </li>
         </ul><!-- /.mobile-nav__contact -->
         <div class="mobile-nav__top">
@@ -122,9 +122,6 @@
                 <a href="#" class="fab fa-instagram"></a>
             </div><!-- /.mobile-nav__social -->
         </div><!-- /.mobile-nav__top -->
-
-
-
     </div>
     <!-- /.mobile-nav__content -->
 </div>
