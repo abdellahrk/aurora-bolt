@@ -14,7 +14,7 @@
             <div class="service-details__need-help-bg"
                  style="background-image: url(assets/images/resources/ser-dtl-need-help-bg.jpg)">
             </div>
-            <h3 class="service-details__need-help-title">Need help</h3>
+            <h3 class="service-details__need-help-title">Besoin d'aide?</h3>
             <p class="service-details__need-help-text">Prefer speaking with a human to filling out a
                 form? call corporate office and we will connect you with a team member who can help.
             </p>
@@ -23,7 +23,7 @@
                     <span class="icon-phone-call"></span>
                 </div>
                 <div class="service-details__need-help-phone-number">
-                    <h4><a href="tel:">92 666 888 0000</a></h4>
+                    <h4><a href="tel:{{ config.get('themes/address/phone') }}">{{ config.get('themes/address/phone') }}</a></h4>
                 </div>
             </div>
         </div>
