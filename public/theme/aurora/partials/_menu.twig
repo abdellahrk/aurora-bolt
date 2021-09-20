@@ -2,14 +2,14 @@
     <div class="main-menu-wrapper clearfix">
         <div class="main-menu-wrapper__left clearfix">
             <div class="main-menu-wrapper__logo">
-                <a href="{{ path('homepage') }}"><img src="assets/images/resources/logo.png" alt=""></a>
+                <a href="{{ path('homepage') }}"><img src="{{ asset('images/resources/logo.png') }}" alt=""></a>
             </div>
             <div class="main-menu-wrapper__search-box">
                 <a href="#" class="main-menu-wrapper__search search-toggler icon-magnifying-glass"></a>
             </div>
             <div class="main-menu-wrapper__social">
                 <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="clr-fb"><i class="fab fa-facebook"></i></a>
+                <a href="{{ config.get('themes/socials/facebook') }}" class="clr-fb"><i class="fab fa-facebook"></i></a>
                 <a href="#" class="clr-dri"><i class="fab fa-pinterest-p"></i></a>
                 <a href="#" class="clr-ins"><i class="fab fa-instagram"></i></a>
             </div>

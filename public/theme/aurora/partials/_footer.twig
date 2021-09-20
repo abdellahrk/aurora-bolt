@@ -15,7 +15,7 @@
                             simply text amet cing elit.</p>
                         <div class="footer-widget__about-social-list">
                             <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="clr-fb"><i class="fab fa-facebook"></i></a>
+                            <a href="{{ config.get('themes/socials/facebook') }}" class="clr-fb"><i class="fab fa-facebook"></i></a>
                             <a href="#" class="clr-dri"><i class="fab fa-pinterest-p"></i></a>
                             <a href="#" class="clr-ins"><i class="fab fa-instagram"></i></a>
                         </div>
@@ -97,7 +97,7 @@
         <span class="mobile-nav__close mobile-nav__toggler"></span>
 
         <div class="logo-box">
-            <a href="#" aria-label="logo image"><img src="assets/images/resources/logo.png" width="155"
+            <a href="#" aria-label="logo image"><img src="{{ asset('images/resources/logo.png') }}" width="155"
                                                               alt="" /></a>
         </div>
         <!-- /.logo-box -->
@@ -116,8 +116,8 @@
         </ul><!-- /.mobile-nav__contact -->
         <div class="mobile-nav__top">
             <div class="mobile-nav__social">
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-facebook-square"></a>
+                <a href="{{ config.get('themes/socials/twitter') }}" class="fab fa-twitter"></a>
+                <a href="{{ config.get('themes/socials/facebook') }}" class="fab fa-facebook-square"></a>
                 <a href="#" class="fab fa-pinterest-p"></a>
                 <a href="#" class="fab fa-instagram"></a>
             </div><!-- /.mobile-nav__social -->
