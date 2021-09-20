@@ -76,6 +76,9 @@ aurora:
     viewless: false
     default_status: published
     searchable: false
+    #order: title
+    icon_many: "fa:persons"
+    icon_one: "fa:person"
 
 # Pages can be used for the more 'static' pages on your site. This content-type
 # has a 'templateselect' field, which allows you to override the record_template
@@ -176,41 +179,6 @@ entries:
 # that it can be used to manage smaller pieces of content, like the 'about us'
 # text, an 'our address' in the footer, or similar short blurbs of text.
 # For more info, see: https://docs.bolt.cm/howto/resource-contenttype
-
-blocks:
-    name: Blocks
-    singular_name: Block
-    excerpt_format: '{teaser}'
-    fields:
-        title:
-            type: text
-            class: large
-            label: Title of this Block
-            group: Block
-        image:
-            type: image
-        teaser:
-            type: redactor
-            fixture_format: '{paragraph}'
-        content:
-            type: redactor
-        contentlink:
-            type: text
-            label: Link
-            placeholder: 'contentType/slug or https://example.org/'
-            postfix: "Use this to add a link for this Homepage. This could either be an 'internal' link like <tt>page//about</tt>, if you use a contentType/slug combination. Otherwise use a proper URL, like `https://example.org`."
-            fixture_format: '{url}'
-        slug:
-            type: slug
-            uses: [ title ]
-            group: Meta
-    show_on_dashboard: true
-    viewless: true
-    default_status: published
-    searchable: false
-    order: title
-    icon_many: "fa:cubes"
-    icon_one: "fa:cube"
 
 services:
     name: Services
