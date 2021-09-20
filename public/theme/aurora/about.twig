@@ -26,7 +26,7 @@
                 <div class="col-xl-7 col-lg-6">
                     <div class="reasons__left">
                         <div class="reasons__img">
-                            <img src="assets/images/resources/reasons-img-1.jpg" alt="">
+                            <img src="{{ asset('images/resources/reasons-img-1.jpg') }}" alt="">
                             <div class="reasons__img-shape-1"></div>
                             <div class="reasons__img-shape-2"></div>
                         </div>
@@ -76,41 +76,7 @@
     <!--Reasons End-->
 
     <!--Counter One Start-->
-    <section class="counters-one">
-        <div class="container">
-            <ul class="counters-one__box list-unstyled">
-                <li class="counter-one__single wow fadeInUp" data-wow-delay="100ms">
-                    <div class="counter-one__icon">
-                        <span class="icon-recommend"></span>
-                    </div>
-                    <h3 class="odometer" data-count="860">00</h3>
-                    <p class="counter-one__text">Projects completed</p>
-                </li>
-                <li class="counter-one__single wow fadeInUp" data-wow-delay="200ms">
-                    <div class="counter-one__icon">
-                        <span class="icon-recruit"></span>
-                    </div>
-                    <h3 class="odometer" data-count="50">00</h3>
-                    <p class="counter-one__text">Active clients</p>
-                </li>
-                <li class="counter-one__single wow fadeInUp" data-wow-delay="300ms">
-                    <div class="counter-one__icon">
-                        <span class="icon-coffee"></span>
-                    </div>
-                    <h3 class="odometer" data-count="93">00</h3>
-                    <p class="counter-one__text">Cups of coffee</p>
-                </li>
-                <li class="counter-one__single wow fadeInUp" data-wow-delay="400ms">
-                    <div class="counter-one__icon">
-                        <span class="icon-customer-review"></span>
-                    </div>
-                    <h3 class="odometer" data-count="970">00</h3>
-                    <p class="counter-one__text">Happy clients</p>
-                </li>
-                <li class="counter-one__shape wow fadeInUp" data-wow-delay="500ms"></li>
-            </ul>
-        </div>
-    </section>
+    {{ include('partials/_counter.twig') }}
     <!--Counter One End-->
 
     <!--We Change Start-->
