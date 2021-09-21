@@ -8,6 +8,7 @@
         "bolt/article": "^1.0",
         "bolt/assets": "^5.0",
         "bolt/core": "^5.0",
+        "bolt/forms": "^1.4",
         "bolt/newswidget": "^1.1",
         "bolt/redactor": "^1.0",
         "bolt/themes": "^3.3",
@@ -25,6 +26,7 @@
         "phpstan/phpstan": "^0.12.48",
         "phpstan/phpstan-doctrine": "^0.12.20",
         "phpstan/phpstan-symfony": "^0.12.8",
+        "symfony/maker-bundle": "^1.33",
         "symplify/easy-coding-standard": "^8.3",
         "thecodingmachine/phpstan-safe-rule": "^1.0"
     },
