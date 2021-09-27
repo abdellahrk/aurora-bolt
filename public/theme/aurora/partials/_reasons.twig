@@ -1,25 +1,26 @@
-{% setcontent whyUs = 'aurora/why-us' %}
+{% setcontent whyus = 'whyus' limit 1 returnsingle %}
+{% if whyus is not empty %}
 <section class="reasons-one">
     <div class="container">
         <div class="row">
             <div class="col-xl-4">
                 <div class="reasons-one__left">
                     <div class="section-title text-left">
-                        <span class="section-title__tagline">Our benefits</span>
-                        <h2 class="section-title__title">{{ whyUs.caption }}</h2>
+                        <span class="section-title__tagline">{{ whyus.small_title ? whyus.small_title : '' }}</span>
+                        <h2 class="section-title__title">{{ whyus.title ? whyus.title : '' }}</h2>
                     </div>
                     <ul class="list-unstyled reasons-one__icon-box">
                         <li>
                             <span class="icon-training"></span>
-                            <p class="reasons-one__text">The best user interfaces</p>
+                            <p class="reasons-one__text">{{ whyus.first_reason ? whyus.first_reason : '' }}</p>
                         </li>
                         <li>
                             <span class="icon-strategy"></span>
-                            <p class="reasons-one__text">Quick smooth web development</p>
+                            <p class="reasons-one__text">{{ whyus.second_reason ? whyus.second_reason : '' }}</p>
                         </li>
                     </ul>
-                    <p class="reasons-one__text-1">{{ whyUs.description }}</p>
-                    <a href="/aurora/apropos" class="thm-btn"><span>Discover more</span></a><!-- /.thm-btn -->
+                    <p class="reasons-one__text-1">{{ whyus.body }}</p>
+                    <a href="{{ whyus.link_to_about }}" class="thm-btn"><span>Discover more</span></a><!-- /.thm-btn -->
                 </div>
             </div>
             <div class="col-xl-8">
@@ -28,17 +29,17 @@
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-6">
                             <div class="reasons-one__img-one">
-                                <img src="{{ asset('images/resources/reasons-one-img-1.jpg') }}" alt="">
+                                <img src="{{ whyus.image_400x609 ? whyus.image_400x609 : '' }}" alt="">
                                 <div class="reasons-one__shape-1"></div>
                                 <div class="reasons-one__shape-2"></div>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6">
                             <div class="reasons-one__img-two">
-                                <img src="{{ asset('images/resources/reasons-one-img-3.jpg') }}" alt="">
+                                <img src="{{ whyus.image_400x349 ? whyus.image_400x349 : '' }}" alt="">
                             </div>
                             <div class="reasons-one__img-three reasons-one__img-two">
-                                <img src="{{ asset('images/resources/reasons-one-img-2.jpg') }}" alt="">
+                                <img src="{{ whyus.image_400x230 ? whyus.image_400x230 : '' }}" alt="">
                                 <div class="reasons-one__shape-3"></div>
                             </div>
                         </div>
@@ -48,3 +49,4 @@
         </div>
     </div>
 </section>
+{% endif %}
