@@ -235,6 +235,37 @@ testimonials:
         image:
             type: image
     viewless: true
+    
+# Why Us partial
+whyus:
+    name: Whyus
+    singular_name: Whyus
+    fields: 
+        small_title:
+            type: text
+        title: 
+            type: text
+        first_reason:
+            type: text
+        second_reason:
+            type: text
+        body: 
+            type: html
+        image_400x609:
+            type: image
+        image_400x349:
+            type: image
+        image_400x230:
+            type: image
+        link_to_about:
+            type: text
+    singleton: true
+    viewless: true
+    default_status: published
+    sort: -id
+    icon_many: "fa:cogs"
+    icon_one: "fa:cog"
+        
 
 # Possible field types:
 #
