@@ -8,9 +8,9 @@ notification:
     replyto_name: '{NAME}'                 # Email addresses and names can be either the
     replyto_email: '{EMAIL}'                 # name of a field below or valid text.
     to_name: 'AURORA DIGITAL AGENCY'
-    to_email: 'youremail@example.org'
-    from_name: 'WebsiteName'
-    from_email: 'youremail@example.org'
+    to_email: 'contact@aurora.cm'
+    from_name: 'AURORA DIGITAL AGENCY'
+    from_email: 'mailer@aurora.cm'
 feedback:
     success: Message submission successful
     error: There are errors in the form, please fix before trying to resubmit

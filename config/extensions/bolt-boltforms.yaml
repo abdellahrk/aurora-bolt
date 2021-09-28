@@ -6,8 +6,8 @@
 #
 # If enabled, ALL forms will go into debug mode.
 debug:
-    enabled: true
-    address: noreply@example.com
+    enabled: false
+    address: contact@aurora.cm
 
 ## Various SPAM protection measures
 #
