@@ -265,6 +265,23 @@ whyus:
     sort: -id
     icon_many: "fa:cogs"
     icon_one: "fa:cog"
+   
+# sliders
+sliders: 
+    name: Sliders
+    singular_name: Slider
+    viewless: true
+    fields:
+        title:
+            type: text
+        background:
+            type: image
+        sub_title:
+            type: text
+        link:
+            type: text
+        link_title:
+            type: text
         
 
 # Possible field types:
