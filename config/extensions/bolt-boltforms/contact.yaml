@@ -1,16 +1,16 @@
 notification:
     enabled: true
     debug: false
-    debug_address: name@example.com # Email address used when debug mode is enabled
+    debug_address: njikam66@gmail.com # Email address used when debug mode is enabled
     debug_smtp: true
     subject: Your message was submitted
     subject_prefix: '[Boltforms]'
     replyto_name: '{NAME}'                 # Email addresses and names can be either the
     replyto_email: '{EMAIL}'                 # name of a field below or valid text.
-    to_name: 'WebsiteName'
-    to_email: 'youremail@example.org'
-    from_name: 'WebsiteName'
-    from_email: 'youremail@example.org'
+    to_name: 'AURORA DIGITAL AGENCY'
+    to_email: 'contact@aurora.cm'
+    from_name: 'AURORA DIGITAL AGENCY'
+    from_email: 'mailer@aurora.cm'
 feedback:
     success: Message submission successful
     error: There are errors in the form, please fix before trying to resubmit
@@ -19,7 +19,6 @@ fields:
         type: text
         options:
             required: true
-            label: Name
             attr:
                 placeholder: Your name...
             constraints: [ NotBlank, { Length: { 'min': 3, 'max': 128 } } ]
@@ -27,15 +26,13 @@ fields:
         type: email
         options:
             required: true
-            label: Email address
             attr:
-                placeholder: Your email...
+                placeholder: Votre Email
             constraints: [ NotBlank, Email ]
     phone:
         type: text
         options:
             required: false
-            label: Numéro téléphone
             attr:
                 placeholder: Numéro téléphone
     subject:
@@ -57,4 +54,4 @@ fields:
         options:
             label: Submit my message »
             attr:
-                class: button primary
+                class: btn btn-primary
