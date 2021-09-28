@@ -69,41 +69,23 @@
                         </li>
                     </ul>
                     <p class="service-details__text-3">{{ service.innerDescription2 }}</p>
+
+                    {% setcontent whyus = 'theylikeus' %}
                     <div class="service-details__faq">
+
                         <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
-                            <div class="accrodion active">
-                                <div class="accrodion-title">
-                                    <h4>Few resons why you should choose us</h4>
+                            {% for reason in whyus %}
+                                <div class="accrodion active">
+                                    <div class="accrodion-title">
+                                        <h4>{{ reason.title }}</h4>
+                                    </div>
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>{{ reason.reason }}</p>
+                                        </div><!-- /.inner -->
+                                    </div>
                                 </div>
-                                <div class="accrodion-content">
-                                    <div class="inner">
-                                        <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum
-                                            leo ligula, vitae commodo nisl.</p>
-                                    </div><!-- /.inner -->
-                                </div>
-                            </div>
-                            <div class="accrodion">
-                                <div class="accrodion-title">
-                                    <h4>Few resons why you should choose us</h4>
-                                </div>
-                                <div class="accrodion-content">
-                                    <div class="inner">
-                                        <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum
-                                            leo ligula, vitae commodo nisl.</p>
-                                    </div><!-- /.inner -->
-                                </div>
-                            </div>
-                            <div class="accrodion last-chiled">
-                                <div class="accrodion-title">
-                                    <h4>Few resons why you should choose us</h4>
-                                </div>
-                                <div class="accrodion-content">
-                                    <div class="inner">
-                                        <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum
-                                            leo ligula, vitae commodo nisl.</p>
-                                    </div><!-- /.inner -->
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -115,26 +97,7 @@
 <!--Service Details End-->
 
 <!--CTA Two Start-->
-<section class="cta-two">
-    <div class="cta-two-shape-1"></div>
-    <div class="cta-two-shape-2"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="cta-two__inner">
-                    <div class="cta-two__title">
-                        <h2>Making your business ideas come true</h2>
-                    </div>
-                    <div class="cta-two__btn-box">
-                            <span><a href="contact.html"
-                                     class="thm-btn cta-two__btn thm-btn--dark thm-btn--dark--light-hover"><span>Free
-                                        Consultation</span></a></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+{{ include('partials/_cta.twig') }}
 <!--CTA Two End-->
 
 {% endblock main %}
