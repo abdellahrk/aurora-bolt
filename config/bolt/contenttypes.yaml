@@ -215,7 +215,7 @@ services:
 # Faq type
 faq:
     name: FAQs
-    singular_name: faq
+    singular_name: faqs
     fields:
         title:
             type: text
@@ -282,6 +282,30 @@ sliders:
             type: text
         link_title:
             type: text
+            
+# Services sidebar call to action
+cta:
+    name: cta
+    singular_name: cta
+    viewless: true
+    singleton: true
+    fields:
+        title:
+            type: text
+        body: 
+            type: html
+            
+# Why us services
+theylikeus:
+    name: theylikeus
+    singular_name: theylikeus
+    viewless: true
+    fields:
+        title:
+            type: text
+        reason: 
+            type: html
+        
         
 
 # Possible field types:
