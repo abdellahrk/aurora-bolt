@@ -1,4 +1,5 @@
-
+{% setcontent settings = 'settings' limit 1 returnsingle %}
+{% if settings is not empty %}
 <!--Site Footer One Start-->
 <footer class="site-footer">
     <div class="site-footer__top">
@@ -11,11 +12,10 @@
                         <div class="footer-widget__about-logo">
                             <a href="{{ path('homepage') }}"><img src="{{ asset('images/resources/footer-logo.png') }}" alt=""></a>
                         </div>
-                        <p class="footer-widget__about-text">Welcome to our website design agency. Lore ipsum
-                            simply text amet cing elit.</p>
+                        <p class="footer-widget__about-text">{{ settings.footer_text ? settings.footer_text : '' }}</p>
                         <div class="footer-widget__about-social-list">
                             <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="{{ config.get('theme/socials/facebook') }}" target="_blank" class="clr-fb"><i class="fab fa-facebook"></i></a>
+                            <a href="{{ settings.facebook ? settings.facebook : '' }}" target="_blank" class="clr-fb"><i class="fab fa-facebook"></i></a>
                             <a href="#" class="clr-dri" target="_blank"><i class="fab fa-pinterest-p"></i></a>
                             <a href="#" class="clr-ins" target="_blank"><i class="fab fa-instagram"></i></a>
                         </div>
@@ -29,7 +29,7 @@
                             <li><a href="team.html">Meet our team</a></li>
                             <li><a href="#">Case stories</a></li>
                             <li><a href="blog.html">Latest news</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="aurora/contact-us">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -40,8 +40,8 @@
                             America</p>
                         <div class="footer-widget__contact-info">
                             <p>
-                                <a href="tel:{{ config.get('theme/address/phone') }}" class="footer-widget__contact-phone">
-                                    {{ config.get('theme/address/phone') }}</a>
+                                <a href="tel:{{ settings.phone ? settings.phone : '' }}" class="footer-widget__contact-phone">
+                                    {{ settings.phone ? settings.phone : '' }}</a>
                                 <a href="mailto:{{ config.get('theme/address/email') }}"
                                    class="footer-widget__contact-mail">{{ config.get('theme/address/email') }}</a>
                             </p>
@@ -142,6 +142,7 @@
     <!-- /.search-popup__content -->
 </div>
 <!-- /.search-popup -->
+{% endif %}
 
 <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
