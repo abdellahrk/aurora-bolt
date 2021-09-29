@@ -294,11 +294,19 @@ cta:
             type: text
         body: 
             type: html
+        tag_line:
+            type: text
+        tag_title:
+            type: text
+        cta_link:
+            type: text
+        cta_link_text: 
+            type: text
             
 # Why us services
 theylikeus:
-    name: theylikeus
-    singular_name: theylikeus
+    name: Theylikeus
+    singular_name: Theylikeus
     viewless: true
     fields:
         title:
@@ -306,6 +314,24 @@ theylikeus:
         reason: 
             type: html
         
+# Settings (general page)
+settings:
+    name: Settings
+    singular_name: Setting
+    singleton: true
+    fields:
+        site_name:
+            type: text
+        footer_text:
+            type: text
+        phone:
+            type: text
+        email:
+            type: email
+        facebook:
+            type: text
+        twitter:
+            type: text
         
 
 # Possible field types:
