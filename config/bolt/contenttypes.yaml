@@ -188,7 +188,7 @@ services:
             type: text
         description:
             type: html
-        headerBackgroud:
+        headerBackground:
             type: image
         image:
             type: image
@@ -214,8 +214,8 @@ services:
 
 # Faq type
 faq:
-    name: FAQs
-    singular_name: faqs
+    name: Faqs
+    singular_name: Faq
     fields:
         title:
             type: text
@@ -302,6 +302,21 @@ cta:
             type: text
         cta_link_text: 
             type: text
+# Stats
+stats:
+    name: Stats
+    singular_name: Stats
+    singleton: true
+    viewless: true
+    fields:
+        clients:
+            type: number
+        clients_text:
+            type: text
+        hosted:
+            type: number
+        hosted_text:
+            type: text
             
 # Why us services
 theylikeus:
@@ -332,8 +347,7 @@ settings:
             type: text
         twitter:
             type: text
-        
-
+            
 # Possible field types:
 #
 # text - varchar(256) - input type text.
