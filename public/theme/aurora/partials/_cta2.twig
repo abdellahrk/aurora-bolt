@@ -1,3 +1,4 @@
+{% setcontent cta = 'cta' limit 1 returnsingle %}
 <!--CTA One Start-->
 <section class="cta-one">
     <div class="cta-one-bg" style="background-image: url(assets/images/backgrounds/cta-one-bg.jpg)"></div>
@@ -5,10 +6,11 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="cta-one__inner">
-                    <p class="cta-one__tagline">We can help you stand out your business</p>
-                    <h2 class="cta-one__title">Website design services for <br> your businesses</h2>
-                    <a href="contact.html" class="thm-btn cta-one__btn thm-btn--dark--light-hover"><span>Free
-                                    consultation</span></a>
+                    <p class="cta-one__tagline">{{ cta.tag_line ? cta.tag_line : '' }}</p>
+                    <h2 class="cta-one__title">{{ cta.tag_title ? cta.tag_title : '' }}</h2>
+                    <a href="{{ cta.cta_link ? cta.cta_link : '' }}" class="thm-btn cta-one__btn thm-btn--dark--light-hover"><span>
+                            {{ cta.cta_link_text ? cta.cta_link_text : '' }}
+                        </span></a>
                 </div>
             </div>
         </div>
