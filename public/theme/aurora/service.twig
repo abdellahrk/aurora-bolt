@@ -2,15 +2,15 @@
 
 {% block main %}
 <!--Page Header Start-->
-<section class="page-header" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg);">
+<section class="page-header" style="background-image: url({{ service.headerBackground ? service.headerBackground : '' }});">
     <div class="page-header-shape-1"></div>
     <div class="page-header-shape-2"></div>
     <div class="container">
         <div class="page-header__inner">
             <ul class="thm-breadcrumb list-unstyled">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{{ path('homepage') }}">Home</a></li>
                 <li><span>.</span></li>
-                <li>Service Details</li>
+                <li>Details Service</li>
             </ul>
             <h2>{{ service.title }}</h2>
         </div>
@@ -25,7 +25,7 @@
             <div class="col-xl-8 col-lg-7">
                 <div class="service-details__left">
                     <div class="service-details__img">
-                        <img src="assets/images/resources/service-details-img.jpg" alt="">
+                        <img src="{{ service.image ? service.image : '' }}" alt="">
                     </div>
                     <div class="service-details__icon-box">
                         <span class="icon-front-end"></span>
