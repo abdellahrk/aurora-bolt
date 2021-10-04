@@ -19,6 +19,12 @@ homepage:
                 shown on the homepage of the website, as the name implies. To change the
                 <em><strong>name</strong></em> of the site, as is shown in the header, and the tab
                 in the webbrowser, edit <code>sitename:</code> in the configuration file.
+        small_title:
+            type: text
+        cta1:
+            type: text
+        cta2:
+            type: text
         image:
             type: image
         introduction:
@@ -305,17 +311,17 @@ cta:
 # Stats
 stats:
     name: Stats
-    singular_name: Stats
-    singleton: true
+    singular_name: Stat
     viewless: true
+    sort: -createdAt
     fields:
-        clients:
-            type: number
-        clients_text:
+        title:
             type: text
-        hosted:
-            type: number
-        hosted_text:
+        icon:
+            type: text
+        stat_number:
+            type: text
+        text:
             type: text
             
 # Why us services

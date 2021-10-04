@@ -2,15 +2,15 @@
 # details: https://docs.bolt.cm/menus
 
 main:
-  - label: Home
+  - label: Accueil
     title: This is the <b>first<b> menu item.
     link: homepage
     class: homepage
   - label: Services
     link: services
     submenu:
-        - label: Web Development
-          link: services/web-development
+        - label: Création SiteWeb
+          link: service/creation-site-web
         - label: Web Design
           class: menu-item-class
           link: service/web-design
