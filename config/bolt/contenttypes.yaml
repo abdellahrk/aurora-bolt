@@ -308,6 +308,8 @@ cta:
             type: text
         cta_link_text: 
             type: text
+        background_image:
+            type: image
 # Stats
 stats:
     name: Stats
