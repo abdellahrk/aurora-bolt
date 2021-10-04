@@ -353,6 +353,31 @@ settings:
             type: text
         twitter:
             type: text
+
+others:
+    name: Others
+    singular_name: Other
+    viewless: true
+    singleton: true
+    fields:
+        faq_title_small:
+            type: text
+            group: faqs settings
+        faq_title:
+            type: text
+        faq_image:
+            type: image
+        faq_image_text:
+            type: text
+        testimonial_small_title:
+            type: text
+            group: testimonials settings
+        testimonial_title:
+            type: text
+        testimonial_link:
+            type: text
+        testimonial_link_text:
+            type: text
             
 # Possible field types:
 #
