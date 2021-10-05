@@ -277,6 +277,7 @@ sliders:
     name: Sliders
     singular_name: Slider
     viewless: true
+    order: createdAt
     fields:
         title:
             type: text
