@@ -382,7 +382,13 @@ others:
     singular_name: Other
     viewless: true
     singleton: true
+    title: Others
     fields:
+        service_tagline:
+            type: text
+            group: service homepage settings
+        service_title:
+            type: text
         faq_title_small:
             type: text
             group: faqs settings
@@ -392,6 +398,8 @@ others:
             type: image
         faq_image_text:
             type: text
+        footer_background:
+            type: image
         testimonial_small_title:
             type: text
             group: testimonials settings
@@ -401,8 +409,7 @@ others:
             type: text
         testimonial_link_text:
             type: text
-        footer_background:
-            type: image
+        
             
 # Possible field types:
 #

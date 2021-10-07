@@ -1,12 +1,13 @@
+{% setcontent services = 'services' limit 3 %}
+{% setcontent others = 'others' %}
 <section class="services-one">
     <div class="services-one-bg" style="background-image: url(assets/images/backgrounds/services-one-bg.jpg)">
     </div>
     <div class="container">
         <div class="section-title text-center">
-            <span class="section-title__tagline">Our services list</span>
-            <h2 class="section-title__title">What we’re offering</h2>
+            <span class="section-title__tagline">{{ others.service_tagline }}</span>
+            <h2 class="section-title__title">{{ others.service_title }}</h2>
         </div>
-        {% setcontent services = 'services' limit 3 %}
         <div class="row">
             {% for service in services %}
                 <div class="col-xl-4 col-lg-4">
