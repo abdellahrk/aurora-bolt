@@ -1,10 +1,11 @@
 {% setcontent settings = 'settings' limit 1 returnsingle %}
+{% setcontent others = 'others' %}
 {% if settings is not empty %}
 <!--Site Footer One Start-->
 <footer class="site-footer">
     <div class="site-footer__top">
         <div class="site-footer-top-bg"
-             style="background-image: url(assets/images/backgrounds/site-footer-bg.jpg)"></div>
+             style="background-image: url({{ others.footer_background }})"></div>
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
