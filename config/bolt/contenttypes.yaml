@@ -290,6 +290,8 @@ settings:
             type: text
         twitter:
             type: text
+        services_background:
+            type: image
 
 others:
     name: Others
@@ -323,8 +325,53 @@ others:
             type: text
         testimonial_link_text:
             type: text
+  
+# Core features
+features:
+    name: features
+    singular_name: feature
+    singleton: true
+    viewless: true
+    fields:
+        title:
+            type: text
+        feature1:
+            type: text
+        feature2:
+            type: text
+        feature3:
+            type: text
+        tag:
+            type: text
+        image:
+            type: image
+        text:
+            type: text
+            title: simple text
+
+# About
+about:
+    name: about
+    singular_name: about type
+    singleton: true
+    fields:
+        title:
+            type: text
+        whyUs:
+            type: text
+        tag:
+            type: text
+        body:
+            type: redactor
+        image:
+            type: image
+        button_text:
+            type: text
+        button_link:
+            type: text
+        background:
+            type: image
         
-            
 # Possible field types:
 #
 # text - varchar(256) - input type text.
