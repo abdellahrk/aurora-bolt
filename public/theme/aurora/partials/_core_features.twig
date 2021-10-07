@@ -1,0 +1,57 @@
+{% setcontent features = 'features' %}
+{% if features is not empty %}
+<section class="core-features core-features-two">
+    <div class="core-features-bg" style="background-image: url(assets/images/backgrounds/core-features-bg.jpg)">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6">
+                <div class="core-features__left">
+                    <div class="section-title text-left">
+                        <span class="section-title__tagline">{{ features.tag }}</span>
+                        <h2 class="section-title__title">{{ features.title }}</h2>
+                    </div>
+                    <div class="core-features__left-bottom">
+                        <div class="core-features__left-bottom-img">
+                            <img src="{{ features.image }}" alt="">
+                        </div>
+                        <div class="core-features__left-bottom-text">
+                            <p>{{ features.text }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="core-features__promicess">
+                    <ul class="list-unstyled core-features__promicess-list">
+                        <li>
+                            <div class="text">
+                                <p>{{ features.feature1  }}</p>
+                            </div>
+                            <div class="icon">
+                                <span class="icon-tick"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text">
+                                <p>{{ features.feature2 }}</p>
+                            </div>
+                            <div class="icon">
+                                <span class="icon-tick"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text">
+                                <p>{{ features.feature3 }}</p>
+                            </div>
+                            <div class="icon">
+                                <span class="icon-tick"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
