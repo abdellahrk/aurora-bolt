@@ -13,6 +13,9 @@
             "src/Entity/.gitignore"
         ]
     },
+    "appolodev/bolt-seo": {
+        "version": "1.0.3"
+    },
     "babdev/pagerfanta-bundle": {
         "version": "v2.7.0"
     },
@@ -21,6 +24,9 @@
     },
     "bobdenotter/configuration-notices": {
         "version": "1.1.8"
+    },
+    "bobdenotter/sitemap": {
+        "version": "1.1.1"
     },
     "bobdenotter/weatherwidget": {
         "version": "1.1.2"
