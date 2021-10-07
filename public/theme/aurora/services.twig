@@ -66,6 +66,7 @@
     </section>
     <!--Areas of Practice End-->
 
+    {#
     <!--Brand Two-->
     <section class="brand-one brand-two brand-three">
         <div class="container">
@@ -132,100 +133,18 @@
         </div>
     </section>
     <!--Brand Two End-->
+    #}
 
     <!--Core Features Start-->
-    <section class="core-features core-features-two">
-        <div class="core-features-bg" style="background-image: url(assets/images/backgrounds/core-features-bg.jpg)">
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="core-features__left">
-                        <div class="section-title text-left">
-                            <span class="section-title__tagline">Core features</span>
-                            <h2 class="section-title__title">We take care your business growth</h2>
-                        </div>
-                        <div class="core-features__left-bottom">
-                            <div class="core-features__left-bottom-img">
-                                <img src="{{ asset('images/resources/core-features-left-bottom-img.jpg') }}" alt="">
-                            </div>
-                            <div class="core-features__left-bottom-text">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Have
-                                    you done google research.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6">
-                    <div class="core-features__promicess">
-                        <ul class="list-unstyled core-features__promicess-list">
-                            <li>
-                                <div class="text">
-                                    <p>We promise to respect your time</p>
-                                </div>
-                                <div class="icon">
-                                    <span class="icon-tick"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="text">
-                                    <p>We hire only professionals you can trust</p>
-                                </div>
-                                <div class="icon">
-                                    <span class="icon-tick"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="text">
-                                    <p>We promise to provide up front pricing</p>
-                                </div>
-                                <div class="icon">
-                                    <span class="icon-tick"></span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {{ include('partials/_core_features.twig') }}
     <!--Core Features End-->
-
-    <!--Services One Start-->
-    <section class="services-one">
-        {% setcontent services = 'services' %}
-        <div class="services-one-bg" style="background-image: url(assets/images/backgrounds/services-one-bg.jpg)">
-        </div>
-        <div class="container">
-            <div class="section-title text-center">
-                <span class="section-title__tagline">Our services list</span>
-                <h2 class="section-title__title">What we’re offering</h2>
-            </div>
-            <div class="row">
-                {% for service in services %}
-                    <div class="col-xl-4 col-lg-4">
-                    <!--Services One Single-->
-                    <div class="services-one__single wow fadeInUp" data-wow-delay="100ms">
-                        <div class="services-one__icon">
-                            <span class="icon-color-sample"></span>
-                        </div>
-                        <h3 class="services-one__title"><a href="{{ service|link }}">{{ service.title }}</a></h3>
-                        <p class="services-one__text">{{ service.excerpt ? service.excerpt : '' }}</p>
-                        <a href="{{ service|link }}" class="service-one__arrow"><span class="icon-right-arrow"></span></a>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-    <!--Services One End-->
 
     <!--Testimonial One Start-->
     {{ include('partials/index/testimonials.twig') }}
     <!--Testimonial One End-->
 
     <!--CTA Two Start-->
-    {% include('partials/_cta.twig') %}
+    {% include('partials/_cta2.twig') %}
     <!--CTA Two End-->
 
 {% endblock main %}

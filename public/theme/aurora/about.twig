@@ -1,9 +1,11 @@
 {% extends('partials/_master.twig') %}
 
+{% setcontent apropos = 'about' %}
+{% setcontent features = 'features' %}
+
 {% block main %}
-    {% setcontent apropos = 'aurora/apropos' %}
     <!--Page Header Start-->
-    <section class="page-header" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg);">
+    <section class="page-header" style="background-image: url({{ apropos.background ?? '' }});">
         <div class="page-header-shape-1"></div>
         <div class="page-header-shape-2"></div>
         <div class="container">
@@ -11,9 +13,9 @@
                 <ul class="thm-breadcrumb list-unstyled">
                     <li><a href="{{ path('homepage') }}">Acceuil</a></li>
                     <li><span>.</span></li>
-                    <li>{{ apropos.title }}</li>
+                    <li>{{ apropos.title ?? '' }}</li>
                 </ul>
-                <h2>About us</h2>
+                <h2>{{ apropos.title ?? '' }}</h2>
             </div>
         </div>
     </section>
@@ -26,7 +28,7 @@
                 <div class="col-xl-7 col-lg-6">
                     <div class="reasons__left">
                         <div class="reasons__img">
-                            <img src="{{ asset('images/resources/reasons-img-1.jpg') }}" alt="">
+                            <img src="{{ apropos.image ?? '' }}" alt="">
                             <div class="reasons__img-shape-1"></div>
                             <div class="reasons__img-shape-2"></div>
                         </div>
@@ -35,19 +37,17 @@
                 <div class="col-xl-5 col-lg-6">
                     <div class="reasons__right">
                         <div class="section-title text-left">
-                            <span class="section-title__tagline">Our benefits</span>
-                            <h2 class="section-title__title">Reasons why we are best</h2>
+                            <span class="section-title__tagline">{{ apropos.tag ?? '' }}</span>
+                            <h2 class="section-title__title">{{ apropos.whyUs ?? '' }}</h2>
                         </div>
-                        <p class="reasons__text">Tincidunt elit magnis nulla facilisis sagittis maecenas. sapien
-                            nunc amet ultrices, dolores sit ipsum velit purus aliquet, massa fringilla leo orci not
-                            dong right. Lorem ipsum dolors sit amet elit magnis.</p>
+                        <p class="reasons__text">{{ apropos.body ?? '' }}</p>
                         <ul class="list-unstyled reasons__list">
                             <li>
                                 <div class="icon">
                                     <span class="icon-tick"></span>
                                 </div>
                                 <div class="text">
-                                    <p>Highly trained in administrative tasks</p>
+                                    <p>{{ features.feature1 ?? '' }}</p>
                                 </div>
                             </li>
                             <li>
@@ -55,7 +55,7 @@
                                     <span class="icon-tick"></span>
                                 </div>
                                 <div class="text">
-                                    <p>Professionally managed and supported</p>
+                                    <p>{{ features.feature2 ?? '' }}</p>
                                 </div>
                             </li>
                             <li>
@@ -63,11 +63,11 @@
                                     <span class="icon-tick"></span>
                                 </div>
                                 <div class="text">
-                                    <p>Proficient in google, and most productivity suites</p>
+                                    <p>{{ features.feature3 ?? '' }}</p>
                                 </div>
                             </li>
                         </ul>
-                        <a href="contact.html" class="thm-btn reasons__btn"><span>Free consultation</span></a>
+                        <a href="{{ features.button_link ?? '#' }}" class="thm-btn reasons__btn"><span>{{ features.button_text?? ''}}</span></a>
                     </div>
                 </div>
             </div>
