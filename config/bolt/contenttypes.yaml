@@ -311,6 +311,26 @@ cta:
             type: text
         background_image:
             type: image
+            
+# We make
+wemake:
+    name: wemake
+    singular_name: wemake
+    singleton: true
+    viewless: true
+    fields:
+        tagline:
+            type: text
+        title:
+            type: text
+        background: 
+            type: image
+        ceo_name:
+            type: text
+        ceo_image:
+            type: image
+            title: ceo image size(81x81)
+            
 # Stats
 stats:
     name: Stats
@@ -381,6 +401,8 @@ others:
             type: text
         testimonial_link_text:
             type: text
+        footer_background:
+            type: image
             
 # Possible field types:
 #
