@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5619d062da536a6cb0310fc180bda73f",
+    "content-hash": "9db9d7003c8d4e1822780a999ef86dc0",
     "packages": [
         {
             "name": "api-platform/core",
@@ -164,6 +164,57 @@
                 }
             ],
             "time": "2021-06-15T16:53:33+00:00"
+        },
+        {
+            "name": "appolodev/bolt-seo",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AppoloDev/bolt-seo.git",
+                "reference": "4aad5ae17fb5355e4d27d9cfe66fd15662b4a74a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AppoloDev/bolt-seo/zipball/4aad5ae17fb5355e4d27d9cfe66fd15662b4a74a",
+                "reference": "4aad5ae17fb5355e4d27d9cfe66fd15662b4a74a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.3",
+                "twig/twig": "^2.12 | ^3.0"
+            },
+            "require-dev": {
+                "bolt/core": "^4.0.0",
+                "migrify/config-transformer": "^0.4.2",
+                "phpstan/phpstan": "^0.12.32",
+                "phpstan/phpstan-symfony": "^0.12.6",
+                "symplify/easy-coding-standard": "^8.1"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "entrypoint": "Appolo\\BoltSeo\\Extension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Appolo\\BoltSeo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "AppoloDev",
+                    "email": "contact@appolo.fr"
+                }
+            ],
+            "description": "Bolt 4 - Seo extension",
+            "support": {
+                "issues": "https://github.com/AppoloDev/bolt-seo/issues",
+                "source": "https://github.com/AppoloDev/bolt-seo/tree/1.0.3"
+            },
+            "time": "2021-02-23T15:20:12+00:00"
         },
         {
             "name": "babdev/pagerfanta-bundle",
@@ -354,6 +405,53 @@
                 "source": "https://github.com/bobdenotter/configuration-notices/tree/1.2.1"
             },
             "time": "2021-07-30T14:07:48+00:00"
+        },
+        {
+            "name": "bobdenotter/sitemap",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobdenotter/sitemap.git",
+                "reference": "741c06054ddc3a5d9aea451aa60abf6cc6f1be0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bobdenotter/sitemap/zipball/741c06054ddc3a5d9aea451aa60abf6cc6f1be0b",
+                "reference": "741c06054ddc3a5d9aea451aa60abf6cc6f1be0b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.3"
+            },
+            "require-dev": {
+                "bolt/core": "^4.0.0",
+                "symplify/easy-coding-standard": "^7.0"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "entrypoint": "Bobdenotter\\Sitemap\\Extension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bobdenotter\\Sitemap\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob den Otter",
+                    "email": "bobdenotter@gmail.com"
+                }
+            ],
+            "description": "Provide a sitemap (.xml) for your Bolt 4 site",
+            "support": {
+                "issues": "https://github.com/bobdenotter/sitemap/issues",
+                "source": "https://github.com/bobdenotter/sitemap/tree/1.1.1"
+            },
+            "time": "2021-05-06T12:23:28+00:00"
         },
         {
             "name": "bobdenotter/weatherwidget",
