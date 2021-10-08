@@ -1,5 +1,5 @@
 {% extends 'partials/_master.twig' %}
-
+{% setcontent features = 'features' %}
 {% block main %}
 <!--Page Header Start-->
 <section class="page-header" style="background-image: url({{ service.headerBackground ? service.headerBackground : '' }});">
@@ -34,13 +34,14 @@
                     <p class="service-details__text-1">{{ service.description|raw }}</p>
                     <h3 class="service-details__title">{{ service.innerTitle }}</h3>
                     <p class="service-details__text-2">{{ service.innerDescription }}</p>
-                    <ul class="list-unstyled service-details__list">
+                    {% if features is not empty %}
+                        <ul class="list-unstyled service-details__list">
                         <li>
                             <div class="icon">
                                 <span class="icon-tick"></span>
                             </div>
                             <div class="text">
-                                <h5>Research beyond the business plan not work here</h5>
+                                <h5>{{ features.feature1 }}</h5>
                             </div>
                         </li>
                         <li>
@@ -48,7 +49,7 @@
                                 <span class="icon-tick"></span>
                             </div>
                             <div class="text">
-                                <h5>Marketing options and rates lipsum simply</h5>
+                                <h5>{{ features.feature2 }}</h5>
                             </div>
                         </li>
                         <li>
@@ -56,18 +57,11 @@
                                 <span class="icon-tick"></span>
                             </div>
                             <div class="text">
-                                <h5> The ability to turnaround consulting work on it</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon">
-                                <span class="icon-tick"></span>
-                            </div>
-                            <div class="text">
-                                <h5>Customer engagement matters not at all</h5>
+                                <h5> {{ features.feature3 }} </h5>
                             </div>
                         </li>
                     </ul>
+                    {% endif %}
                     <p class="service-details__text-3">{{ service.innerDescription2 }}</p>
 
                     {% setcontent whyus = 'theylikeus' %}
@@ -97,7 +91,7 @@
 <!--Service Details End-->
 
 <!--CTA Two Start-->
-{{ include('partials/_cta.twig') }}
+{{ include('partials/_cta2.twig') }}
 <!--CTA Two End-->
 
 {% endblock main %}
