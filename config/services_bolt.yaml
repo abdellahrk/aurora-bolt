@@ -16,6 +16,9 @@ services:
     Bobdenotter\Sitemap\:
         resource: '../vendor/bobdenotter/sitemap/src/*'
         exclude: '../vendor/bobdenotter/sitemap/src/{Entity,Exception}'
+    BoltCachebuster\:
+        resource: '../vendor/bolt/asset-cachebuster/src/*'
+        exclude: '../vendor/bolt/asset-cachebuster/src/{Entity,Exception}'
     Bolt\Article\:
         resource: '../vendor/bolt/article/src/*'
         exclude: '../vendor/bolt/article/src/{Entity,Exception}'
