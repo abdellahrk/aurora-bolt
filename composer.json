@@ -17,6 +17,7 @@
         "bolt/themes": "^3.3",
         "nelmio/security-bundle": "^2.10",
         "symfony/flex": "^1.6",
+        "symfony/webpack-encore-bundle": "^1.12",
         "twig/extra-bundle": "^3.3",
         "twig/string-extra": "^3.3"
     },
