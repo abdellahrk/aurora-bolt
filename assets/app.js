@@ -53,6 +53,8 @@ import './vendors/bootstrap-select/js/bootstrap-select.min.js';
 import './vendors/vegas/vegas.min.js';
 import './vendors/jquery-ui/jquery-ui.js';
 import './vendors/timepicker/timePicker.js';
+
 import './js/moniz.js';
 import './js/custom.js';
+
 */
