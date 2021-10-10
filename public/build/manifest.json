@@ -1,8 +1,8 @@
 {
-  "build/0.c2ac3c97.js": "/build/0.c2ac3c97.js",
-  "build/app.css": "/build/app.55c839dc.css",
-  "build/app.js": "/build/app.251bc3d3.js",
-  "build/runtime.js": "/build/runtime.d94b3b43.js",
+  "build/app.css": "/build/app.css",
+  "build/app.js": "/build/app.js",
+  "build/runtime.js": "/build/runtime.js",
+  "build/vendors~app.js": "/build/vendors~app.js",
   "build/fonts/fa-brands-400.eot": "/build/fonts/fa-brands-400.0fea2496.eot",
   "build/fonts/fa-brands-400.woff2": "/build/fonts/fa-brands-400.c967a94c.woff2",
   "build/fonts/fa-brands-400.woff": "/build/fonts/fa-brands-400.dc2cbadd.woff",
@@ -35,5 +35,6 @@
   "build/images/ui-icons_2e83ff_256x240.png": "/build/images/ui-icons_2e83ff_256x240.48c27dae.png",
   "build/images/ui-icons_454545_256x240.png": "/build/images/ui-icons_454545_256x240.78025884.png",
   "build/images/ui-icons_888888_256x240.png": "/build/images/ui-icons_888888_256x240.756afcb8.png",
-  "build/images/ui-icons_cd0a0a_256x240.png": "/build/images/ui-icons_cd0a0a_256x240.ab0379f3.png"
+  "build/images/ui-icons_cd0a0a_256x240.png": "/build/images/ui-icons_cd0a0a_256x240.ab0379f3.png",
+  "build/vendors~app.css": "/build/vendors~app.css"
 }
