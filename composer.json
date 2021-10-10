@@ -8,6 +8,7 @@
         "bobdenotter/sitemap": "^1.1",
         "bobdenotter/weatherwidget": "^1.1",
         "bolt/article": "^1.0",
+        "bolt/asset-cachebuster": "^0.0.2",
         "bolt/assets": "^5.0",
         "bolt/core": "^5.0",
         "bolt/forms": "^1.4",
