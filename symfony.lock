@@ -37,6 +37,9 @@
     "bolt/article": {
         "version": "1.0.14"
     },
+    "bolt/asset-cachebuster": {
+        "version": "0.0.2"
+    },
     "bolt/assets": {
         "version": "4.1.4"
     },

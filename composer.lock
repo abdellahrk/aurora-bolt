@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9db9d7003c8d4e1822780a999ef86dc0",
+    "content-hash": "219526e67e0284079a77ee1781df279d",
     "packages": [
         {
             "name": "api-platform/core",
@@ -604,6 +604,55 @@
                 "source": "https://github.com/bolt/article/tree/1.1.0"
             },
             "time": "2021-08-10T12:08:57+00:00"
+        },
+        {
+            "name": "bolt/asset-cachebuster",
+            "version": "0.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bolt/asset-cachebuster.git",
+                "reference": "4fd895355fbd1bc00fe89e62df1d67c8d8f06998"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bolt/asset-cachebuster/zipball/4fd895355fbd1bc00fe89e62df1d67c8d8f06998",
+                "reference": "4fd895355fbd1bc00fe89e62df1d67c8d8f06998",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=7.1.3",
+                "twig/twig": "^2.12 | ^3.0"
+            },
+            "require-dev": {
+                "bolt/core": "^4.0.0 || ^5.0.0",
+                "symplify/easy-coding-standard": "^6.0"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "entrypoint": "BoltCachebuster\\Extension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "BoltCachebuster\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ivo Valchev",
+                    "email": "me@ivovalchev.com"
+                }
+            ],
+            "description": "📦 A Bolt 4/5 extension to bust cache for your assets",
+            "support": {
+                "issues": "https://github.com/bolt/asset-cachebuster/issues",
+                "source": "https://github.com/bolt/asset-cachebuster/tree/0.0.2"
+            },
+            "time": "2021-05-10T10:03:49+00:00"
         },
         {
             "name": "bolt/assets",
