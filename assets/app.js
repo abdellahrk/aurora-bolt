@@ -1,0 +1,30 @@
+
+import './css/moniz.css';
+import './css/modes/moniz-normal.css';
+import './css/colors/color-default.css'
+import './css/moniz-responsive.css';
+import './css/moniz-toolbar.css';
+import './vendors/bootstrap/css/bootstrap.min.css';
+import './vendors/animate/animate.min.css';
+import './vendors/fontawesome/css/all.min.css';
+import './vendors/jarallax/jarallax.css';
+import './vendors/jquery-magnific-popup/jquery.magnific-popup.css';
+import './vendors/nouislider/nouislider.min.css';
+import './vendors/nouislider/nouislider.pips.css';
+import './vendors/odometer/odometer.min.css';
+import './vendors/swiper/swiper.min.css';
+import './vendors/moniz-icons/style.css';
+import './vendors/tiny-slider/tiny-slider.min.css';
+import './vendors/reey-font/stylesheet.css';
+import './vendors/owl-carousel/owl.carousel.min.css';
+import './vendors/owl-carousel/owl.theme.default.min.css';
+import './vendors/twentytwenty/twentytwenty.css';
+import './vendors/bxslider/jquery.bxslider.css';
+import './vendors/bootstrap-select/css/bootstrap-select.min.css';
+import './vendors/vegas/vegas.min.css';
+import './vendors/jquery-ui/jquery-ui.css';
+//import './vendors/timepicker/timePicker.css';
+
+import './vendors/jquery/jquery-3.5.1.min.js';
+import './vendors/bootstrap/js/bootstrap.bundle.min.js';
+import './vendors/jarallax/jarallax.min.js';
