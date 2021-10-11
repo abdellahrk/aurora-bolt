@@ -43,7 +43,7 @@
     };
 
 
-    $('input[name="time"]').ptTimeSelect();
+    //$('input[name="time"]').ptTimeSelect();
 
 
     if ($(".banner-bg-slide").length) {
