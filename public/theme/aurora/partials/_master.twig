@@ -20,6 +20,7 @@
     {% block stylesheets %}
         {{ encore_entry_link_tags('app', null, 'frontend') }}
     {% endblock %}
+
     <!-- Matomo -->
     <script>
         var _paq = window._paq = window._paq || [];
@@ -36,8 +37,6 @@
     </script>
     <!-- End Matomo Code -->
 
-
-
 </head>
 
 <body>
@@ -49,14 +48,13 @@
 <!-- /.preloader -->
 #}
 {% include 'partials/_header.twig' %}
+
 {% block main %}
 
 {% endblock %}
 
 {% include '/partials/_footer.twig' %}
-{% block javascripts %}
-    {{ encore_entry_script_tags('app', null, 'frontend') }}
-{% endblock %}
+
 </body>
 
 </html>
