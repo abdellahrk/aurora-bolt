@@ -20,6 +20,7 @@
     {% block stylesheets %}
         {{ encore_entry_link_tags('app', null, 'frontend') }}
     {% endblock %}
+
     <!-- Matomo -->
     <script>
         var _paq = window._paq = window._paq || [];
@@ -35,8 +36,6 @@
         })();
     </script>
     <!-- End Matomo Code -->
-
-
 
 </head>
 
@@ -54,8 +53,11 @@
 {% endblock %}
 
 {% include '/partials/_footer.twig' %}
+
 {% block javascripts %}
     {{ encore_entry_script_tags('app', null, 'frontend') }}
+    {#  <script src="{{ asset('js/moniz.js') }}"></script>
+        <script src="{{ asset('js/custom.js') }}"></script>#}
 {% endblock %}
 </body>
 
