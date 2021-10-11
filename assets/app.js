@@ -29,7 +29,7 @@ import './css/moniz-toolbar.css';
 
 /*
 require('bootstrap');
-require('bootstrap/dist/css/bootstrap.min.css');
+import './vendors/jquery/jquery-3.5.1.min';
 import './vendors/bootstrap/js/bootstrap.bundle.min.js';
 import './vendors/jarallax/jarallax.min.js';
 import './vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js';
@@ -52,9 +52,7 @@ import './vendors/bxslider/jquery.bxslider.min.js';
 import './vendors/bootstrap-select/js/bootstrap-select.min.js';
 import './vendors/vegas/vegas.min.js';
 import './vendors/jquery-ui/jquery-ui.js';
-import './vendors/timepicker/timePicker.js';
 
 import './js/moniz.js';
 import './js/custom.js';
-
 */
