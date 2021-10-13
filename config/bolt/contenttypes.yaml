@@ -179,6 +179,8 @@ whyus:
             type: image
         link_to_about:
             type: text
+        link_title:
+            type: text
     singleton: true
     viewless: true
     default_status: published
@@ -305,6 +307,8 @@ others:
             group: service homepage settings
         service_title:
             type: text
+        service_homepage_background:
+            type: image
         faq_title_small:
             type: text
             group: faqs settings

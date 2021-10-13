@@ -45,10 +45,9 @@ import './vendors/owl-carousel/owl.carousel.min.js';
 import './vendors/twentytwenty/twentytwenty.js';
 import './vendors/twentytwenty/jquery.event.move.js';
 import './vendors/bxslider/jquery.bxslider.min.js';
+
 import './vendors/bootstrap-select/js/bootstrap-select.min.js';
 import './vendors/vegas/vegas.min.js';
 import './vendors/jquery-ui/jquery-ui.js';
 
-import './js/moniz.js';
-import './js/custom.js';
 */

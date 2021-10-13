@@ -20,7 +20,7 @@
                         </li>
                     </ul>
                     <p class="reasons-one__text-1">{{ whyus.body }}</p>
-                    <a href="{{ whyus.link_to_about }}" class="thm-btn"><span>Discover more</span></a><!-- /.thm-btn -->
+                    <a href="{{ whyus.link_to_about }}" class="thm-btn"><span>{{ whyus.link_title }}</span></a><!-- /.thm-btn -->
                 </div>
             </div>
             <div class="col-xl-8">
@@ -29,17 +29,17 @@
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-6">
                             <div class="reasons-one__img-one">
-                                <img src="{{ whyus.image_400x609 ? whyus.image_400x609 : '' }}" alt="">
+                                <img src="{{ whyus.image_400x609 ? whyus.image_400x609|thumbnail(400, 609): '' }}" alt="">
                                 <div class="reasons-one__shape-1"></div>
                                 <div class="reasons-one__shape-2"></div>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6">
                             <div class="reasons-one__img-two">
-                                <img src="{{ whyus.image_400x349 ? whyus.image_400x349 : '' }}" alt="">
+                                <img src="{{ whyus.image_400x349 ? whyus.image_400x349|thumbnail(400, 349) : '' }}" alt="">
                             </div>
                             <div class="reasons-one__img-three reasons-one__img-two">
-                                <img src="{{ whyus.image_400x230 ? whyus.image_400x230 : '' }}" alt="">
+                                <img src="{{ whyus.image_400x230 ? whyus.image_400x230|thumbnail(400, 230) : '' }}" alt="">
                                 <div class="reasons-one__shape-3"></div>
                             </div>
                         </div>
