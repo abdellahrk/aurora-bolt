@@ -16,25 +16,26 @@
                     </div>
                 {% endif %}
             </div>
+            {% setcontent testimonials = 'testimonials' %}
             <div class="col-xl-8 col-lg-7">
-                <div class="testimonial-one__slider">
 
-                    {% setcontent testimonials = 'testimonials' %}
+                <div class="testimonial-one__slider">
+                     {% for testimonial in testimonials %}
                     <div class="swiper-container" id="testimonials-one__thumb">
                         <div class="swiper-wrapper">
-                            {% for testimonial in testimonials %}
+
                                 <div class="swiper-slide">
                                     <div class="testimonial-one__img-holder">
-                                        <img src="{{ asset('images/testimonial/testimonials-1-1.png') }}" alt="">
+                                        <img src="{{ testimonial.image ? testimonial.image|thumbnail(81, 81) : '' }}" alt="">
                                         <div class="testimonial-one__quote">
 
                                         </div>
                                     </div>
                                 </div><!-- /.swiper-slide -->
-                            {% endfor %}
+
                         </div><!-- /.swiper-wrapper -->
                     </div><!-- /#testimonials-one__thumb.swiper-container -->
-
+                    {% endfor %}
                     <div class="testimonials-one__main-content">
                         <div class="swiper-container" id="testimonials-one__carousel">
                             <div class="swiper-wrapper">

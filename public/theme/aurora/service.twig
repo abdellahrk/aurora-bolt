@@ -2,7 +2,7 @@
 {% setcontent features = 'features' %}
 {% block main %}
 <!--Page Header Start-->
-<section class="page-header" style="background-image: url({{ service.headerBackground ? service.headerBackground : '' }});">
+<section class="page-header" style="background-image: url({{ service.headerBackground ? service.headerBackground|thumbnail(1894, 420) : '' }});">
     <div class="page-header-shape-1"></div>
     <div class="page-header-shape-2"></div>
     <div class="container">
@@ -25,7 +25,7 @@
             <div class="col-xl-8 col-lg-7">
                 <div class="service-details__left">
                     <div class="service-details__img">
-                        <img src="{{ service.image ? service.image : '' }}" alt="">
+                        <img src="{{ service.image ? service.image|thumbnail(770, 416) : '' }}" alt="">
                     </div>
                     <div class="service-details__icon-box">
                         <span class="icon-front-end"></span>
