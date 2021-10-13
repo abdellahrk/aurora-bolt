@@ -5,7 +5,7 @@
     {% setcontent services = 'services' orderby 'createdAt' %}
     {% setcontent settings = 'settings' %}
     <!--Page Header Start-->
-    <section class="page-header" style="background-image: url({{ settings.services_background }});">
+    <section class="page-header" style="background-image: url({{ settings.services_background|thumbnail(1894, 420) }});">
         <div class="page-header-shape-1"></div>
         <div class="page-header-shape-2"></div>
         <div class="container">

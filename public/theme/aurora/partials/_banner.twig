@@ -19,7 +19,7 @@
             {% for slider in sliders %}
                 <div class="swiper-slide">
                     <div class="image-layer"
-                         style="background-image: url({{ slider.background }});">
+                         style="background-image: url({{ slider.background|thumbnail(1894, 972) }});">
                     </div>
 
                     <div class="image-layer-overlay"></div>

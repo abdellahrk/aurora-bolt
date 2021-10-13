@@ -5,7 +5,7 @@
 
 {% block main %}
     <!--Page Header Start-->
-    <section class="page-header" style="background-image: url({{ apropos.background ?? '' }});">
+    <section class="page-header" style="background-image: url({{ apropos.background|thumbnail }});">
         <div class="page-header-shape-1"></div>
         <div class="page-header-shape-2"></div>
         <div class="container">
@@ -28,7 +28,7 @@
                 <div class="col-xl-7 col-lg-6">
                     <div class="reasons__left">
                         <div class="reasons__img">
-                            <img src="{{ apropos.image ?? '' }}" alt="">
+                            <img src="{{ apropos.image|thumbnail }}" alt="">
                             <div class="reasons__img-shape-1"></div>
                             <div class="reasons__img-shape-2"></div>
                         </div>
