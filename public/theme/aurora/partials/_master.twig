@@ -15,7 +15,9 @@
         {{ encore_entry_link_tags('app', null, 'frontend') }}
     {% endblock %}
 
-
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app', null, 'frontend') }}
+    {% endblock %}
 
     <!-- Matomo -->
     <script>
@@ -51,9 +53,6 @@
 
 {% include '/partials/_footer.twig' %}
 
-{% block javascripts %}
-        {{ encore_entry_script_tags('app', null, 'frontend') }}
-    {% endblock %}
 </body>
 
 </html>
