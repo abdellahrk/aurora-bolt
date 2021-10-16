@@ -1,4 +1,7 @@
 window.onload = function(){
+  var disableCalender = document.getElementById('ptTimeSelectCntr');
+  disableCalender.style.display = "none";
+
   let accordion = document.getElementsByClassName("accrodion");
   accordion[0].classList.add('active');
 
