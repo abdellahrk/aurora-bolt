@@ -375,6 +375,29 @@ about:
             type: text
         background:
             type: image
+resource:
+    name: resource
+    singular_name: resource
+    singleton: true
+    fields:
+        title:
+            type: text
+        tagline:
+            type: text
+        text:
+            type: redactor
+        button_text:
+            type: text
+        background:
+            type: image
+        slug:
+            type: slug
+            uses: [ title ]
+        template:
+            type: templateselect
+        seo:
+            type: seo
+            group: "Seo settings"
         
 # Possible field types:
 #
