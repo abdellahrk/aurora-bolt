@@ -23,9 +23,11 @@ import './css/moniz-responsive.css';
 import './css/modes/moniz-normal.css';
 import './css/moniz-toolbar.css';
 
-import './js/custom';
-
 /*
+import './js/custom';
+import './vendors/wow/wow.js';
+import './vendors/isotope/isotope.js';
+
 import './vendors/jquery/jquery-3.5.1.min';
 import './vendors/bootstrap/js/bootstrap.bundle.min.js';
 import './vendors/jarallax/jarallax.min.js';

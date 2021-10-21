@@ -1,5 +1,8 @@
 {% extends 'partials/_master.twig' %}
 {% setcontent features = 'features' %}
+
+{% setcontent services = 'services' orderby 'createdAt' %}
+
 {% block main %}
 <!--Page Header Start-->
 <section class="page-header" style="background-image: url({{ service.headerBackground ? service.headerBackground|thumbnail(1894, 420) : '' }});">
