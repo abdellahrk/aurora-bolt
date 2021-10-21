@@ -1,5 +1,6 @@
 {% extends 'partials/_master.twig' %}
-
+{% setcontent services = 'services' limit 3 %}
+{% setcontent others = 'others' %}
 
 {% block main %}
     {% include 'partials/_banner.twig' %}

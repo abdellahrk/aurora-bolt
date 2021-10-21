@@ -12,7 +12,7 @@
                     <div class="we-change__faqs">
                         <div class="accrodion-grp" data-grp-name="faq-one-accrodion" >
                             {% for faq in faqs %}
-                                <div class="accrodion {{  loop.last ? 'last-chiled' }}" >
+                                <div class="accrodion {{  loop.last ?? 'last-chiled' }}" >
                                     <div class="accrodion-title">
                                         <h4>{{ faq.title }}</h4>
                                     </div>
