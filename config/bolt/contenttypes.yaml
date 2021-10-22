@@ -53,6 +53,26 @@ homepage:
     icon_many: "fa:home"
     icon_one: "fa:home"
     
+blog:
+    name: blog
+    singular_name: blog
+    fields:
+        title:
+            type: text
+        text:
+            type: html
+        image:
+            type: image
+        slug:
+            type: slug
+            uses: title
+        seo:
+            type: seo
+            group: "SEO Settings"
+    taxonomy: [ categories, tags ]
+    records_template: blog.twig
+    record_template: blogitem.twig
+    
 aurora:
     name: Aurora
     singular_name: Aurora
@@ -328,6 +348,13 @@ others:
         testimonial_link:
             type: text
         testimonial_link_text:
+            type: text
+        blog_background:
+            type: image
+            group: "Blog Setting"
+        bottom_text:
+            type: redactor
+        bottom_text_cta:
             type: text
   
 # Core features

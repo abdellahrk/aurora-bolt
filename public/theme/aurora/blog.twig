@@ -1,0 +1,171 @@
+{% extends 'partials/_master.twig' %}
+
+
+{% block main %}
+    <!--Page Header Start-->
+    <section class="page-header" style="background-image: url({{ others.blog_background }});">
+        <div class="page-header-shape-1"></div>
+        <div class="page-header-shape-2"></div>
+        <div class="container">
+            <div class="page-header__inner">
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="{{ path('homepage') }}">Acceuil</a></li>
+                    <li><span>.</span></li>
+                    <li>Blog</li>
+                </ul>
+                <h2>Blog</h2>
+            </div>
+        </div>
+    </section>
+    <!--Page Header End-->
+
+    <!--Blog Sidebar Start-->
+    <section class="blog-sidebar">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-7">
+                    <div class="blog-sidebar__left">
+                        <div class="blog-sidebar__content">
+                            {% for article in blog %}
+                                <!--Blog Sidebar Content Single-->
+                                <div class="blog-sidebar__content-single">
+                                <div class="blog-sidebar__content-img">
+                                    <img src="{{ article.image }}" alt="">
+                                    <div class="blog-sidebar__date-box">
+                                        <p><span>{{ article.createdAt|date('d') }}</span> {{ article.createdAt|date('M') }} <span>{{ article.createdAt|date('Y') }}</span></p>
+                                    </div>
+                                </div>
+                                <div class="blog-sidebar__content-box">
+                                    <ul class="list-unstyled blog-sidebar__meta">
+                                        <li><a href="#"><i class="far fa-user-circle"></i> {{ article.author }}</a></li>
+                                        {#
+                                        <li><a href="{{ article|link }}"><i class="far fa-comments"></i> 2
+                                                Comments</a>
+                                        </li>
+                                        #}
+                                    </ul>
+                                    <h3 class="blog-sidebar__title">
+                                        <a href="{{ article|link }}">{{ article.title }}</a>
+                                    </h3>
+                                    <p class="blog-sidebar__text">{{ article.text|excerpt(150) }}</p>
+                                    <div class="blog-sidebar__read-more-btn">
+                                        <a href="{{ article|link }}">Lire... <span
+                                                class="icon-right-arrow"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="blog-sidebar__bottom-box">
+                            <div class="blog-sidebar__bottom-box-icon">
+                                <img src="assets/images/shapes/blog-sidebar-bottom-box-icon.png" alt="">
+                            </div>
+                            <p class="blog-sidebar__bottom-box-text">{{ others.bottom_text|raw }}</p>
+                        </div>
+                        <div class="blog-sidebar__delivering-services">
+                            <div class="blog-sidebar__delivering-services-icon">
+                                <a href="#"><img
+                                        src="assets/images/shapes/blog-sidebar__delivering-services-icon.png"
+                                        alt=""></a>
+                                <h3 class="blog-sidebar__delivering-services-title">{{ others.bottom_text_cta }}</h3>
+                            </div>
+                        </div>
+                        <div class="blog-sidebar__load-more">
+                            <a href="#" class="thm-btn blog-sidebar__load-more-btn"><span>Load more posts</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-5">
+                    <div class="sidebar">
+                        <div class="sidebar__single sidebar__search">
+                            <form action="#" class="sidebar__search-form">
+                                <input type="search" placeholder="Search here">
+                                <button type="submit"><i class="icon-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                        <div class="sidebar__single sidebar__post">
+                            <h3 class="sidebar__title">Latest posts</h3>
+                            <ul class="sidebar__post-list list-unstyled">
+                                {% for article in blog %}
+                                    <li>
+                                        <div class="sidebar__post-image">
+                                            <img src="{{ article.image }}" alt="">
+                                        </div>
+                                        <div class="sidebar__post-content">
+                                            <h3>
+                                                <a href="{{ article|link }}">{{ article.title }}</a>
+                                            </h3>
+                                        </div>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="sidebar__single sidebar__category">
+                            <h3 class="sidebar__title">Categories</h3>
+                            <ul class="sidebar__category-list list-unstyled">
+                                <li><a href="#">Business <span class="fa fa-angle-right"></span></a></li>
+                                <li class="active"><a href="#">Introductions <span
+                                            class="fa fa-angle-right"></span></a></li>
+                                <li><a href="#">One Page Template <span class="fa fa-angle-right"></span></a></li>
+                                <li><a href="#">Parallax Effects <span class="fa fa-angle-right"></span></a></li>
+                                <li><a href="#">New Technologies <span class="fa fa-angle-right"></span></a></li>
+                                <li><a href="#">Video Backgrounds <span class="fa fa-angle-right"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="sidebar__single sidebar__tags">
+                            <h3 class="sidebar__title">Tags</h3>
+                            <div class="sidebar__tags-list">
+                                <a href="#">Agency</a>
+                                <a href="#">Development</a>
+                                <a href="#">Design</a>
+                                <a href="#">Parallax</a>
+                                <a href="#">Web</a>
+                                <a href="#">Business Agency</a>
+                            </div>
+                        </div>
+                        {#<div class="sidebar__single sidebar__comments">
+                            <h3 class="sidebar__title">Recent comments</h3>
+                            <ul class="sidebar__comments-list list-unstyled">
+                                <li>
+                                    <div class="sidebar__comments-icon">
+                                        <i class="far fa-comments"></i>
+                                    </div>
+                                    <div class="sidebar__comments-text-box">
+                                        <p>A wordpress commenter on <br> launch new mobile app</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="sidebar__comments-icon">
+                                        <i class="far fa-comments"></i>
+                                    </div>
+                                    <div class="sidebar__comments-text-box">
+                                        <p>John Doe on Template:</p>
+                                        <h5>Comments</h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="sidebar__comments-icon">
+                                        <i class="far fa-comments"></i>
+                                    </div>
+                                    <div class="sidebar__comments-text-box">
+                                        <p>A wordpress commenter on <br> launch new mobile app</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="sidebar__comments-icon">
+                                        <i class="far fa-comments"></i>
+                                    </div>
+                                    <div class="sidebar__comments-text-box">
+                                        <p>John Doe on Template:</p>
+                                        <h5>Comments</h5>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>#}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>#}
+    <!--Blog Sidebar End-->
+{% endblock %}
