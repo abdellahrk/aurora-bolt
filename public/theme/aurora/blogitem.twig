@@ -1,0 +1,190 @@
+{% extends 'partials/_master.twig' %}
+
+{% setcontent articles = 'blog' random limit 6 %}
+
+{% block main %}
+    <!--Page Header Start-->
+    <section class="page-header" style="background-image: url({{ others.blog_background }});">
+        <div class="page-header-shape-1"></div>
+        <div class="page-header-shape-2"></div>
+        <div class="container">
+            <div class="page-header__inner">
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="{{ path('homepage') }}">Acceuil</a></li>
+                    <li><span>.</span></li>
+                    <li>{{ blog.title }}</li>
+                </ul>
+                <h2>{{ blog.title }}</h2>
+            </div>
+        </div>
+    </section>
+    <!--Page Header End-->
+
+    <!--Blog Details Start-->
+    <section class="blog-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-7">
+                    <div class="blgo-details__left">
+                        <div class="blog-details__img">
+                            <img src="assets/images/blog/blog-details-img-1.jpg" alt="">
+                            <div class="blog-details__date-box">
+                                <p><span>{{ blog.createdAt|date('d') }}</span> {{ blog.createdAt|date('M') }}<span>{{ blog.createdAt|date('Y') }}</span></p>
+                            </div>
+                        </div>
+                        <div class="blog-details__content">
+                            <ul class="list-unstyled blog-details__meta">
+                                <li><a href="#"><i class="far fa-user-circle"></i> {{ blog.author }}</a></li>
+                                {#<li><a href="blog-details.html"><i class="far fa-comments"></i> 2 Comments</a>#}
+                                </li>
+                            </ul>
+                            <h3 class="blog-details__title">{{ blog.title|ucwords }}</h3>
+                            <p class="blog-details__text-1">{{ blog.text|raw }}</p>
+                        </div>
+                        <div class="blog-details__bottom">
+                            <p class="blog-details__tags">
+                                <span>Tags:</span>
+                                <a href="#">Agency</a>
+                                <a href="#">Design</a>
+                            </p>
+                            <div class="blog-details__social-list">
+                                <span>Share:</span>
+                                <a href="https://twitter.com/share?url={{ app.request.uri }}&text={{ blog.title }}&via=auroracm_&hashtags=auroracm"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/sharer.php?u={{ app.request.uri }}" target="_blank" class="clr-fb"><i class="fab fa-facebook"></i></a>
+                                <a href="https://pinterest.com/pin/create/bookmarklet/?media=[post-img]&url={{ app.request.uri }}&is_video=[is_video]&description={{ blog.title }}" target="_blank" class="clr-dri"><i class="fab fa-pinterest-p"></i></a>
+                                <a href="https://api.whatsapp.com/send?text={{ blog.title }} {{ app.request.uri}}" target="_blank" class="clr-ins"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                        <div class="blgo-details__pagenation-box">
+                            <ul class="list-unstyled blog-details__pagenation">
+                                {% for article in articles %}
+                                    {% if loop.index < 3 %}
+                                    <li><a href="{{ article|link }}">{{ article.title|excerpt(50) }}</a>
+                                    </li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {#
+                        <div class="comment-one">
+                            <h3 class="comment-one__title">2 Comments</h3>
+                            <div class="comment-one__single">
+                                <div class="comment-one__image">
+                                    <img src="assets/images/blog/comment-1-1.png" alt="">
+                                </div>
+                                <div class="comment-one__content">
+                                    <h3>Kevin Martin</h3>
+                                    <p>It has survived not only five centuries, but also the leap into electronic
+                                        typesetting unchanged. It was popularised in the sheets containing lorem
+                                        ipsum is simply free text.</p>
+                                    <a href="#" class="thm-btn comment-one__btn"><span>Reply</span></a>
+                                </div>
+                            </div>
+                            <div class="comment-one__single">
+                                <div class="comment-one__image">
+                                    <img src="assets/images/blog/comment-1-2.png" alt="">
+                                </div>
+                                <div class="comment-one__content">
+                                    <h3>Sarah albert</h3>
+                                    <p>It has survived not only five centuries, but also the leap into electronic
+                                        typesetting unchanged. It was popularised in the sheets containing lorem
+                                        ipsum is simply free text.</p>
+                                    <a href="#" class="thm-btn comment-one__btn"><span>Reply</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-form">
+                            <h3 class="comment-form__title">Leave a Comment</h3>
+                            <form action="assets/inc/sendemail.php" class="comment-one__form contact-form-validated"
+                                  novalidate="novalidate">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <input type="text" placeholder="Your name" name="name">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <input type="email" placeholder="Email Address" name="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <input type="text" placeholder="Phone number" name="phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <input type="text" placeholder="Subject" name="Subject">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="comment-form__input-box">
+                                            <textarea name="message" placeholder="Write Message"></textarea>
+                                        </div>
+                                        <button type="submit" class="thm-btn comment-form__btn"><span>Submit a
+                                                    Comment</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        #}
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-5">
+                    <div class="sidebar">
+                        {#<div class="sidebar__single sidebar__search">
+                            <form action="#" class="sidebar__search-form">
+                                <input type="search" placeholder="Search here">
+                                <button type="submit"><i class="icon-magnifying-glass"></i></button>
+                            </form>
+                        </div>#}
+                        <div class="sidebar__single sidebar__post">
+                            <h3 class="sidebar__title">Latest posts</h3>
+                            <ul class="sidebar__post-list list-unstyled">
+                                {% for article in articles %}
+                                    <li>
+                                        <div class="sidebar__post-image">
+                                            <img src="{{ article.image }}" alt="">
+                                        </div>
+                                        <div class="sidebar__post-content">
+                                            <h3>
+                                                <a href="{{ article|link }}">{{ article.title|excerpt(30) }}</a>
+                                            </h3>
+                                        </div>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="sidebar__single sidebar__category">
+                            <h3 class="sidebar__title">Categories</h3>
+                            <ul class="sidebar__category-list list-unstyled">
+                                <li><a href="#">Business <span class="fa fa-angle-right"></span></a></li>
+                                <li class="active"><a href="#">Introductions <span
+                                            class="fa fa-angle-right"></span></a></li>
+                                <li><a href="#">One Page Template <span class="fa fa-angle-right"></span></a></li>
+                                <li><a href="#">Parallax Effects <span class="fa fa-angle-right"></span></a></li>
+                                <li><a href="#">New Technologies <span class="fa fa-angle-right"></span></a></li>
+                                <li><a href="#">Video Backgrounds <span class="fa fa-angle-right"></span></a></li>
+                            </ul>
+                        </div>
+                        {#<div class="sidebar__single sidebar__tags">
+                            <h3 class="sidebar__title">Tags</h3>
+                            <div class="sidebar__tags-list">
+                                <a href="#">Agency</a>
+                                <a href="#">Development</a>
+                                <a href="#">Design</a>
+                                <a href="#">Parallax</a>
+                                <a href="#">Web</a>
+                                <a href="#">Business Agency</a>
+                            </div>
+                        </div>#}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Blog Details End-->
+{% endblock %}

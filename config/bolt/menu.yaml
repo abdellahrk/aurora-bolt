@@ -11,14 +11,16 @@ main:
     submenu:
         - label: Création SiteWeb
           link: service/creation-site-web
-        - label: Web Design
+        - label: Développement Web
           class: menu-item-class
-          link: service/web-design
+          link: service/developpement-applications-web
+        - label: Hébergement Web
+          link: service/hebergement-web 
   - label: A Propos
     link: aurora/apropos
     class: apropos
   - label: Hébergement Web
-    link: https://hebergement.aurora.cm
+    link: https://hosting.aurora.cm
     class: bolt-site
     title: Meilleur hébergement web au Cameroun
 
