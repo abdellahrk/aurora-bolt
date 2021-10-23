@@ -27,7 +27,7 @@
 <ul class="footer-widget__explore-list list-unstyled">
 {% for item in menu %}
     <li>
-        {{ _self.display_menu_item(item, loop, 'navbar-link') }}
+        <a href="{{ item.uri }}">{{ item.label }}</a>
     </li>
 {% endfor %}
 </ul>
