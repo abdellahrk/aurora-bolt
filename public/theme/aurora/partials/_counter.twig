@@ -6,7 +6,7 @@
             {% for stat in stats %}
                 <li class="counter-one__single wow fadeInUp" data-wow-delay="100ms">
                     <div class="counter-one__icon">
-                        <span class="{{ stat.icon }}"></span>
+                        <span class="{{ stat.stat_icon }}"></span>
                     </div>
                     <h3 class="odometer" data-count="{{ stat.stat_number }}">{{ stat.stat_number }}</h3>
                     <p class="counter-one__text">{{ stat.text }}</p>

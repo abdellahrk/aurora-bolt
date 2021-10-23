@@ -1,0 +1,20 @@
+# Blog
+blog:
+    name: blog
+    singular_name: blog
+    fields:
+        title:
+            type: text
+        text:
+            type: html
+        image:
+            type: image
+        slug:
+            type: slug
+            uses: title
+        seo:
+            type: seo
+            group: "SEO Settings"
+    taxonomy: [ categories, tags ]
+    records_template: blog.twig
+    record_template: blogitem.twig

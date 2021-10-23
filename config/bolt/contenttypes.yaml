@@ -53,6 +53,7 @@ homepage:
     icon_many: "fa:home"
     icon_one: "fa:home"
     
+# Blog
 blog:
     name: blog
     singular_name: blog
@@ -133,12 +134,11 @@ services:
             type: text
         innerDescription:
             type: html
-        
         innerDescription2:
             type: html
         slug:
             type: slug
-            user: title
+            uses: title
         excerpt:
             type: text
         iconImage:
@@ -151,9 +151,22 @@ services:
     record_template: service.twig
     listing_template: listing.twig
     order: createdAt
+    
+article:
+    name: article
+    singular_name: article
+    fields:
+        title:
+            type: text
+        slug:
+            type: slug
+            uses: title
+    taxonomy: [ categories, tags ]
+    records_template: blog.twig
+    record_template: blogitem.twig
 
 # Faq type
-faq:
+faqs:
     name: Faqs
     singular_name: Faq
     fields:
@@ -165,8 +178,8 @@ faq:
 
 # Testimonials
 testimonials:
-    name: Testimonial
-    singular_name: testimonials
+    name: Testimonials
+    singular_name: testimonial
     fields:
         client:
             type: text
@@ -276,7 +289,7 @@ stats:
     fields:
         title:
             type: text
-        icon:
+        stat_icon:
             type: text
         stat_number:
             type: text
@@ -352,6 +365,10 @@ others:
         blog_background:
             type: image
             group: "Blog Setting"
+        home_tag:
+            type: text
+        home_title:
+            type: text
         bottom_text:
             type: redactor
         bottom_text_cta:
