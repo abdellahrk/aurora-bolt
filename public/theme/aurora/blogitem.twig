@@ -27,7 +27,7 @@
                 <div class="col-xl-8 col-lg-7">
                     <div class="blgo-details__left">
                         <div class="blog-details__img">
-                            <img src="assets/images/blog/blog-details-img-1.jpg" alt="">
+                            <img src="{{ blog.image|thumbnail(770,444) }}" alt="{{ blog.title }}">
                             <div class="blog-details__date-box">
                                 <p><span>{{ blog.createdAt|date('d') }}</span> {{ blog.createdAt|date('M') }}<span>{{ blog.createdAt|date('Y') }}</span></p>
                             </div>
@@ -43,9 +43,11 @@
                         </div>
                         <div class="blog-details__bottom">
                             <p class="blog-details__tags">
+                                {#
                                 <span>Tags:</span>
                                 <a href="#">Agency</a>
                                 <a href="#">Design</a>
+                                #}
                             </p>
                             <div class="blog-details__social-list">
                                 <span>Share:</span>
