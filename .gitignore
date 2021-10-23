@@ -72,3 +72,5 @@ docker-compose.override.yaml
 /vendor/
 .web-server-pid
 ###< symfony/framework-bundle ###
+
+/config/bolt/menu.yaml

@@ -1,125 +1,59 @@
+{% setcontent blog = 'blog' random limit 3%}
+
+{% if blog is not empty %}
 <!--Blog One Start-->
 <section class="blog-one">
     <div class="container">
         <div class="section-title text-center">
-            <span class="section-title__tagline">Recent work completed</span>
-            <h2 class="section-title__title">Latest from the blog</h2>
+            <span class="section-title__tagline">{{ others.home_tag }}</span>
+            <h2 class="section-title__title">{{ others.home_title }}</h2>
         </div>
         <div class="row">
-            <div class="col-xl-4 col-lg-4">
-                <!--Blog One Single-->
-                <div class="blog-one__single wow fadeInUp" data-wow-delay="100ms">
-                    <div class="blog-one__img-box">
-                        <div class="blog-one__img">
-                            <img src="assets/images/blog/blog-1-1.jpg" alt="">
-                            <a href="blog-details.html">
-                                <span class="blog-one__plus"></span>
-                            </a>
-                        </div>
-                        <div class="blog-one__date-box">
-                            <p><span>20</span> May</p>
-                        </div>
-                    </div>
-                    <div class="blog-one__content">
-                        <ul class="list-unstyled blog-one__meta">
-                            <li><a href="blog-details.html"><i class="far fa-user-circle"></i> By admin</a></li>
-                            <li><a href="blog-details.html"><i class="far fa-comments"></i> 2 Comments</a>
-                            </li>
-                        </ul>
-                        <h3 class="blog-one__title">
-                            <a href="blog-details.html">Basic rule of running web agency business</a>
-                        </h3>
-                        <p class="blog-one__text">Lorem ipsum is simply is text used by copytyping refreshing.
-                        </p>
-                        <div class="blog-one__bottom">
-                            <div class="blog-one__read-btn">
-                                <a href="blog-details.html">Read more</a>
+            {% for article in blog %}
+                <div class="col-xl-4 col-lg-4">
+                    <!--Blog One Single-->
+                    <div class="blog-one__single wow fadeInUp" data-wow-delay="100ms">
+                        <div class="blog-one__img-box">
+                            <div class="blog-one__img">
+                                <img src="{{ article.image|thumbnail(370,250) }}" alt="{{ article.title }}">
+                                <a href="{{ article|link }}">
+                                    <span class="blog-one__plus"></span>
+                                </a>
                             </div>
-                            <div class="blog-one__arrow">
-                                <a href="blog-details.html"><span class="icon-right-arrow"></span></a>
+                            <div class="blog-one__date-box">
+                                <p><span>{{ article.createdAt|date('d') }}</span> {{ article.createdAt|date('M') }} <span>{{ article.createdAt|date('Y') }}</span></p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4">
-                <!--Blog One Single-->
-                <div class="blog-one__single wow fadeInUp" data-wow-delay="200ms">
-                    <div class="blog-one__img-box">
-                        <div class="blog-one__img">
-                            <img src="assets/images/blog/blog-1-2.jpg" alt="">
-                            <a href="blog-details.html">
-                                <span class="blog-one__plus"></span>
-                            </a>
-                        </div>
-                        <div class="blog-one__date-box">
-                            <p><span>20</span> May</p>
-                        </div>
-                    </div>
-                    <div class="blog-one__content">
-                        <ul class="list-unstyled blog-one__meta">
-                            <li><a href="blog-details.html"><i class="far fa-user-circle"></i> By admin</a></li>
-                            <li><a href="blog-details.html"><i class="far fa-comments"></i> 2 Comments</a>
-                            </li>
-                        </ul>
-                        <h3 class="blog-one__title">
-                            <a href="blog-details.html">Leverage frameworks to provide a robust</a>
-                        </h3>
-                        <p class="blog-one__text">Lorem ipsum is simply is text used by copytyping refreshing.
-                        </p>
-                        <div class="blog-one__bottom">
-                            <div class="blog-one__read-btn">
-                                <a href="blog-details.html">Read more</a>
-                            </div>
-                            <div class="blog-one__arrow">
-                                <a href="blog-details.html"><span class="icon-right-arrow"></span></a>
+                        <div class="blog-one__content">
+                            <ul class="list-unstyled blog-one__meta">
+                                <li><a href="#"><i class="far fa-user-circle"></i> {{ article.author }}</a></li>
+                                {#li><a href="blog-details.html"><i class="far fa-comments"></i> 2 Comments</a>
+                                </li>#}
+                            </ul>
+                            <h3 class="blog-one__title">
+                                <a href="{{ article|link }}">{{ article.title|excerpt(20) }}</a>
+                            </h3>
+                            <p class="blog-one__text">{{ article.text|excerpt(50) }}</p>
+                            <div class="blog-one__bottom">
+                                <div class="blog-one__read-btn">
+                                    <a href="{{ article|link }}">Lire...</a>
+                                </div>
+                                <div class="blog-one__arrow">
+                                    <a href="{{ article|link }}"><span class="icon-right-arrow"></span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-4 col-lg-4">
-                <!--Blog One Single-->
-                <div class="blog-one__single wow fadeInUp" data-wow-delay="300ms">
-                    <div class="blog-one__img-box">
-                        <div class="blog-one__img">
-                            <img src="assets/images/blog/blog-1-3.jpg" alt="">
-                            <a href="blog-details.html">
-                                <span class="blog-one__plus"></span>
-                            </a>
-                        </div>
-                        <div class="blog-one__date-box">
-                            <p><span>20</span> May</p>
-                        </div>
-                    </div>
-                    <div class="blog-one__content">
-                        <ul class="list-unstyled blog-one__meta">
-                            <li><a href="blog-details.html"><i class="far fa-user-circle"></i> By admin</a></li>
-                            <li><a href="blog-details.html"><i class="far fa-comments"></i> 2 Comments</a>
-                            </li>
-                        </ul>
-                        <h3 class="blog-one__title">
-                            <a href="blog-details.html">Organically grow the holistic world view of</a>
-                        </h3>
-                        <p class="blog-one__text">Lorem ipsum is simply is text used by copytyping refreshing.
-                        </p>
-                        <div class="blog-one__bottom">
-                            <div class="blog-one__read-btn">
-                                <a href="blog-details.html">Read more</a>
-                            </div>
-                            <div class="blog-one__arrow">
-                                <a href="blog-details.html"><span class="icon-right-arrow"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
 <!--Blog One End-->
+{% endif %}
 
 <!--Brand Two-->
+{#
 <section class="brand-one">
     <div class="container">
         <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 100, "slidesPerView": 5, "autoplay": { "delay": 5000 }, "breakpoints": {
@@ -183,4 +117,5 @@
         </div>
     </div>
 </section>
+#}
 <!--Brand Two End-->

@@ -24,4 +24,10 @@ main:
     class: bolt-site
     title: Meilleur hébergement web au Cameroun
 
-foo: bar
+footer:
+    - label: Acceuil
+      link: /
+    - label: Services
+      link: services
+    - label: Contact
+      link: contact
