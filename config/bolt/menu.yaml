@@ -14,6 +14,8 @@ main:
         - label: Web Design
           class: menu-item-class
           link: service/web-design
+        - label: Contact
+          link: contact
   - label: A Propos
     link: aurora/apropos
     class: apropos
@@ -22,4 +24,10 @@ main:
     class: bolt-site
     title: Meilleur hébergement web au Cameroun
 
-foo: bar
+footer:
+    - label: Home
+      link: /
+    - label: Blog
+      link: blog
+    - label: Contact
+      link: contact

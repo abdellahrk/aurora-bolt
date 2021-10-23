@@ -31,7 +31,6 @@
         "phpstan/phpstan-doctrine": "^0.12.20",
         "phpstan/phpstan-symfony": "^0.12.8",
         "symfony/maker-bundle": "^1.33",
-        "symplify/easy-coding-standard": "^8.3",
         "thecodingmachine/phpstan-safe-rule": "^1.0"
     },
     "config": {
