@@ -57,11 +57,12 @@ homepage:
 blog:
     name: blog
     singular_name: blog
+    taxonomy: [ categories, tags ]
     fields:
         title:
             type: text
         text:
-            type: html
+            type: article
         image:
             type: image
         slug:
@@ -70,7 +71,6 @@ blog:
         seo:
             type: seo
             group: "SEO Settings"
-    taxonomy: [ categories, tags ]
     records_template: blog.twig
     record_template: blogitem.twig
     
