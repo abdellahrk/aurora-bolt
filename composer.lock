@@ -657,20 +657,20 @@
         },
         {
             "name": "bolt/assets",
-            "version": "5.0.4",
+            "version": "5.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/assets.git",
-                "reference": "645990122bf7026471b5e068176ef255bb0dad0d"
+                "reference": "1e9fba0f3e7bce5ec43d11f30ebeac3be14f639e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/assets/zipball/645990122bf7026471b5e068176ef255bb0dad0d",
-                "reference": "645990122bf7026471b5e068176ef255bb0dad0d",
+                "url": "https://api.github.com/repos/bolt/assets/zipball/1e9fba0f3e7bce5ec43d11f30ebeac3be14f639e",
+                "reference": "1e9fba0f3e7bce5ec43d11f30ebeac3be14f639e",
                 "shasum": ""
             },
             "require-dev": {
-                "bolt/core": "^4.0.0"
+                "bolt/core": "^5.0.5"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -683,12 +683,12 @@
                     "email": "bob@twokings.nl"
                 }
             ],
-            "description": "🛠 Assets used in Bolt's backend. Do not use directly.",
+            "description": "🛠 Javascript and CSS Assets used in Bolt's backend. Do not `require` directly.",
             "support": {
                 "issues": "https://github.com/bolt/assets/issues",
-                "source": "https://github.com/bolt/assets/tree/5.0.4"
+                "source": "https://github.com/bolt/assets/tree/5.0.5"
             },
-            "time": "2021-10-22T13:44:21+00:00"
+            "time": "2021-10-24T14:15:08+00:00"
         },
         {
             "name": "bolt/common",
@@ -748,16 +748,16 @@
         },
         {
             "name": "bolt/core",
-            "version": "5.0.4",
+            "version": "5.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/core.git",
-                "reference": "30eeb1602ec8f54ed4cbe0f10a5c3ce0326266d5"
+                "reference": "301a1ce35e139c772c77bd35f579ded771d05e0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/core/zipball/30eeb1602ec8f54ed4cbe0f10a5c3ce0326266d5",
-                "reference": "30eeb1602ec8f54ed4cbe0f10a5c3ce0326266d5",
+                "url": "https://api.github.com/repos/bolt/core/zipball/301a1ce35e139c772c77bd35f579ded771d05e0b",
+                "reference": "301a1ce35e139c772c77bd35f579ded771d05e0b",
                 "shasum": ""
             },
             "require": {
@@ -768,7 +768,7 @@
                 "bolt/common": "^3.0.5",
                 "cocur/slugify": "^4.0",
                 "composer-runtime-api": "^2",
-                "composer/composer": "^2.1.9",
+                "composer/composer": "^2.0",
                 "composer/package-versions-deprecated": "^1.11",
                 "doctrine/doctrine-bundle": "^2.4",
                 "doctrine/doctrine-fixtures-bundle": "^3.4",
@@ -873,7 +873,7 @@
                 "se/selenium-server-standalone": "^3.141",
                 "symfony/browser-kit": "^5.3",
                 "symfony/css-selector": "^5.3",
-                "symplify/easy-coding-standard": "^9.4"
+                "symplify/easy-coding-standard": "^8.0 || ^9.0"
             },
             "type": "library",
             "extra": {
@@ -896,7 +896,7 @@
             "description": "🧿 Bolt 5 Core",
             "support": {
                 "issues": "https://github.com/bolt/core/issues",
-                "source": "https://github.com/bolt/core/tree/5.0.4"
+                "source": "https://github.com/bolt/core/tree/5.0.5"
             },
             "funding": [
                 {
@@ -904,7 +904,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-10-22T12:52:09+00:00"
+            "time": "2021-10-24T13:50:03+00:00"
         },
         {
             "name": "bolt/forms",
