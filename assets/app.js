@@ -23,13 +23,15 @@ import './css/moniz-responsive.css';
 import './css/modes/moniz-normal.css';
 import './css/moniz-toolbar.css';
 
-/*
-import './js/custom';
+import jquery from 'jquery';
+window.jQuery, global.jQuery = jquery;
+window.bootstrap = require('bootstrap/dist/js/bootstrap.bundle.js');
+
+
+import './js/custom.js';
+
 import './vendors/wow/wow.js';
 import './vendors/isotope/isotope.js';
-
-import './vendors/jquery/jquery-3.5.1.min';
-import './vendors/bootstrap/js/bootstrap.bundle.min.js';
 import './vendors/jarallax/jarallax.min.js';
 import './vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js';
 import './vendors/jquery-appear/jquery.appear.min.js';
@@ -48,9 +50,7 @@ import './vendors/owl-carousel/owl.carousel.min.js';
 import './vendors/twentytwenty/twentytwenty.js';
 import './vendors/twentytwenty/jquery.event.move.js';
 import './vendors/bxslider/jquery.bxslider.min.js';
-
-import './vendors/bootstrap-select/js/bootstrap-select.min.js';
+//import './vendors/bootstrap-select/js/bootstrap-select.min.js';
 import './vendors/vegas/vegas.min.js';
 import './vendors/jquery-ui/jquery-ui.js';
-
-*/
+//import './js/aurora.js';

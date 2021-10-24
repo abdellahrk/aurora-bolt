@@ -151,19 +151,6 @@ services:
     record_template: service.twig
     listing_template: listing.twig
     order: createdAt
-    
-article:
-    name: article
-    singular_name: article
-    fields:
-        title:
-            type: text
-        slug:
-            type: slug
-            uses: title
-    taxonomy: [ categories, tags ]
-    records_template: blog.twig
-    record_template: blogitem.twig
 
 # Faq type
 faqs:
@@ -312,6 +299,7 @@ settings:
     name: Settings
     singular_name: Setting
     singleton: true
+    viewless: true
     fields:
         site_name:
             type: text

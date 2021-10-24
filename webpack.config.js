@@ -63,7 +63,12 @@ Encore
 //.enableIntegrityHashes(Encore.isProduction())
 
 // uncomment if you're having problems with a jQuery plugin
-.autoProvidejQuery()
+//.autoProvidejQuery()
+.autoProvideVariables({
+  $: 'jquery',
+  jQuery: 'jquery',
+  'window.jQuery': 'jquery',
+})
 
 // uncomment if you use API Platform Admin (composer require api-admin)
 //.enableReactPreset()
