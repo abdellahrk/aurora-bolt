@@ -74,7 +74,7 @@ blog:
     records_template: blog.twig
     record_template: blogitem.twig
     locales: ['fr', 'en']
-    listing_records: 2
+    listing_records: 4
     
 aurora:
     name: Aurora
