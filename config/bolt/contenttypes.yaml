@@ -56,7 +56,7 @@ homepage:
 # Blog
 blog:
     name: blog
-    singular_name: blog
+    singular_name: Blog
     taxonomy: [ categories, tags ]
     fields:
         title:
@@ -73,6 +73,8 @@ blog:
             group: "SEO Settings"
     records_template: blog.twig
     record_template: blogitem.twig
+    locales: ['fr', 'en']
+    listing_records: 2
     
 aurora:
     name: Aurora

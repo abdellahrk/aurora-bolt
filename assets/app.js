@@ -22,6 +22,7 @@ import './css/colors/color-default.css'
 import './css/moniz-responsive.css';
 import './css/modes/moniz-normal.css';
 import './css/moniz-toolbar.css';
+import './css/custom.css';
 
 import jquery from 'jquery';
 window.jQuery, global.jQuery = jquery;
