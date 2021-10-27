@@ -1,0 +1,19 @@
+.pagination > li > a {
+    color: #fc653c;
+    background: white;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #fc653c;
+    background-color: #eee;
+    border-color: #ddd;
+}
+li.page-item.active .page-link {
+    background-color: white !important;
+    border-color: #fc653c;
+    color: #717178;
+}

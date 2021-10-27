@@ -1,6 +1,5 @@
 {% extends 'partials/_master.twig' %}
 
-
 {% block main %}
     <!--Page Header Start-->
     <section class="page-header" style="background-image: url({{ others.blog_background }});">
@@ -58,20 +57,20 @@
                         </div>
                         <div class="blog-sidebar__bottom-box">
                             <div class="blog-sidebar__bottom-box-icon">
-                                <img src="assets/images/shapes/blog-sidebar-bottom-box-icon.png" alt="">
+                                <img src="{{ asset('images/shapes/blog-sidebar-bottom-box-icon.png') }}" alt="">
                             </div>
                             <p class="blog-sidebar__bottom-box-text">{{ others.bottom_text|raw }}</p>
                         </div>
                         <div class="blog-sidebar__delivering-services">
                             <div class="blog-sidebar__delivering-services-icon">
                                 <a href="#"><img
-                                        src="assets/images/shapes/blog-sidebar__delivering-services-icon.png"
+                                        src="{{ asset('images/shapes/blog-sidebar__delivering-services-icon.png') }}"
                                         alt=""></a>
                                 <h3 class="blog-sidebar__delivering-services-title">{{ others.bottom_text_cta }}</h3>
                             </div>
                         </div>
                         <div class="blog-sidebar__load-more">
-                            <a href="#" class="thm-btn blog-sidebar__load-more-btn"><span>Load more posts</span></a>
+                            {{ pager(template='@theme/helpers/_pager.twig') }}
                         </div>
                     </div>
                 </div>
@@ -86,7 +85,7 @@
                         </div>
                         #}
                         <div class="sidebar__single sidebar__post">
-                            <h3 class="sidebar__title">Latest posts</h3>
+                            <h3 class="sidebar__title">Articles Récents</h3>
                             <ul class="sidebar__post-list list-unstyled">
                                 {% for article in blog %}
                                     <li>
@@ -170,6 +169,6 @@
                 </div>
             </div>
         </div>
-    </section>#}
+    </section>
     <!--Blog Sidebar End-->
 {% endblock %}

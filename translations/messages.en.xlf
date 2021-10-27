@@ -13,5 +13,29 @@
         <target>image.button_upload_options</target>
       </segment>
     </unit>
+    <unit id="UDs2VGe" name="pager.previous &lt;span class=&quot;icon-right-arrow&quot;&gt;&lt;/span&gt;">
+      <segment>
+        <source>pager.previous &lt;span class="icon-right-arrow"&gt;&lt;/span&gt;</source>
+        <target><![CDATA[pager.previous <span class="icon-right-arrow"></span>]]></target>
+      </segment>
+    </unit>
+    <unit id="1RKGMll" name="&lt;span class=&quot;icon-right-arrow&quot;&gt;&lt;/span&gt;">
+      <segment>
+        <source>&lt;span class="icon-right-arrow"&gt;&lt;/span&gt;</source>
+        <target><![CDATA[<span class="icon-right-arrow"></span>]]></target>
+      </segment>
+    </unit>
+    <unit id="wwcMjix" name="pager.suivant">
+      <segment>
+        <source>pager.suivant</source>
+        <target>pager.suivant</target>
+      </segment>
+    </unit>
+    <unit id="lONBiUz" name="default-title">
+      <segment>
+        <source>default-title</source>
+        <target>default-title</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
