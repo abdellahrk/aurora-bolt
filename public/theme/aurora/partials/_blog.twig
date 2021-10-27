@@ -1,4 +1,4 @@
-{% setcontent blog = 'blog' random limit 3%}
+{% setcontent blog = 'blog' limit 3 %}
 
 {% if blog is not empty %}
 <!--Blog One Start-->
@@ -31,7 +31,7 @@
                                 </li>#}
                             </ul>
                             <h3 class="blog-one__title">
-                                <a href="{{ article|link }}">{{ article.title|excerpt(20) }}</a>
+                                <a href="{{ article|link }}">{{ article.title|excerpt(30) }}</a>
                             </h3>
                             <p class="blog-one__text">{{ article.text|excerpt(50) }}</p>
                             <div class="blog-one__bottom">
