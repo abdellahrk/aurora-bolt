@@ -1,5 +1,8 @@
 {% extends 'partials/_master.twig' %}
 
+{% setcontent blog = 'blog' %}
+
+{% set categories = records %}
 {% block main %}
     <!--Page Header Start-->
     <section class="page-header" style="background-image: url({{ others.blog_background }});">
@@ -10,9 +13,9 @@
                 <ul class="thm-breadcrumb list-unstyled">
                     <li><a href="{{ path('homepage') }}">Acceuil</a></li>
                     <li><span>.</span></li>
-                    <li>Blog</li>
+                    <li>{{ slug }}</li>
                 </ul>
-                <h2>Blog</h2>
+                <h2>{{ slug|upper }}</h2>
             </div>
         </div>
     </section>
@@ -25,35 +28,39 @@
                 <div class="col-xl-8 col-lg-7">
                     <div class="blog-sidebar__left">
                         <div class="blog-sidebar__content">
-                            {% for article in blog %}
-                                <!--Blog Sidebar Content Single-->
-                                <div class="blog-sidebar__content-single">
-                                <div class="blog-sidebar__content-img">
-                                    <img src="{{ article.image }}" alt="">
-                                    <div class="blog-sidebar__date-box">
-                                        <p><span>{{ article.createdAt|date('d') }}</span> {{ article.createdAt|date('M') }} <span>{{ article.createdAt|date('Y') }}</span></p>
+                            {% if categories is not empty %}
+                                {% for article in categories %}
+                                    <!--Blog Sidebar Content Single-->
+                                    <div class="blog-sidebar__content-single">
+                                        <div class="blog-sidebar__content-img">
+                                            <img src="{{ article.image }}" alt="">
+                                            <div class="blog-sidebar__date-box">
+                                                <p><span>{{ article.createdAt|date('d') }}</span> {{ article.createdAt|date('M') }} <span>{{ article.createdAt|date('Y') }}</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="blog-sidebar__content-box">
+                                            <ul class="list-unstyled blog-sidebar__meta">
+                                                <li><a href="#"><i class="far fa-user-circle"></i> {{ article.author }}</a></li>
+                                                {#
+                                                <li><a href="{{ article|link }}"><i class="far fa-comments"></i> 2
+                                                        Comments</a>
+                                                </li>
+                                                #}
+                                            </ul>
+                                            <h3 class="blog-sidebar__title">
+                                                <a href="{{ article|link }}">{{ article.title }}</a>
+                                            </h3>
+                                            <p class="blog-sidebar__text">{{ article.text|excerpt(150) }}</p>
+                                            <div class="blog-sidebar__read-more-btn">
+                                                <a href="{{ article|link }}">Lire... <span
+                                                        class="icon-right-arrow"></span></a>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="blog-sidebar__content-box">
-                                    <ul class="list-unstyled blog-sidebar__meta">
-                                        <li><a href="#"><i class="far fa-user-circle"></i> {{ article.author }}</a></li>
-                                        {#
-                                        <li><a href="{{ article|link }}"><i class="far fa-comments"></i> 2
-                                                Comments</a>
-                                        </li>
-                                        #}
-                                    </ul>
-                                    <h3 class="blog-sidebar__title">
-                                        <a href="{{ article|link }}">{{ article.title }}</a>
-                                    </h3>
-                                    <p class="blog-sidebar__text">{{ article.text|excerpt(150) }}</p>
-                                    <div class="blog-sidebar__read-more-btn">
-                                        <a href="{{ article|link }}">Lire... <span
-                                                class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
+                                {% endfor %}
+                            {% else %}
+                                <h2 class="mb-4">Désolé c'est vide ici</h2>
+                            {% endif %}
                         </div>
                         <div class="blog-sidebar__bottom-box">
                             <div class="blog-sidebar__bottom-box-icon">
@@ -70,7 +77,7 @@
                             </div>
                         </div>
                         <div class="blog-sidebar__load-more">
-                            {{ pager(template='@theme/helpers/_pager.twig') }}
+                            {#{ pager(template='@theme/helpers/_pager.twig') }#}
                         </div>
                     </div>
                 </div>
@@ -112,6 +119,7 @@
                                 </ul>
                             </div>
                         {% endif %}
+
                         {#
                         <div class="sidebar__single sidebar__tags">
                             <h3 class="sidebar__title">Tags</h3>
