@@ -20,11 +20,13 @@ groups:
     required: false
 
 categories:
-    name: Categories
+    name: Catégories
     slug: categories
-    singular_name: Category
-    singular_slug: category
-    behaves_like: categories
+    singular_name: Catégorie
+    singular_slug: categorie
+    behaves_like: catégories
     multiple: true
-    options: [ news, events, movies, music, books, life, love, fun ]
+    options: [ technologie, business, hébergement, e-commerce, web-design, infos ]
     required: true
+    listing_template: category.twig
+    listing_records: 4
