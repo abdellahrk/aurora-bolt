@@ -29,7 +29,7 @@
                                 <!--Blog Sidebar Content Single-->
                                 <div class="blog-sidebar__content-single">
                                 <div class="blog-sidebar__content-img">
-                                    <img src="{{ article.image }}" alt="">
+                                    <img loading="lazy" src="{{ article.image|thumbnail() }}" alt="{{ article.title }}" >
                                     <div class="blog-sidebar__date-box">
                                         <p><span>{{ article.createdAt|date('d') }}</span> {{ article.createdAt|date('M') }} <span>{{ article.createdAt|date('Y') }}</span></p>
                                     </div>
@@ -84,86 +84,25 @@
                             </form>
                         </div>
                         #}
-                        <div class="sidebar__single sidebar__post">
-                            <h3 class="sidebar__title">Articles Récents</h3>
-                            <ul class="sidebar__post-list list-unstyled">
-                                {% for article in blog %}
-                                    <li>
-                                        <div class="sidebar__post-image">
-                                            <img src="{{ article.image }}" alt="">
-                                        </div>
-                                        <div class="sidebar__post-content">
-                                            <h3>
-                                                <a href="{{ article|link }}">{{ article.title }}</a>
-                                            </h3>
-                                        </div>
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-
-                        {% if config.get('taxonomies/categories/options') is defined %}
-                            <div class="sidebar__single sidebar__category">
-                                <h3 class="sidebar__title">Catégories</h3>
-                                <ul class="sidebar__category-list list-unstyled">
-                                    {% for category in config.get('taxonomies/categories/options') %}
-                                        <li><a href="/categorie/{{ category|slug }}">{{ category|capitalize }} <span class="fa fa-angle-right"></span></a></li>
+                        {% include 'partials/_blog_sidebar.twig' with {'articles': blog} %}
+                        {#
+                        {% if config.get('taxonomies/tags') is defined %}
+                            <div class="sidebar__single sidebar__tags">
+                                <h3 class="sidebar__title">Tags</h3>
+                                <div class="sidebar__tags-list">
+                                    {% for tag in config.get('taxonomies/tags') %}
+                                        <a href="#">{{ tag }}</a>
                                     {% endfor %}
-                                </ul>
+                                    <a href="#">Development</a>
+                                    <a href="#">Design</a>
+                                    <a href="#">Parallax</a>
+                                    <a href="#">Web</a>
+                                    <a href="#">Business Agency</a>
+                                </div>
                             </div>
                         {% endif %}
-                        {#
-                        <div class="sidebar__single sidebar__tags">
-                            <h3 class="sidebar__title">Tags</h3>
-                            <div class="sidebar__tags-list">
-                                <a href="#">Agency</a>
-                                <a href="#">Development</a>
-                                <a href="#">Design</a>
-                                <a href="#">Parallax</a>
-                                <a href="#">Web</a>
-                                <a href="#">Business Agency</a>
-                            </div>
-                        </div>
+
                         #}
-                        {#<div class="sidebar__single sidebar__comments">
-                            <h3 class="sidebar__title">Recent comments</h3>
-                            <ul class="sidebar__comments-list list-unstyled">
-                                <li>
-                                    <div class="sidebar__comments-icon">
-                                        <i class="far fa-comments"></i>
-                                    </div>
-                                    <div class="sidebar__comments-text-box">
-                                        <p>A wordpress commenter on <br> launch new mobile app</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="sidebar__comments-icon">
-                                        <i class="far fa-comments"></i>
-                                    </div>
-                                    <div class="sidebar__comments-text-box">
-                                        <p>John Doe on Template:</p>
-                                        <h5>Comments</h5>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="sidebar__comments-icon">
-                                        <i class="far fa-comments"></i>
-                                    </div>
-                                    <div class="sidebar__comments-text-box">
-                                        <p>A wordpress commenter on <br> launch new mobile app</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="sidebar__comments-icon">
-                                        <i class="far fa-comments"></i>
-                                    </div>
-                                    <div class="sidebar__comments-text-box">
-                                        <p>John Doe on Template:</p>
-                                        <h5>Comments</h5>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>#}
                     </div>
                 </div>
             </div>
