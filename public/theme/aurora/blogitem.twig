@@ -146,34 +146,7 @@
                                 <button type="submit"><i class="icon-magnifying-glass"></i></button>
                             </form>
                         </div>#}
-                        <div class="sidebar__single sidebar__post">
-                            <h3 class="sidebar__title">Latest posts</h3>
-                            <ul class="sidebar__post-list list-unstyled">
-                                {% for article in articles %}
-                                    <li>
-                                        <div class="sidebar__post-image">
-                                            <img src="{{ article.image }}" alt="">
-                                        </div>
-                                        <div class="sidebar__post-content">
-                                            <h3>
-                                                <a href="{{ article|link }}">{{ article.title|excerpt(30) }}</a>
-                                            </h3>
-                                        </div>
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-
-                        {% if config.get('taxonomies/categories/options') is defined %}
-                            <div class="sidebar__single sidebar__category">
-                                <h3 class="sidebar__title">Catégories</h3>
-                                <ul class="sidebar__category-list list-unstyled">
-                                    {% for category in config.get('taxonomies/categories/options') %}
-                                        <li><a href="/categorie/{{ category|slug }}">{{ category|capitalize }} <span class="fa fa-angle-right"></span></a></li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        {% endif %}
+                        {% include 'partials/_blog_sidebar.twig' with {'articles': articles} %}
                         {#<div class="sidebar__single sidebar__tags">
                             <h3 class="sidebar__title">Tags</h3>
                             <div class="sidebar__tags-list">

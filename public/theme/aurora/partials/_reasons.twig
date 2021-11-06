@@ -29,17 +29,17 @@
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-6">
                             <div class="reasons-one__img-one">
-                                <img src="{{ whyus.image_400x609 ? whyus.image_400x609|thumbnail(400, 609): '' }}" alt="">
+                                <img src="{{ whyus.image_400x609 ? whyus.image_400x609|thumbnail(400, 609): '' }}" alt="{{ config.get('general/sitename') }}">
                                 <div class="reasons-one__shape-1"></div>
                                 <div class="reasons-one__shape-2"></div>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6">
                             <div class="reasons-one__img-two">
-                                <img src="{{ whyus.image_400x349 ? whyus.image_400x349|thumbnail(400, 349) : '' }}" alt="">
+                                <img src="{{ whyus.image_400x349 ? whyus.image_400x349|thumbnail(400, 349) : '' }}" alt="{{ config.get('general/sitename') }}">
                             </div>
                             <div class="reasons-one__img-three reasons-one__img-two">
-                                <img src="{{ whyus.image_400x230 ? whyus.image_400x230|thumbnail(400, 230) : '' }}" alt="">
+                                <img src="{{ whyus.image_400x230 ? whyus.image_400x230|thumbnail(400, 230) : '' }}" alt="{{ config.get('general/sitename') }}">
                                 <div class="reasons-one__shape-3"></div>
                             </div>
                         </div>
