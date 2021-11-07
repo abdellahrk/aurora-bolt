@@ -25,7 +25,7 @@ fields:
 default:
     title: ""
     description: "Nous sommes une agence camerounaise de conception, développement, et d'hébergement des sites/applications web. Nous facilitons la mise en œuvre des idées et nos réalisations sont à plus de 95% de réussites et de satisfactions de nos clients."
-    keywords: ""
+    keywords: "création site web au cameroun, siteweb, cameroun, hébergement, cameroun, "
     ogtype: "website" # default og:type value.
     #image: "" Set absolute URL
 

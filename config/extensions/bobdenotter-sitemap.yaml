@@ -5,4 +5,4 @@ limit: 10000
 templates:
   xml: "@sitemap/sitemap.xml.twig"
   xsl: "@sitemap/sitemap.xsl"
-#taxonomies: ["categories", "tags"]
+taxonomies: ["categories"]
