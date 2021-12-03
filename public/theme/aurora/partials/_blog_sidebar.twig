@@ -2,16 +2,18 @@
     <h3 class="sidebar__title">Articles Récents</h3>
     <ul class="sidebar__post-list list-unstyled">
         {% for article in articles %}
-            <li>
-                <div class="sidebar__post-image">
-                    <img src="{{ article.image|thumbnail(770,444) }}" alt="{{ article.title }}" loading="lazy">
-                </div>
-                <div class="sidebar__post-content">
-                    <h3>
-                        <a href="{{ article|link }}">{{ article.title|excerpt(30) }}</a>
-                    </h3>
-                </div>
-            </li>
+            {% if loop.index0 < 5 %}
+                <li>
+                    <div class="sidebar__post-image">
+                        <img src="{{ article.image|thumbnail(770,444) }}" alt="{{ article.title }}" loading="lazy">
+                    </div>
+                    <div class="sidebar__post-content">
+                        <h3>
+                            <a href="{{ article|link }}">{{ article.title|excerpt(30) }}</a>
+                        </h3>
+                    </div>
+                </li>
+            {% endif %}
         {% endfor %}
     </ul>
 </div>

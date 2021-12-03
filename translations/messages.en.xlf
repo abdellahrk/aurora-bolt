@@ -37,5 +37,29 @@
         <target>default-title</target>
       </segment>
     </unit>
+    <unit id="vALIVzb" name="pager.précedent">
+      <segment>
+        <source>pager.précedent</source>
+        <target>pager.précedent</target>
+      </segment>
+    </unit>
+    <unit id="2FfFprn" name="précedent">
+      <segment>
+        <source>précedent</source>
+        <target>précedent</target>
+      </segment>
+    </unit>
+    <unit id="WDmyT3_" name="Précedent">
+      <segment>
+        <source>Précedent</source>
+        <target>Précedent</target>
+      </segment>
+    </unit>
+    <unit id="3y3zvHE" name="Suivant">
+      <segment>
+        <source>Suivant</source>
+        <target>Suivant</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
