@@ -431,3 +431,15 @@ resource:
             type: seo
             group: "Seo settings"
    
+# Ads
+ads:
+    name: Ads
+    singular_name: Ad
+    viewless: true
+    fields:
+        title:
+            type: text
+        description:
+            type: text
+        image:
+            type: image

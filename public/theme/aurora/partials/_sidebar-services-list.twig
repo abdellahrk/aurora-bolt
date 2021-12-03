@@ -13,7 +13,7 @@
         </div>
         <div class="service-details__need-help">
             <div class="service-details__need-help-bg"
-                 style="background-image: url(assets/images/resources/ser-dtl-need-help-bg.jpg)">
+                 style="background-image: url(theme/aurora/images/resources/ser-dtl-need-help-bg.jpg)">
             </div>
             <h3 class="service-details__need-help-title">{{ cta.title ? cta.title : '' }}</h3>
             <p class="service-details__need-help-text">
@@ -30,21 +30,73 @@
         </div>
 
         <div class="service-details__need-help">
-            <div class="service-details__need-help-bg"
-                 style="background-image: url(assets/images/resources/ser-dtl-need-help-bg.jpg)">
-            </div>
-            <h3 class="service-details__need-help-title">{{ cta.title ? cta.title : '' }}</h3>
-            <p class="service-details__need-help-text">
-                {{ cta.body ? cta.body : ''}}
-            </p>
-            <div class="service-details__need-help-phone">
-                <div class="service-details__need-help-phone-icon">
-                    <span class="icon-phone-call"></span>
+            <section class="main-slider">
+            <div class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,
+                "effect": "fade",
+                 "pagination": {
+                    "el": "#main-slider-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  },
+                "navigation": {
+                    "nextEl": "#main-slider__swiper-button-next",
+                    "prevEl": "#main-slider__swiper-button-prev"
+                },
+                "autoplay": {
+                    "delay": 5000
+                }}'>
+                <div class="swiper-wrapper">
+                    {% for slider in sliders %}
+                        <div class="swiper-slide">
+                            <div class="service-details__need-help-bg"
+                                 style="background-image: url(assets/images/resources/ser-dtl-need-help-bg.jpg)">
+                            </div>
+
+                            <div class="image-layer-overlay"></div>
+                            <div class="main-slider-shape-1"></div>
+                            <div class="main-slider-shape-2"></div>
+                            <div class="main-slider-shape-3"></div>
+                            <div class="main-slider-shape-4"></div>
+                            <!-- /.image-layer -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="main-slider__content">
+                                            <h3 class="service-details__need-help-title">{{ cta.title ? cta.title : '' }}</h3>
+                                            <p class="service-details__need-help-text">
+                                                {{ cta.body ? cta.body : ''}}
+                                            </p>
+                                            <div class="service-details__need-help-phone">
+                                                <div class="service-details__need-help-phone-icon">
+                                                    <span class="icon-phone-call"></span>
+                                                </div>
+                                                <div class="service-details__need-help-phone-number">
+                                                    <h4><a href="tel:{{ config.get('theme/address/phone') }}">{{ config.get('theme/address/phone') }}</a></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
-                <div class="service-details__need-help-phone-number">
-                    <h4><a href="tel:{{ config.get('theme/address/phone') }}">{{ config.get('theme/address/phone') }}</a></h4>
+                <!-- If we need navigation buttons -->
+                <div class="slider-bottom-box clearfix">
+
+                    <div class="main-slider__nav">
+                        <div class="swiper-button-prev" id="main-slider__swiper-button-next"><i
+                                class="icon-right-arrow icon-left-arrow"></i>
+                        </div>
+                        <div class="swiper-button-next" id="main-slider__swiper-button-prev"><i
+                                class="icon-right-arrow"></i>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination" id="main-slider-pagination"></div>
                 </div>
             </div>
+        </section>
         </div>
+
     </div>
 </div>
