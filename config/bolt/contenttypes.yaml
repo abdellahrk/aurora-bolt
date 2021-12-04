@@ -443,5 +443,5 @@ ads:
             type: redaction
         image:
             type: image
-        website:
+        link:
             type: text
