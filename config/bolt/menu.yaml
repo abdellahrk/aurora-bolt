@@ -16,6 +16,8 @@ main:
           link: service/developpement-applications-web
         - label: Hébergement Web
           link: service/hebergement-web 
+  - label: Blog
+    link: blog
   - label: A Propos
     link: aurora/apropos
     class: apropos
@@ -29,5 +31,7 @@ footer:
       link: /
     - label: Services
       link: services
+    - label: Blog
+      link: blog
     - label: Contact
-      link: contact
+      link: aurora/contact-us
