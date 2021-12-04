@@ -440,6 +440,8 @@ ads:
         title:
             type: text
         description:
-            type: text
+            type: redaction
         image:
             type: image
+        website:
+            type: text
