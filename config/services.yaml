@@ -136,3 +136,6 @@ services:
 
     # Validation: specify Bolt\Validator\ContentValidator as validator
     Bolt\Validator\ContentValidatorInterface: '@Bolt\Validator\ContentValidator'
+
+    BoltCachebuster\Twig:
+        $secret: 'secret'
