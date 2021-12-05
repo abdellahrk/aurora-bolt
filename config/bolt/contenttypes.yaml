@@ -55,7 +55,6 @@ homepage:
             group: "SEO Settings"
     viewless: false
     taxonomy: [ categories ]
-    locales: ['en', 'nl', 'pt_BR', 'es']
     singleton: true
     icon_many: "fa:home"
     icon_one: "fa:home"
