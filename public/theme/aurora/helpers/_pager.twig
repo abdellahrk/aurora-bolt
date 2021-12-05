@@ -30,7 +30,7 @@ Predefined variables:
     <ul class="pagination {{ class != 'pagination' ? class }}" >
         {# Previous Button #}
         {% set p = routeParams|merge({page: records.hasPreviousPage ? records.previousPage : 1 }) %}
-        {% with {'path': path(route, p), 'label': 'Précedent'|trans, 'enabled': records.hasPreviousPage, 'rel': 'précedent' } %}
+        {% with {'path': path(route, p), 'label': 'Précédent'|trans, 'enabled': records.hasPreviousPage, 'rel': 'précédent' } %}
             {{ block('item') }}
         {% endwith %}
 

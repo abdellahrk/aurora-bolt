@@ -1,11 +1,11 @@
 
 <section class="services-one">
-    <div class="services-one-bg" style="background-image: url({{ others.service_homepage_background ? others.service_homepage_background|thumbnail(1984, 824) : ''}})">
+    <div class="services-one-bg" style="background-image: url({{  homepage.service_background|showimage(1984, 824) }})">
     </div>
     <div class="container">
         <div class="section-title text-center">
-            <span class="section-title__tagline">{{ others.service_tagline }}</span>
-            <h2 class="section-title__title">{{ others.service_title }}</h2>
+            <span class="section-title__tagline">{{ homepage.service_tagline }}</span>
+            <h2 class="section-title__title">{{ homepage.service_title }}</h2>
         </div>
         <div class="row">
             {% for service in services %}
