@@ -66,7 +66,7 @@ maintenance_mode: false
 
 # The default for the "Maintenance mode" (503) page. Can be an (array of) template
 # names or identifiers for records, which will be tried until a match is found.
-maintenance: [ blocks/503-maintenance-mode, 'helpers/page_503.html.twig' ]
+maintenance: [ blocks/503-maintenance-mode, 'helpers/page_503.twig' ]
 
 # The default content for the "Forbidden" (403) page. Can be an (array of) template
 # names or identifiers for records, which will be tried until a match is found.
@@ -77,7 +77,7 @@ forbidden: [ blocks/403-forbidden, 'helpers/page_403.html.twig' ]
 # Note: Only used in `APP_ENV=prod` mode. You're advised to keep this as simple
 # as possible, because if an error occurs in this template, it can not be
 # handled, and you'll have a bad time debugging it!
-internal_server_error: [ 'helpers/page_500.html.twig' ]
+internal_server_error: [ 'helpers/page_500.twig' ]
 
 # The default template and amount of records to use for listing-pages on the
 # site.
