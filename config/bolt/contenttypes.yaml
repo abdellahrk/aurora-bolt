@@ -12,7 +12,6 @@ homepage:
             type: text
             class: large
             group: content
-            localize: true
             label: Title
             postfix: |
                 The 'Homepage' can contain basic information about the website. This title will be
@@ -29,10 +28,8 @@ homepage:
             type: image
         introduction:
             type: redactor
-            localize: true
         content:
             type: redactor
-            localize: true
         contentlink:
             type: text
             label: Link
