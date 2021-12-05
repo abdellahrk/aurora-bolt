@@ -54,7 +54,7 @@ homepage:
             type: seo
             group: "SEO Settings"
     viewless: false
-    taxonomy: [ categories, tags, foobars ]
+    taxonomy: [ categories ]
     locales: ['en', 'nl', 'pt_BR', 'es']
     singleton: true
     icon_many: "fa:home"
