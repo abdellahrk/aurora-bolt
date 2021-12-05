@@ -39,6 +39,13 @@ homepage:
             placeholder: 'contentType/slug or https://example.org/'
             postfix: "Use this to add a link for this Homepage. This could either be an 'internal' link like <tt>page//about</tt>, if you use a contentType/slug combination. Otherwise use a proper URL, like `https://example.org`."
             fixture_format: '{url}'
+        service_tagline:
+            type: text
+            group: service homepage settings
+        service_title:
+            type: text
+        service_background:
+            type: image
         slug:
             type: slug
             uses: title
@@ -323,13 +330,6 @@ others:
     singleton: true
     title: Others
     fields:
-        service_tagline:
-            type: text
-            group: service homepage settings
-        service_title:
-            type: text
-        service_homepage_background:
-            type: image
         faq_title_small:
             type: text
             group: faqs settings
