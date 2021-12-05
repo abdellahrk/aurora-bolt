@@ -1,6 +1,6 @@
 {% setcontent wemake = 'wemake' %}
 <section class="we-make">
-    <div class="we-make-bg" style="background-image: url({{ wemake.background|thumbnail(1894, 513) }})"></div>
+    <div class="we-make-bg" style="background-image: url({{ wemake.background|image(1894, 513) }})"></div>
     <div class="container">
         <div class="row">
             <div class="col-xl-7 col-lg-6">
@@ -11,7 +11,7 @@
                     </div>
                     <div class="we-make__person">
                         <div class="we-make__person-img">
-                            <img src="{{ wemake.ceo_image ? wemake.ceo_image|thumbnail(81, 81) }}" alt="">
+                            <img src="{{ wemake.ceo_image ? wemake.ceo_image|showimage(81, 81) }}" alt="">
                         </div>
                         <div class="we-make__person-text">
                             <p>{{ wemake.ceo_name ?? '' }}</p>
