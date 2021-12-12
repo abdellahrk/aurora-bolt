@@ -272,3 +272,17 @@
 #}
 
 {% endblock main %}
+
+{% block schema %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "headline": "{{ apropos.title }}",
+            "image": "{{ apropos.image }}",
+            "name": "Apropos",
+            "url": "/aurora/apropos",
+            "abstract": "{{ apropos.body }}"
+        }
+    </script>
+{% endblock %}
