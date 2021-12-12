@@ -165,3 +165,17 @@
     </section>
     <!--Blog Details End-->
 {% endblock %}
+
+{% block schema %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "{{ blog.title }}",
+            "image": "{{ blog.image }}",
+            "name": "{{ blog.title }}",
+            "url": "{{ blog|link }}",
+            "articleBody": "{{ blog.text }}"
+        }
+    </script>
+{% endblock %}
