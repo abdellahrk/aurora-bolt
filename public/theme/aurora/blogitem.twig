@@ -175,7 +175,7 @@
             "image": "{{ blog.image }}",
             "name": "{{ blog.title }}",
             "url": "{{ blog|link }}",
-            "articleBody": "{{ blog.text }}"
+            "articleBody": "{{ blog.text|raw }}"
         }
     </script>
 {% endblock %}
