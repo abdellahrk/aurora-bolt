@@ -114,7 +114,7 @@
             "name": "{{ service.title }}",
             "slogan": "Meilleure agence digitale au cameroun",
             "url": "{{ service|link }}",
-            "description": "{{ service.description|raw }}"
+            "description": "{{ service.description|striptags }}"
 
         }
     </script>
