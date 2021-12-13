@@ -3,7 +3,7 @@
 
 # The name of the website
 sitename: Aurora Digital Agency
-payoff: Votre solutionneur numéro un au Cameroun
+payoff: Votre agence digitale et solutionneur numéro un au Cameroun
 
 secret: '%env(APP_SECRET)%'
 
