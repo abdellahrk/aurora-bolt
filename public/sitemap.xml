@@ -29,19 +29,19 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://aurora.cm/blog/hebergement-web-au-cameroun</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://aurora.cm/blog/combien-coute-un-site-web-au-cameroun</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://aurora.cm/blog/creation-site-web-au-cameroun</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://aurora.cm/blog/confiance-avec-nos-clients</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
     <loc>https://aurora.cm/blog/cm-ou-com</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://aurora.cm/blog/pourquoi-nous-choisir-pour-votre-projet-web</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -65,7 +65,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://aurora.cm/categorie/infos</loc>
+    <loc>https://aurora.cm/blog/pourquoi-nous-choisir-pour-votre-projet-web</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://aurora.cm/blog/10-raisons-pourquoi-avoir-un-site-web</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -73,7 +77,7 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://aurora.cm/blog/10-raisons-pourquoi-avoir-un-site-web</loc>
+    <loc>https://aurora.cm/categorie/infos</loc>
     <changefreq>daily</changefreq>
   </url>
 </urlset>
