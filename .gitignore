@@ -56,6 +56,7 @@ docker-compose.override.yaml
 ###< squizlabs/php_codesniffer ###
 
 ###> symfony/framework-bundle ###
+/.env
 /.env.local
 /.env.local.php
 /.env.*.local
@@ -71,6 +72,8 @@ docker-compose.override.yaml
 !/var/sessions/.gitkeep
 /vendor/
 .web-server-pid
+/config/bolt/menu.yaml
+/config/services_bolt.yaml
 ###< symfony/framework-bundle ###
 
 /config/bolt/menu.yaml
