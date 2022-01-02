@@ -2,11 +2,10 @@
     "type": "project",
     "license": "proprietary",
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
         "appolodev/bolt-seo": "^1.0",
         "bobdenotter/configuration-notices": "^1.0",
         "bobdenotter/sitemap": "^1.1",
-        "bobdenotter/weatherwidget": "^1.1",
         "bolt/article": "^1.0",
         "bolt/asset-cachebuster": "^0.0.2",
         "bolt/assets": "^5.0",
@@ -38,7 +37,12 @@
         "preferred-install": {
             "*": "dist"
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "symfony/flex": true,
+            "composer/package-versions-deprecated": true,
+            "drupol/composer-packages": true
+        }
     },
     "extra": {
         "public-dir": "public",
@@ -83,5 +87,8 @@
         "auto-scripts": {
 
         }
+    },
+    "conflict": {
+        "symfony/dependency-injection": "5.4"
     }
 }
