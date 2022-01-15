@@ -10,9 +10,6 @@ services:
     BobdenOtter\ConfigurationNotices\:
         resource: '../vendor/bobdenotter/configuration-notices/src/*'
         exclude: '../vendor/bobdenotter/configuration-notices/src/{Entity,Exception}'
-    BobdenOtter\WeatherWidget\:
-        resource: '../vendor/bobdenotter/weatherwidget/src/*'
-        exclude: '../vendor/bobdenotter/weatherwidget/src/{Entity,Exception}'
     Bobdenotter\Sitemap\:
         resource: '../vendor/bobdenotter/sitemap/src/*'
         exclude: '../vendor/bobdenotter/sitemap/src/{Entity,Exception}'
