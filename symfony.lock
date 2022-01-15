@@ -28,9 +28,6 @@
     "bobdenotter/sitemap": {
         "version": "1.1.1"
     },
-    "bobdenotter/weatherwidget": {
-        "version": "1.1.2"
-    },
     "bobdenotter/yaml-migrations": {
         "version": "1.0.2"
     },
@@ -50,7 +47,7 @@
         "version": "4.1.4"
     },
     "bolt/forms": {
-        "version": "1.4.7"
+        "version": "1.4.12"
     },
     "bolt/newswidget": {
         "version": "1.2.3"
