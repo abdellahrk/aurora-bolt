@@ -67,5 +67,11 @@
         <target>You have to login in order to access this page.</target>
       </segment>
     </unit>
+    <unit id="MLDppFq" name="Précédent">
+      <segment>
+        <source>Précédent</source>
+        <target>Précédent</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
