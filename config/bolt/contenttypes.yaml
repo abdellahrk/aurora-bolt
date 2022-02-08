@@ -159,6 +159,23 @@ Faqs:
             type: html
     viewless: true
 
+#Portfolio
+portfolio:
+    name: Portfolios
+    singular_name: Porfolio
+    fields:
+        title:
+            type: text
+        image:
+            type: image
+        image2: 
+            type: image
+        client:
+            type: text
+        about:
+            type: redactor
+        slug:
+            type: slug
 # Testimonials
 testimonials:
     name: Testimonials
