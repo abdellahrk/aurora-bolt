@@ -60,15 +60,14 @@ global:
     fields:
         service_tagline:
             type: text
-            group: Service Page 
             localize: true
+            group: Service Page 
         service_caption:
             type: text
             localize: true 
         service_description:
             type: text 
-            localize: true
-        
+            localize: true       
     
 # Blog
 blog:
