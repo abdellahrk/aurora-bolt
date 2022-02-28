@@ -1,7 +1,7 @@
 parameters:
     locale: en
-    app_locales: en|nl|es|fr|de|pl|it|hu|pt_BR|ja|nb|nn|nl_NL|nl_BE|is|ru
-    app.notifications.email_sender: anonymous@example.com
+    app_locales: en|fr
+    app.notifications.email_sender: contact@aurora.cm
     bolt.table_prefix: bolt_
     bolt.backend_url: /bolt
 services:

@@ -1,5 +1,7 @@
 {% extends 'partials/_master.twig' %}
 
+{% setcontent global = 'global' %}
+
 {% block main %}
     {% setcontent aboutservices = 'aurora/services' %}
     {% setcontent services = 'services' orderby 'createdAt' %}
@@ -13,9 +15,9 @@
                 <ul class="thm-breadcrumb list-unstyled">
                     <li><a href="{{ path('homepage') }}">Home</a></li>
                     <li><span>.</span></li>
-                    <li>{{ aboutservices.title }}</li>
+                    <li>Services</li>
                 </ul>
-                <h2>{{ aboutservices.title }}</h2>
+                <h2>Services</h2>
             </div>
         </div>
     </section>
@@ -29,14 +31,14 @@
                     <div class="col-xl-6 col-lg-6">
                         <div class="areas-of-practice__top-left">
                             <div class="section-title text-left">
-                                <span class="section-title__tagline">Areas of practice</span>
-                                <h2 class="section-title__title">{{ aboutservices.caption }}</h2>
+                                <span class="section-title__tagline">{{ global.service_tagline }}</span>
+                                <h2 class="section-title__title">{{ global.service_caption ?? ''}}</h2>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6">
                         <div class="areas-of-practice__top-right">
-                            <p class="areas-of-practice__top-right-text">{{ aboutservices.description }}</p>
+                            <p class="areas-of-practice__top-right-text">{{ global.service_description ?? '' }}</p>
                         </div>
                     </div>
                 </div>

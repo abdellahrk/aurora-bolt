@@ -30,3 +30,15 @@ categories:
     required: true
     listing_template: category.twig
     listing_records: 4
+
+portfolios:
+    name: Portfolio
+    slug: work-done
+    singular_name: portfolio
+    singular_slug: work-done
+    behaves_like: categories
+    multiple: true
+    options: [ business, school, university, ngo ]
+    required: true
+    listing_template: portfolios
+    
