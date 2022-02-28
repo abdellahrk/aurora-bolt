@@ -28,6 +28,9 @@
     "bobdenotter/sitemap": {
         "version": "1.1.1"
     },
+    "bobdenotter/weatherwidget": {
+        "version": "1.1.15"
+    },
     "bobdenotter/yaml-migrations": {
         "version": "1.0.2"
     },

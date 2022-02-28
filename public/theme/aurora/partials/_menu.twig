@@ -1,8 +1,10 @@
+{% set locale = app.request.locale %}
 <nav class="main-menu clearfix">
     <div class="main-menu-wrapper clearfix">
         <div class="main-menu-wrapper__left clearfix">
             <div class="main-menu-wrapper__logo">
                 <a href="{{ path('homepage') }}"><img src="{{ asset('images/resources/logo.png') }}" alt=""></a>
+                
             </div>
             <div class="main-menu-wrapper__search-box">
                 <a href="#" class="main-menu-wrapper__search search-toggler icon-magnifying-glass"></a>
@@ -10,8 +12,21 @@
             <div class="main-menu-wrapper__social">
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="{{ config.get('themes/socials/facebook') }}" class="clr-fb"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="clr-dri"><i class="fab fa-pinterest-p"></i></a>
                 <a href="#" class="clr-ins"><i class="fab fa-instagram"></i></a>
+                <ul class="main-menu__list ms-3">
+                    <li class="dropdown">
+                        <a >{{ locale|upper }} </a>
+                        <ul>
+                            <li>
+                                <a href="{{ url('homepage') }}en">EN</a>
+                            </li>
+                            <li>
+                                <a href="{{ url('homepage') }}fr">FR</a>
+                            </li>
+                        </ul>
+                    </li>
+                     
+                </ul>
             </div>
         </div>
         <div class="main-menu-wrapper__main-menu">
@@ -46,6 +61,7 @@
                     {% if config.get('theme/address/phone') %}
                         <a href="tel:{{ config.get('theme/address/phone')  }}">{{ config.get('theme/address/phone') }}</a>
                     {% endif %}
+                    
                 </div>
             </div>
         </div>
