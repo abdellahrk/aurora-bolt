@@ -1,6 +1,8 @@
+{% set locale = app.request.locale %}
 <div class="page-wrapper">
     <header class="main-header clearfix">
-        {{ menu('main', template='partials/_menu.twig') }}
+        {{ menu('main-' ~ locale, template='partials/_menu.twig') }}
+        
     </header>
 
     <div class="stricky-header stricked-menu main-menu">

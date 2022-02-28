@@ -7,29 +7,31 @@
 homepage:
     name: Homepage
     singular_name: Homepage
+    locales: ['en', 'fr']
     fields:
         title:
+            localize: true
             type: text
             class: large
             group: content
             label: Title
-            postfix: |
-                The 'Homepage' can contain basic information about the website. This title will be
-                shown on the homepage of the website, as the name implies. To change the
-                <em><strong>name</strong></em> of the site, as is shown in the header, and the tab
-                in the webbrowser, edit <code>sitename:</code> in the configuration file.
         small_title:
             type: text
+            localize: true
         cta1:
             type: text
+            localize: true
         cta2:
             type: text
+            localize: true
         image:
             type: image
         introduction:
             type: redactor
+            localize: true
         content:
             type: redactor
+            localize: true
         contentlink:
             type: text
             label: Link
@@ -48,16 +50,38 @@ homepage:
     singleton: true
     icon_many: "fa:home"
     icon_one: "fa:home"
+
+global:
+    name: Global 
+    singular_name: Global 
+    viewless: true 
+    singleton: true
+    locales: ['en', 'fr']
+    fields:
+        service_tagline:
+            type: text
+            group: Service Page 
+            localize: true
+        service_caption:
+            type: text
+            localize: true 
+        service_description:
+            type: text 
+            localize: true
+        
     
 # Blog
-Blog:
+blog:
     name: Blog
     singular_name: Blog
+    locales: ['en', 'fr']
     fields:
         title:
             type: text
+            localize: true
         text:
             type: article
+            localize: true
         image:
             type: image
         slug:
@@ -74,17 +98,23 @@ Blog:
 aurora:
     name: Aurora
     singular_name: Aurora
+    locales: ['en', 'fr']
     fields:
         title:
             type: text
+            localize: true
         caption: 
             type: text
+            localize: true
         description:
             type: html
+            localize: true
         feature_title:
             type: text
+            localize: true
         feature_description:
             type: textarea
+            localize: true
         feature_image:
             type: image
         template:
@@ -114,29 +144,37 @@ aurora:
 # text, an 'our address' in the footer, or similar short blurbs of text.
 # For more info, see: https://docs.bolt.cm/howto/resource-contenttype
 
-Services:
+service:
     name: Services
     singular_name: Service
+    locales: ['en', 'fr']
     fields:
         title:
             type: text
+            localize: true
         description:
             type: html
+            localize: true
         headerBackground:
             type: image
         image:
             type: image
         innerTitle: 
             type: text
+            localize: true
         innerDescription:
             type: html
+            localize: true
         innerDescription2:
             type: html
+            localize: true
         slug:
             type: slug
             uses: title
+            localize: true
         excerpt:
             type: text
+            localize: true
         iconImage:
             type: text
         percentage:
@@ -145,46 +183,58 @@ Services:
            type: seo
            group: "SEO Settings"
     record_template: service.twig
-    listing_template: listing.twig
+    listing_template: services.twig
     order: createdAt
 
 # Faq type
 Faqs:
     name: Faqs
     singular_name: Faq
+    locales: ['en', 'fr']
     fields:
         title:
             type: text
+            localize: true
         body:
             type: html
+            localize: true
     viewless: true
 
 #Portfolio
 portfolio:
     name: Portfolios
     singular_name: Porfolio
+    taxonomy: portfolios
+    locales: ['en', 'fr']
     fields:
         title:
             type: text
+            localize: true
         image:
             type: image
         image2: 
             type: image
         client:
             type: text
+            localize: true
         about:
             type: redactor
+            localize: true
         slug:
             type: slug
+            localize: true
 # Testimonials
 testimonials:
     name: Testimonials
     singular_name: testimonial
+    locales: ['en', 'fr']
     fields:
         client:
             type: text
+            localize: true
         body:
             type: html
+            localize: true
         image:
             type: image
     viewless: true
@@ -193,17 +243,23 @@ testimonials:
 whyus:
     name: Whyus
     singular_name: Whyus
+    locales: ['en', 'fr']
     fields: 
         small_title:
             type: text
+            localize: true
         title: 
             type: text
+            localize: true
         first_reason:
             type: text
+            localize: true
         second_reason:
             type: text
+            localize: true
         body: 
             type: html
+            localize: true
         image_400x609:
             type: image
         image_400x349:
@@ -214,6 +270,7 @@ whyus:
             type: text
         link_title:
             type: text
+            localize: true
     singleton: true
     viewless: true
     default_status: published
@@ -225,39 +282,49 @@ whyus:
 sliders: 
     name: Sliders
     singular_name: Slider
+    locales: ['en', 'fr']
     viewless: true
     order: createdAt
     fields:
         title:
             type: text
+            localize: true
         background:
             type: image
         sub_title:
             type: text
+            localize: true
         link:
             type: text
         link_title:
             type: text
+            localize: true
             
 # Services sidebar call to action
 cta:
     name: cta
     singular_name: cta
+    locales: ['en', 'fr']
     viewless: true
     singleton: true
     fields:
         title:
             type: text
+            localize: true
         body: 
             type: html
+            localize: true
         tag_line:
             type: text
+            localize: true
         tag_title:
             type: text
+            localize: true
         cta_link:
             type: text
         cta_link_text: 
             type: text
+            localize: true
         background_image:
             type: image
             
@@ -265,13 +332,16 @@ cta:
 wemake:
     name: wemake
     singular_name: wemake
+    locales: ['en', 'fr']
     singleton: true
     viewless: true
     fields:
         tagline:
             type: text
+            localize: true
         title:
             type: text
+            localize: true
         background: 
             type: image
         ceo_name:
@@ -284,28 +354,34 @@ wemake:
 stats:
     name: Stats
     singular_name: Stat
+    locales: ['en', 'fr']
     viewless: true
     sort: -createdAt
     fields:
         title:
             type: text
+            localize: true
         stat_icon:
             type: text
         stat_number:
             type: text
         text:
             type: text
+            localize: true
             
 # Why us services
 theylikeus:
     name: Theylikeus
     singular_name: Theylikeus
+    locales: ['en', 'fr']
     viewless: true
     fields:
         title:
             type: text
+            localize: true
         reason: 
             type: html
+            localize: true
         
 # Settings (general page)
 settings:
@@ -332,6 +408,7 @@ settings:
 others:
     name: Others
     singular_name: Other
+    locales: ['en', 'fr']
     viewless: true
     singleton: true
     title: Others
@@ -341,28 +418,36 @@ others:
         faq_title_small:
             type: text
             group: faqs settings
+            localize: true
         faq_title:
             type: text
+            localize: true
         faq_image:
             type: image
         faq_image_text:
             type: text
+            localize: true
         testimonial_small_title:
             type: text
             group: testimonials settings
+            localize: true
         testimonial_title:
             type: text
+            localize: true
         testimonial_link:
             type: text
         testimonial_link_text:
             type: text
+            localize: true
         blog_background:
             type: image
             group: "Blog Setting"
         home_tag:
             type: text
+            localize: true
         home_title:
             type: text
+            localize: true
         bottom_text:
             type: redactor
         bottom_text_cta:
@@ -370,8 +455,10 @@ others:
         service_tagline:
             type: text
             group: service homepage settings
+            localize: true
         service_title:
             type: text
+            localize: true
         service_background:
             type: image
   
@@ -379,43 +466,57 @@ others:
 features:
     name: features
     singular_name: feature
+    locales: ['en', 'fr']
     singleton: true
     viewless: true
     fields:
         title:
             type: text
+            localize: true
         feature1:
             type: text
+            localize: true
         feature2:
             type: text
+            localize: true
         feature3:
             type: text
+            localize: true
         tag:
             type: text
+            localize: true
         image:
             type: image
         text:
             type: text
             title: simple text
+            localize: true
 
 # About
 about:
     name: About
     singular_name: About type
+    locales: ['en', 'fr']
     singleton: true
     fields:
         title:
             type: text
+            localize: true
         whyUs:
             type: text
+            localize: true
+
         tag:
             type: text
+            localize: true
         body:
             type: redactor
+            localize: true
         image:
             type: image
         button_text:
             type: text
+            localize: true
         button_link:
             type: text
         background:
@@ -424,6 +525,7 @@ resource:
     name: resource
     singular_name: resource
     singleton: false
+    locales: ['en', 'fr']
     fields:
         title:
             type: text
@@ -448,6 +550,7 @@ resource:
 ads:
     name: Ads
     singular_name: Ad
+    locales: ['en', 'fr']
     viewless: true
     fields:
         title:
