@@ -412,6 +412,15 @@ others:
     singleton: true
     title: Others
     fields:
+        home:
+            type: text 
+            localize: true
+        service_details:
+            type: text 
+            localize: true
+        quick_links:
+            type: text
+            localize: true
         footer_background:
             type: image
         faq_title_small:
