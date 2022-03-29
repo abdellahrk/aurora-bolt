@@ -1,0 +1,44 @@
+{% setcontent services = 'services' %}
+<!--Services One Start-->
+<section class="services-one">
+    <div class="services-one-shape" style="background-image: url(assets/images/shapes/services-one-shape.png)">
+    </div>
+    <div class="container">
+        <div class="services-one__top">
+            <div class="row">
+                <div class="col-xl-7 col-lg-6">
+                    <div class="services-one__top-left">
+                        <div class="section-title text-left">
+                            <span class="section-title__tagline">Our Services</span>
+                            <h2 class="section-title__title">We Shape the <br> Perfect solution</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-6">
+                    <div class="services-one__top-right">
+                        <p class="services-one__top-text">We are committed to providing our customers with not
+                            service while offering our emod tempor incididunt ut labore employees the best
+                            training.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="services-one__bottom">
+            <div class="row">
+                {% for service in services %}
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="{{ loop.index }}00ms">
+                        <!--Services One Single-->
+                        <div class="services-one__single">
+                            <h3 class="services-one__title"><a href="{{ service|link }}">{{ service.title }}</a></h3>
+                            <div class="services-one__icon">
+                                <span class="icon-online-shopping"></span>
+                            </div>
+                            <div class="services-one__count"></div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!--Services One End-->
