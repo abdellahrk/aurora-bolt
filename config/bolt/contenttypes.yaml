@@ -143,7 +143,7 @@ aurora:
 # text, an 'our address' in the footer, or similar short blurbs of text.
 # For more info, see: https://docs.bolt.cm/howto/resource-contenttype
 
-service:
+services:
     name: Services
     singular_name: Service
     locales: ['en', 'fr']
@@ -152,7 +152,7 @@ service:
             type: text
             localize: true
         description:
-            type: html
+            type: redactor
             localize: true
         headerBackground:
             type: image

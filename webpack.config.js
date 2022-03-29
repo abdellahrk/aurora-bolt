@@ -25,6 +25,7 @@ Encore
    */
   .addEntry('app', './assets/app.js')
   .addEntry('custom', './assets/aurora.js')
+  .addEntry('aurora', './assets/aurora-new.js')
 
   // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
   .splitEntryChunks()
