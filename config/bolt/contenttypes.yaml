@@ -164,8 +164,8 @@ services:
         innerDescription:
             type: html
             localize: true
-        innerDescription2:
-            type: html
+        featuresList:
+            type: redactor
             localize: true
         slug:
             type: slug

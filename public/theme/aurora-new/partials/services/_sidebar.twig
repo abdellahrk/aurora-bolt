@@ -1,0 +1,24 @@
+<div class="service-details__sidebar">
+    <div class="service-details__sidebar-service">
+        <h4 class="service-details__sidebar-title">Services</h4>
+        <ul class="service-details__sidebar-service-list list-unstyled">
+            {% for service in services %}
+                <li><a href="{{ service|link }}">{{ service.title }} <span
+                            class="icon-arrow-right"></span></a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="service-details__need-help">
+        <div class="service-details__need-help-bg"
+            style="background-image: url(assets/images/backgrounds/service-details-need-help-bg.jpg)">
+        </div>
+        <div class="service-details__need-help-icon">
+            <span class="icon-phone-call"></span>
+        </div>
+        <h2 class="service-details__need-help-title">Best Quality <br> services</h2>
+        <div class="service-details__need-help-contact">
+            <p>Call us Anytime</p>
+            <a href="tel:926668880000">+237 693 387 688 </a>
+        </div>
+    </div>
+</div>
