@@ -1,0 +1,85 @@
+<div class="col-xl-4 col-lg-5">
+    <div class="sidebar">
+        <div class="sidebar__single sidebar__search">
+            <form action="#" class="sidebar__search-form">
+                <input type="search" placeholder="Search here">
+                <button type="submit"><i class="icon-magnifying-glass"></i></button>
+            </form>
+        </div>
+        <div class="sidebar__single sidebar__post">
+            <h3 class="sidebar__title">Latest Posts</h3>
+            <ul class="sidebar__post-list list-unstyled">
+                {% for article in articles %}
+                    <li>
+                        <div class="sidebar__post-image">
+                            <img src="{{ article.image }}" alt="{{ article.title }}">
+                        </div>
+                        <div class="sidebar__post-content">
+                            <h3>
+                                <a href="#" class="sidebar__post-content-meta"><i class="far fa-calendar"></i>{{ article.createdAt|date('d M Y') }}</a>
+                                <a href="{{ article|link }}">{{ article.title }}</a>
+                            </h3>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="sidebar__single sidebar__category">
+            <h3 class="sidebar__title">Categories</h3>
+            <ul class="sidebar__category-list list-unstyled">
+                <li><a href="#">Web Development <span class="icon-arrow-right"></span></a></li>
+            </ul>
+        </div>
+        {#
+            <div class="sidebar__single sidebar__tags">
+                <h3 class="sidebar__title">Tags</h3>
+                <div class="sidebar__tags-list">
+                    <a href="#">Development</a>
+                    <a href="#">Designing</a>
+                    <a href="#">Business</a>
+                    <a href="#">Marketing</a>
+                    <a href="#">technology</a>
+                </div>
+            </div>
+            <div class="sidebar__single sidebar__comments">
+                <h3 class="sidebar__title">comments</h3>
+                <ul class="sidebar__comments-list list-unstyled">
+                    <li>
+                        <div class="sidebar__comments-icon">
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <div class="sidebar__comments-text-box">
+                            <p>A wordpress commenter on <br> launch new mobile app</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sidebar__comments-icon">
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <div class="sidebar__comments-text-box">
+                            <p>John Doe on Template:</p>
+                            <h5>Comments</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sidebar__comments-icon">
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <div class="sidebar__comments-text-box">
+                            <p>A wordpress commenter on <br> launch new mobile app</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sidebar__comments-icon">
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <div class="sidebar__comments-text-box">
+                            <p>John Doe on Template:</p>
+                            <h5>Comments</h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        #}
+    </div>
+</div>
