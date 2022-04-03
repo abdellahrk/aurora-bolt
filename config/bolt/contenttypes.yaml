@@ -569,3 +569,11 @@ ads:
             type: image
         link:
             type: text
+
+contact:
+    name: Contact
+    singular_name: Contact
+    singleton: true
+    fields: 
+        contact: 
+            type: text
