@@ -27,20 +27,20 @@ fields:
         options:
             required: true
             attr:
-                placeholder: Votre Email
+                placeholder: Your Email
             constraints: [ NotBlank, Email ]
     phone:
         type: text
         options:
             required: false
             attr:
-                placeholder: Numéro téléphone
+                placeholder: Phone
     subject:
         type: text
         options:
             required: true
             attr:
-                placeholder: Sujet
+                placeholder: Subject
     message:
         type: textarea
         options:

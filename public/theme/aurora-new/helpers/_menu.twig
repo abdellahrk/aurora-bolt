@@ -1,0 +1,52 @@
+{#{% macro display_menu_item(item, loop) %}
+
+    {% if item.submenu %}
+        {% set class = 'navbar-link' %}
+        <li class="dropdown">
+        {{ _self.display_menu_item(item, loop) }}
+        <ul>
+    {% else %}
+        {% set class = 'navbar-item' %}
+    {% endif %}
+
+    <a href='{{ item.link }}' {% if item.title is defined %}title='{{ item.title|escape }}'{% endif %}
+       class='{{ class }} {% if item|current %}current {% endif %}{% if item.class is defined %}{{item.class}}{% endif %} index-{{ loop.index }}{% if loop.first %} first{% endif %}{% if loop.last %} last{% endif %}'>
+        {{ item.label|default(item.title) }}
+    </a>
+
+    {% if item.submenu %}
+
+            {% for submenu in item.submenu %}
+                <li>
+                    {{ _self.display_menu_item(submenu, loop) }}
+                </li>
+            {% endfor %}
+
+
+        </ul>
+        </li>
+    {% endif %}
+
+{% endmacro %}
+#}
+
+<ul class="main-menu__list">
+    {% for item in menu %}
+        <li >
+            <a href="{{ item.uri }}">{{ item.label }}</a>
+        </li>
+        {% if item.submenu %}
+            <li class="dropdown">
+                <a href="{{ item.uri }}">{{ item.label }}</a>
+                <ul>
+                    {% for submenu in item.submenu %}
+                        <li>
+                            <a href="{{ submenu.uri }}">{{ submenu.label }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
