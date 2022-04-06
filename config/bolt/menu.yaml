@@ -62,3 +62,11 @@ footer-fr:
       link: blog
     - label: Contact
       link: contact
+
+footer2-en:
+    - label: Home
+      link: /
+
+footer2-fr:
+    - label: Home
+      link: /
