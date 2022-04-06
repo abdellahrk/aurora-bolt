@@ -2,29 +2,28 @@
   "entrypoints": {
     "app": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors~app~aurora.js",
-        "/build/app.js"
+        "/build/runtime.d94b3b43.js",
+        "/build/0.6c9002dc.js",
+        "/build/app.8d0fd98e.js"
       ],
       "css": [
-        "/build/app.css"
+        "/build/app.9b26775c.css"
       ]
     },
     "custom": {
       "js": [
-        "/build/runtime.js",
-        "/build/custom.js"
+        "/build/runtime.d94b3b43.js",
+        "/build/custom.1b8cdfd1.js"
       ]
     },
     "aurora": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors~app~aurora.js",
-        "/build/vendors~aurora.js",
-        "/build/aurora.js"
+        "/build/runtime.d94b3b43.js",
+        "/build/0.6c9002dc.js",
+        "/build/aurora.f8b572c3.js"
       ],
       "css": [
-        "/build/aurora.css"
+        "/build/aurora.7be3fe94.css"
       ]
     }
   }
