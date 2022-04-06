@@ -1,6 +1,7 @@
 {% extends 'partials/_master.twig' %}
 
 {% setcontent articles = 'blog' random limit 6 %}
+{% locale = app.request.locale %}
 
 {% block main %}
     <!--Page Header Start-->

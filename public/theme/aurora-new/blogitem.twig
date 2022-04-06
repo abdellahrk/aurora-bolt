@@ -1,0 +1,143 @@
+{% extends 'partials/_master.twig' %}
+
+{% block content %}
+            <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
+            </div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{{ path('homepage') }}">Home</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                    <h2>{{ blog.title }}</h2>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+        <!--Blog Details Start-->
+        <section class="blog-details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="blog-details__left">
+                            <div class="blog-details__img">
+                                <img src="{{ blog.image }}" alt="{{ blog.title }}">
+                                <div class="blog-details__date-box">
+                                    <p>26 aug</p>
+                                </div>
+                            </div>
+                            <div class="blog-details__content">
+                                <ul class="list-unstyled blog-details__meta">
+                                    <li><a href="#"><i class="far fa-user-circle"></i> By {{ blog.author }}</a></li>
+                                    <li><span>/</span></li>
+                                    {#
+                                    <li><a href="blog-details.html"><i class="far fa-comments"></i> 2 Comments</a>
+                                    </li>
+                                    #}
+                                </ul>
+                                <h3 class="blog-details__title">{{ blog.title }}</h3>
+                                <p class="blog-details__text-1">{{ blog.text|raw }}</p>
+                             </div>
+                            <div class="blog-details__bottom">
+                                <p class="blog-details__tags">
+                                    <span>Tags</span>
+                                    <a href="#">Development</a>
+                                    <a href="#">Designing</a>
+                                </p>
+                                <div class="blog-details__social-list">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="blgo-details__pagenation-box">
+                                <ul class="list-unstyled blog-details__pagenation">
+                                    {% set next_article = blog|next %}
+                                    {% set previous_article = blog|previous %}
+                                    {% if previous_article %}
+                                        <li><a href="{{ previous_article|link }}">{{ previous_article.title }}</a></li>
+                                    {% endif %}
+                                    {% if next_article %}
+                                    <li><a href="{{ next_article|link }}"> {{ next_article.title }} </a></li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                            {#
+                            <div class="comment-one">
+                                <h3 class="comment-one__title">2 Comments</h3>
+                                <div class="comment-one__single">
+                                    <div class="comment-one__image">
+                                        <img src="assets/images/blog/comment-1-1.jpg" alt="">
+                                    </div>
+                                    <div class="comment-one__content">
+                                        <h3>Kevin Martin</h3>
+                                        <p>It has survived not only five centuries, but also the leap into electronic typesetting unchanged. It was popularised in the sheets containing lorem ipsum is simply free text.</p>
+                                        <a href="blog-details.html" class="thm-btn comment-one__btn">Reply</a>
+                                    </div>
+                                </div>
+                                <div class="comment-one__single">
+                                    <div class="comment-one__image">
+                                        <img src="assets/images/blog/comment-1-2.jpg" alt="">
+                                    </div>
+                                    <div class="comment-one__content">
+                                        <h3>Kevin albert</h3>
+                                        <p>It has survived not only five centuries, but also the leap into electronic typesetting unchanged. It was popularised in the sheets containing lorem ipsum is simply free text.</p>
+                                        <a href="blog-details.html" class="thm-btn comment-one__btn">Reply</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-form">
+                                <h3 class="comment-form__title">Leave a Comment</h3>
+                                <form action="assets/inc/sendemail.php" class="comment-one__form contact-form-validated" novalidate="novalidate">
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <div class="comment-form__input-box">
+                                                <input type="text" placeholder="Your name" name="name">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="comment-form__input-box">
+                                                <input type="email" placeholder="Email address" name="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="comment-form__input-box">
+                                                <textarea name="message" placeholder="Write message"></textarea>
+                                            </div>
+                                            <button type="submit" class="thm-btn comment-form__btn">Submit a Comment</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            #}
+                        </div>
+                    </div>
+
+                    {% setcontent articles = 'blog' limit 6  %}
+                    {% include 'partials/blog/_sidebar.twig' with {'articles': articles } %}
+                </div>
+            </div>
+        </section>
+        <!--Blog Details End-->
+{% endblock %}
+
+
+{% block schema %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "{{ blog.title }}",
+            "image": "{{ blog.image }}",
+            "name": "{{ blog.title }}",
+            "url": "{{ blog|link }}",
+            "articleBody": "{{ blog.text|striptags }}"
+        }
+    </script>
+{% endblock %}

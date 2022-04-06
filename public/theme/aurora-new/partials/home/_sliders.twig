@@ -1,0 +1,64 @@
+{% setcontent sliders = 'sliders' %}
+<!--Main Slider Start-->
+<section class="main-slider">
+    <div class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,
+    "effect": "fade",
+     "pagination": {
+        "el": "#main-slider-pagination",
+        "type": "bullets",
+        "clickable": true
+      },
+    "navigation": {
+        "nextEl": "#main-slider__swiper-button-next",
+        "prevEl": "#main-slider__swiper-button-prev"
+    },
+    "autoplay": {
+        "delay": 5000
+    }}'>
+        <div class="swiper-wrapper">
+            {% for slider in sliders %}
+                <div class="swiper-slide">
+                    <div class="image-layer"
+                        style="background-image: url({{ slider.background }});">
+                    </div>
+                    <!-- /.image-layer -->
+                    <div class="main-slider__social">
+                        <a href="{{ settings.facebook }}">facebook</a>
+                        <a href="{{ settings.twitter }}">twitter</a>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="main-slider__content">
+                                    <div class="main-slider__title-box-1">
+                                        <h2>{{ slider.title }}</h2>
+                                        <div class="main-slider__title-box-2">
+                                            <h2>{{ slider.title }}</h2>
+                                        </div>
+                                    </div>
+                                    <a href="/about" class="thm-btn">Discover More</a>
+                                    <div class="main-slider-badge">
+                                        <img data-tilt src="assets/images/resources/main-slider-badge.png" alt="{{ slider.title }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="slider-bottom-box clearfix">
+            <div class="swiper-pagination" id="main-slider-pagination"></div>
+            <div class="main-slider__nav">
+                <div class="swiper-button-prev" id="main-slider__swiper-button-next">
+                    <span class="icon-arrow-left"></span>
+                </div>
+                <div class="swiper-button-next" id="main-slider__swiper-button-prev">
+                    <span class="icon-arrow-right"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Main Slider End-->

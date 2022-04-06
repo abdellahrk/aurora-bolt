@@ -1,0 +1,87 @@
+{% extends 'partials/_master.twig' %}
+
+{% block content %}
+    <!--Page Header Start-->
+    <section class="page-header">
+        <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
+        </div>
+        <div class="container">
+            <div class="page-header__inner">
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="{{ path('homepage') }}">Home</a></li>
+                    <li>Blog</li>
+                </ul>
+                <h2>Blog</h2>
+            </div>
+        </div>
+    </section>
+    <!--Page Header End-->
+
+    <!--Blog Page Start-->
+    <section class="blog-sidebar">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-7">
+                    <div class="blog-sidebar__left">
+                        <div class="blog-sidebar__content">
+                            <!--Blog Sidebar Content Single-->
+                            {% for article in blog %}
+                                <div class="blog-sidebar__content-single">
+                                    <div class="blog-sidebar__content-img">
+                                        <img src="{{ article.image }}" alt="{{ article.title }}">
+                                        <div class="blog-sidebar__date-box">
+                                            <p>{{ article.createdAt|date('d M y') }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="blog-sidebar__content-box">
+                                        <ul class="list-unstyled blog-sidebar__meta">
+                                            <li><i class="far fa-user-circle"></i> By
+                                                    {{ article.author }}</li>
+                                            {#
+                                            <li><span>/</span></li>
+                                            <li><a href="blog-details.html"><i class="far fa-comments"></i> 2
+                                                    Comments</a>
+                                            </li>
+                                            #}
+                                        </ul>
+                                        <h3 class="blog-sidebar__title">
+                                            <a href="{{ article|link }}">{{ article.title }}</a>
+                                        </h3>
+                                        <p class="blog-sidebar__text">{{ article.text|excerpt(150) }}</p>
+                                        <div class="blog-sidebar__read-more-btn">
+                                            <a href="{{ article|link }}">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="blog-sidebar__bottom-box">
+                            <div class="blog-sidebar__bottom-box-icon">
+                                <img src="assets/images/icon/blog-sidebar-bottom-box-icon.png" alt="">
+                            </div>
+                            <p class="blog-sidebar__bottom-box-text">There are many variations of passages available
+                                but have alteration in some by inject humour or random words. There are many
+                                variations of passages of Lorem Ipsum available, but the majority have suffered
+                                alteration.</p>
+                        </div>
+                        <div class="blog-sidebar__delivering-services">
+                            <div class="blog-sidebar__delivering-services-icon">
+                                <a href="blog-details.html"><img
+                                        src="assets/images/icon/blog-sidebar__delivering-services-icon.png"
+                                        alt=""></a>
+                            </div>
+                            <h3 class="blog-sidebar__delivering-services-title"><a
+                                    href="blog-details.html">Delivering the best web design agency.</a></h3>
+                        </div>
+                        <div class="blog-sidebar__load-more">
+                            <a href="blog-details.html" class="thm-btn blog-sidebar__load-more-btn">Load more
+                                posts</a>
+                        </div>
+                    </div>
+                </div>
+                {% include 'partials/blog/_sidebar.twig' with {'articles': blog} %}
+            </div>
+        </div>
+    </section>
+    <!--Blog Page End-->
+{% endblock %}

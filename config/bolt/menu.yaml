@@ -1,39 +1,3 @@
-<<<<<<< HEAD
-# This file defines the menus on the website. See the documentation for
-# details: https://docs.bolt.cm/menus
-
-main:
-  - label: Accueil
-    title: This is the <b>first<b> menu item.
-    link: homepage
-    class: homepage
-  - label: Services
-    link: services
-    submenu:
-        - label: Création SiteWeb
-          link: service/creation-site-web
-        - label: Développement Web
-          class: menu-item-class
-          link: service/developpement-applications-web
-        - label: Hébergement Web
-          link: service/hebergement-web 
-  - label: Blog
-    link: blog
-  - label: Hébergement Web
-    link: https://hosting.aurora.cm
-    class: bolt-site
-    title: Meilleur hébergement web au Cameroun
-
-footer:
-    - label: Acceuil
-      link: /
-    - label: Services
-      link: services
-    - label: Blog
-      link: blog
-    - label: Contact
-      link: aurora/contact-us
-=======
 # This file defines the menus on the website. See the documentation for
 # details: https://docs.bolt.cm/menus
 
@@ -98,4 +62,11 @@ footer-fr:
       link: blog
     - label: Contact
       link: contact
->>>>>>> fafbb1c3fa3db12d2eb4f22a244ac3fbf63c72a5
+      
+footer2-en:
+    - label: Home
+      link: /
+
+footer2-fr:
+    - label: Home
+      link: /

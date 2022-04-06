@@ -67,10 +67,77 @@
         <target>You have to login in order to access this page.</target>
       </segment>
     </unit>
+<<<<<<< HEAD
     <unit id="MLDppFq" name="Précédent">
       <segment>
         <source>Précédent</source>
         <target>Précédent</target>
+=======
+    <unit id="3NHVIj9" name="Name">
+      <segment>
+        <source>Name</source>
+        <target>Name</target>
+      </segment>
+    </unit>
+    <unit id="rMKsKxN" name="Your name...">
+      <segment>
+        <source>Your name...</source>
+        <target>Your name...</target>
+      </segment>
+    </unit>
+    <unit id="KIeucxj" name="Votre Email">
+      <segment>
+        <source>Votre Email</source>
+        <target>Votre Email</target>
+      </segment>
+    </unit>
+    <unit id="Y9zriAC" name="Phone">
+      <segment>
+        <source>Phone</source>
+        <target>Phone</target>
+      </segment>
+    </unit>
+    <unit id="IGUOG7q" name="Numéro téléphone">
+      <segment>
+        <source>Numéro téléphone</source>
+        <target>Numéro téléphone</target>
+      </segment>
+    </unit>
+    <unit id="aJcSg4Q" name="Subject">
+      <segment>
+        <source>Subject</source>
+        <target>Subject</target>
+      </segment>
+    </unit>
+    <unit id="21nrsnI" name="Sujet">
+      <segment>
+        <source>Sujet</source>
+        <target>Sujet</target>
+      </segment>
+    </unit>
+    <unit id="egV72Za" name="Your message">
+      <segment>
+        <source>Your message</source>
+        <target>Your message</target>
+      </segment>
+    </unit>
+    <unit id="gvYWw0o" name="Your message...">
+      <segment>
+        <source>Your message...</source>
+        <target>Your message...</target>
+      </segment>
+    </unit>
+    <unit id=".MeoEev" name="String city processor string">
+      <segment>
+        <source>String city processor string</source>
+        <target>String city processor string</target>
+      </segment>
+    </unit>
+    <unit id="IWej4Er" name="Your Email">
+      <segment>
+        <source>Your Email</source>
+        <target>Your Email</target>
+>>>>>>> 55733f8296e8935d9d0232bffd41ada88d438921
       </segment>
     </unit>
   </file>

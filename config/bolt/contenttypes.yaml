@@ -143,7 +143,7 @@ aurora:
 # text, an 'our address' in the footer, or similar short blurbs of text.
 # For more info, see: https://docs.bolt.cm/howto/resource-contenttype
 
-service:
+services:
     name: Services
     singular_name: Service
     locales: ['en', 'fr']
@@ -152,7 +152,7 @@ service:
             type: text
             localize: true
         description:
-            type: html
+            type: redactor
             localize: true
         headerBackground:
             type: image
@@ -164,8 +164,8 @@ service:
         innerDescription:
             type: html
             localize: true
-        innerDescription2:
-            type: html
+        featuresList:
+            type: redactor
             localize: true
         slug:
             type: slug
@@ -190,14 +190,14 @@ Faqs:
     name: Faqs
     singular_name: Faq
     locales: ['en', 'fr']
+    listing_template: faqs.twig
     fields:
         title:
             type: text
             localize: true
         body:
-            type: html
+            type: redactor
             localize: true
-    viewless: true
 
 #Portfolio
 portfolio:
@@ -568,4 +568,12 @@ ads:
         image:
             type: image
         link:
+            type: text
+
+contact:
+    name: Contact
+    singular_name: Contact
+    singleton: true
+    fields: 
+        contact: 
             type: text
