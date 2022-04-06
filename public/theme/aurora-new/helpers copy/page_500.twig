@@ -1,0 +1,38 @@
+{% extends 'partials/_master.twig' %}
+{% setcontent record = 'resource/not-found' %}
+{% block main %}
+    <!--Page Header Start-->
+    <section class="page-header" style="background-image: url({{ record.background }});">
+        <div class="page-header-shape-1"></div>
+        <div class="page-header-shape-2"></div>
+        <div class="container">
+            <div class="page-header__inner">
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="{{ path('homepage') }}">Acceuil</a></li>
+                    <li><span>.</span></li>
+                    <li>500</li>
+                </ul>
+                <h2>404 page</h2>
+            </div>
+        </div>
+    </section>
+    <!--Page Header End-->
+
+    <!--Error Page Start-->
+    <section class="error-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="error-page__inner">
+                        <h2 class="error-page__title">500</h2>
+                        <h3 class="error-page__tagline">{{ record.tagline }}</h3>
+                        <p class="error-page__text">{{ record.text|raw }}</p>
+
+                        <a href="{{ path('homepage') }}" class="thm-btn error-page__btn"><span>{{ record.button_text }}</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Error Page End-->
+{% endblock %}
