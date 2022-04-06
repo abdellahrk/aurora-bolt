@@ -475,37 +475,22 @@ features:
     name: features
     singular_name: feature
     locales: ['en', 'fr']
-    singleton: true
     viewless: true
     fields:
         title:
             type: text
             localize: true
-        feature1:
-            type: text
-            localize: true
-        feature2:
-            type: text
-            localize: true
-        feature3:
-            type: text
-            localize: true
-        tag:
-            type: text
-            localize: true
-        image:
-            type: image
-        text:
-            type: text
-            title: simple text
+        content:
+            type: redactor
             localize: true
 
 # About
 about:
     name: About
-    singular_name: About type
+    singular_name: About
     locales: ['en', 'fr']
-    singleton: true
+    singleton: true  
+    record_template: about.twig
     fields:
         title:
             type: text
@@ -577,3 +562,27 @@ contact:
     fields: 
         contact: 
             type: text
+
+partners: 
+    name: Partners
+    singular_name: Partner
+    viewless: true
+    fields: 
+        name: 
+            type: text
+        image: 
+            type: image
+        website: 
+            type: text
+
+counters: 
+    name: Counters 
+    singular_name: Counter
+    viewless: true
+    fields: 
+        counter_icon: 
+            type: text 
+        count:
+            type: number 
+        name: 
+            type: text 
