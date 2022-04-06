@@ -5,7 +5,6 @@
   "build/aurora.js": "/build/aurora.js",
   "build/custom.js": "/build/custom.js",
   "build/runtime.js": "/build/runtime.js",
-  "build/vendors~app.js": "/build/vendors~app.js",
   "build/vendors~app~aurora.js": "/build/vendors~app~aurora.js",
   "build/vendors~aurora.js": "/build/vendors~aurora.js",
   "build/fonts/fa-brands-400.eot": "/build/fonts/fa-brands-400.0fea2496.eot",

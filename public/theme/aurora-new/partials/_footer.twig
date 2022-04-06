@@ -7,14 +7,12 @@
                     <div class="site-footer__top-inner">
                         <div class="site-footer__top-left">
                             <h3 class="site-footer__top-left-title">Your Perfect Business Partner Solution</h3>
-                            <a href="tel:926668880000" class="site-footer__top-left-phone">+ 92 666 888 0000</a>
+                            <a href="tel:{{ settings.phone }}" class="site-footer__top-left-phone">{{ settings.phone }}</a>
                         </div>
                         <div class="site-footer__top-right">
                             <div class="site-footer__top-right-social">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="{{ settings.facebook }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="{{ settings.twitter }}" target="_blank"><i class="fab fa-facebook"></i></a>
                             </div>
                         </div>
                     </div>
@@ -31,8 +29,8 @@
                                         USA</p>
                                     <h4 class="footer-widget__contact-email-phone">
                                         <a href="mailto:needhelp@company.com"
-                                            class="footer-widget__contact-email">contact@aurora.cm</a>
-                                        <a href="tel:237 693387688" class="footer-widget__contact-phone">+237 693 387 688</a>
+                                            class="footer-widget__contact-email">{{ settings.email }}</a>
+                                        <a href="tel:237 693387688" class="footer-widget__contact-phone"> {{ settings.phone }} </a>
                                     </h4>
                                 </div>
                             </div>
@@ -118,19 +116,17 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@packageName__.com">needhelp@mibooz.com</a>
+                    <a href="mailto:{{ settings.email }}">{{ settings.email }}</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
+                    <a href="tel:{{ settings.phone }}">{{ settings.phone }}</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__top">
                 <div class="mobile-nav__social">
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-facebook-square"></a>
-                    <a href="#" class="fab fa-pinterest-p"></a>
-                    <a href="#" class="fab fa-instagram"></a>
+                   <a href="{{ settings.facebook }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                   <a href="{{ settings.twitter }}" target="_blank"><i class="fab fa-facebook"></i></a>
                 </div><!-- /.mobile-nav__social -->
             </div><!-- /.mobile-nav__top -->
 
@@ -156,3 +152,15 @@
         <!-- /.search-popup__content -->
     </div>
     <!-- /.search-popup -->
+
+<script src="{{ asset('tiger/vendors/bootstrap-select/js/bootstrap-select.min.js') }}"></script>
+<script src="{{ asset('tiger/vendors/swiper/swiper.min.js') }}"></script>
+<script src="{{ asset('tiger/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('tiger/js/mibooz.js') }}"></script>
+{#
+<script src="{{ asset('tiger/vendors/bootstrap-select/js/bootstrap-select.min.js') }}"></script>
+<script src="{{ asset('tiger/vendors/bootstrap-select/js/bootstrap-select.min.js') }}"></script>
+<script src="{{ asset('tiger/vendors/bootstrap-select/js/bootstrap-select.min.js') }}"></script>
+<script src="{{ asset('tiger/vendors/bootstrap-select/js/bootstrap-select.min.js') }}"></script>
+<script src="{{ asset('tiger/vendors/bootstrap-select/js/bootstrap-select.min.js') }}"></script>
+#}

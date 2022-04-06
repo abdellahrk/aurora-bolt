@@ -2,7 +2,7 @@
             <nav class="main-menu clearfix">
                 <div class="main-menu-wrapper">
                     <div class="main-menu-wrapper__logo">
-                        <a href="index.html"><img src="assets/images/resources/logo-1.png" alt=""></a>
+                        <a href="{{ path('homepage') }}"><img src="{{ asset('images/resources/logo.png') }}" alt=""></a>
                     </div>
                     <div class="main-menu-wrapper__main-menu">
                         <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="main-menu-wrapper__call-number">
                                 <p>Call Anytime</p>
-                                <h5><a href="tel:926668880000">+ 92 666 888 0000</a></h5>
+                                <h5><a href="tel:{{ settings.phone }}">{{ settings.phone }}</a></h5>
                             </div>
                         </div>
                         <div class="main-menu-wrapper__search-box">

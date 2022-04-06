@@ -23,23 +23,22 @@
                     </div>
                     <!-- /.image-layer -->
                     <div class="main-slider__social">
-                        <a href="#">facebook</a>
-                        <a href="#">twitter</a>
-                        <a href="#">instagram</a>
+                        <a href="{{ settings.facebook }}">facebook</a>
+                        <a href="{{ settings.twitter }}">twitter</a>
                     </div>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="main-slider__content">
                                     <div class="main-slider__title-box-1">
-                                        <h2>Creative <br> Talent <br> Here</h2>
+                                        <h2>{{ slider.title }}</h2>
                                         <div class="main-slider__title-box-2">
-                                            <h2>Creative <br> Talent <br> Here</h2>
+                                            <h2>{{ slider.title }}</h2>
                                         </div>
                                     </div>
-                                    <a href="about.html" class="thm-btn">Discover More</a>
+                                    <a href="/about" class="thm-btn">Discover More</a>
                                     <div class="main-slider-badge">
-                                        <img data-tilt src="assets/images/resources/main-slider-badge.png" alt="">
+                                        <img data-tilt src="assets/images/resources/main-slider-badge.png" alt="{{ slider.title }}">
                                     </div>
                                 </div>
                             </div>
