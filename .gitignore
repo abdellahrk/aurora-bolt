@@ -76,3 +76,4 @@ docker-compose.override.yaml
 ###< symfony/framework-bundle ###
 
 /config/bolt/menu.yaml
+/.env

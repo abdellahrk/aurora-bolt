@@ -1,10 +1,10 @@
 {% form_theme form _self %}
 
 <div class="row">
-    {% block text_widget %}
+    {% block form_widget_simple %}
         <div class="col-xl-6">
             <div class="comment-form__input-box">
-                <input type="text" {{ block('widget_attributes') }} {% if value is defined %} value="{{ value }}"{% endif %} name="name">
+                <input type="text"  name="name">
             </div>
         </div>
     {% endblock %}
@@ -12,7 +12,7 @@
     {% block email_widget %}
         <div class="col-xl-6">
             <div class="comment-form__input-box">
-                <input type="email" {{ block('widget_attributes') }} {% if value is defined %} value="{{ value }}"{% endif %} name="email">
+                <input type="email" name="email">
             </div>
         </div>
     {% endblock %}
@@ -20,7 +20,7 @@
     {% block datetime_widget %}
         <div class="col-xl-6">
             <div class="comment-form__input-box">
-                <input type="date" {{ block('widget_attributes') }} {% if value is defined %} value="{{ value }}"{% endif %} name="email">
+                <input type="date" name="email">
             </div>
         </div>
     {% endblock %}
@@ -30,11 +30,11 @@
     <div class="col-xl-12">
         {% block textarea_widget %}
             <div class="comment-form__input-box">
-                <textarea name="message" {{ block('widget_attributes') }}>{{ value }}</textarea>
+                <textarea name="message" ></textarea>
             </div>
         {% endblock %}
         {% block button_widget %}
-            <button type="submit" class="thm-btn faqs-contact__btn"><span>{{ label }}</span></button>
+            <button type="submit" class="thm-btn faqs-contact__btn"><span></span></button>
         {% endblock %}
     </div>
 </div>

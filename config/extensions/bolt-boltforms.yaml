@@ -14,7 +14,7 @@ debug:
 # Enable CSRF protection for forms. You should leave this set to 'true', unless
 # you know what you're doing.
 csrf: true
-honeypot: true
+honeypot: false
 spam-action: mark-as-spam # Either 'block', 'none' or 'mark-as-spam'
 
 # Global templates used for rendering forms and emails.
@@ -38,10 +38,11 @@ templates:
     email: '@boltforms/email_table.html.twig' # Replace with @boltforms/email.html.twig to send simple list-based emails.
     subject: '@boltforms/subject.html.twig'
     files: '@boltforms/file_browser.twig'
-
-# If the default templates are used, customise the layout.
 layout:
-    form: 'forms/form.html.twig' # or see all options here: https://github.com/symfony/symfony/tree/5.x/src/Symfony/Bridge/Twig/Resources/views/Form
+    form: '@theme/forms/form_div_layout.html.twig'
+# If the default templates are used, customise the layout.
+#layout:
+ #   form: 'forms/form.html.twig' # or see all options here: https://github.com/symfony/symfony/tree/5.x/src/Symfony/Bridge/Twig/Resources/views/Form
     bootstrap: true # if true, bootstrap will automatically be included.
 
 ## reCAPTCHa set up

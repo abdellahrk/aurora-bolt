@@ -14,6 +14,7 @@ notification:
 feedback:
     success: Message submission successful
     error: There are errors in the form, please fix before trying to resubmit
+
 fields:
     name:
         type: text
@@ -28,13 +29,9 @@ fields:
             required: true
             attr:
                 placeholder: Your Email
+                label: none
             constraints: [ NotBlank, Email ]
-    phone:
-        type: text
-        options:
-            required: false
-            attr:
-                placeholder: Phone
+ 
     subject:
         type: text
         options:
@@ -54,4 +51,4 @@ fields:
         options:
             label: Submit my message »
             attr:
-                class: btn btn-primary
+                class: thm-btn comment-form__btn

@@ -140,5 +140,11 @@
 >>>>>>> 55733f8296e8935d9d0232bffd41ada88d438921
       </segment>
     </unit>
+    <unit id="_.3xzA_" name="Submit my message »">
+      <segment>
+        <source>Submit my message »</source>
+        <target>Submit my message »</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
