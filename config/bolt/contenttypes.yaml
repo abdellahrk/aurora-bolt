@@ -403,6 +403,8 @@ settings:
             type: text
         services_background:
             type: image
+        address:
+            type: text
 
 others:
     name: Others

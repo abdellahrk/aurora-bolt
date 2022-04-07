@@ -133,5 +133,11 @@
         <target>Your Email</target>
       </segment>
     </unit>
+    <unit id="_.3xzA_" name="Submit my message »">
+      <segment>
+        <source>Submit my message »</source>
+        <target>Submit my message »</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
