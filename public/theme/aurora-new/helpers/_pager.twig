@@ -15,13 +15,13 @@ Predefined variables:
 {% block item %}
     {% if path is defined and (enabled is not defined or enabled != false) %}
         <li class="page-item {{ class }}">
-            <a href="{{ path(route, p) }}" class="page-link" {%- if rel|default() %} rel="{{ rel }}"{% endif -%}>
+            <a href="{{ path(route, p) }}" class="page-link thm-btn blog-sidebar__load-more-btn" {%- if rel|default() %} rel="{{ rel }}"{% endif -%}>
                 {{ label|default('…') }}
             </a>
         </li>
     {% elseif label is defined %}
         <li class="page-item disabled">
-            <a class="page-link {{ class }}" disabled>{{ label|default('…') }}</a>
+            <a class="page-link {{ class }} thm-btn blog-sidebar__load-more-btn" disabled>{{ label|default('…') }}</a>
         </li>
     {% endif %}
 {% endblock item %}
@@ -30,7 +30,7 @@ Predefined variables:
     <ul class="pagination {{ class != 'pagination' ? class }}" >
         {# Previous Button #}
         {% set p = routeParams|merge({page: records.hasPreviousPage ? records.previousPage : 1 }) %}
-        {% with {'path': path(route, p), 'label': 'Précédent'|trans, 'enabled': records.hasPreviousPage, 'rel': 'précédent' } %}
+        {% with {'path': path(route, p), 'label': 'Previous'|trans, 'enabled': records.hasPreviousPage, 'rel': 'previous' } %}
             {{ block('item') }}
         {% endwith %}
 
@@ -71,7 +71,7 @@ Predefined variables:
 
         {# Next Button #}
         {% set p = routeParams|merge({page: records.hasNextPage ? records.nextPage : records.nbPages }) %}
-        {% with {'path': path(route, p), 'label': 'Suivant'|trans, 'enabled': records.hasNextPage, 'rel': 'suivant' } %}
+        {% with {'path': path(route, p), 'label': 'Next'|trans, 'enabled': records.hasNextPage, 'rel': 'next' } %}
             {{ block('item') }}
         {% endwith %}
     </ul>
