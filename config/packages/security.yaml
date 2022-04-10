@@ -57,3 +57,5 @@ security:
             path: ^/(%app_locales%)%bolt.backend_url%
             roles: IS_AUTHENTICATED_REMEMBERED
     enable_authenticator_manager: true
+    password_hashers:
+        Bolt\Entity\User: auto

@@ -16,6 +16,7 @@ services:
             $projectDir: '%kernel.project_dir%'
             $publicFolder: '%bolt.public_folder%'
             $tablePrefix: '%bolt.table_prefix%'
+            $backendUrl: '%bolt.backend_url%'
     _instanceof:
         Bolt\Menu\ExtensionBackendMenuInterface:
             tags: [bolt.extension_backend_menu]
@@ -103,3 +104,6 @@ services:
     Bolt\Api\ContentDataPersister:
         decorates: api_platform.doctrine.orm.data_persister
     Symfony\Bridge\Twig\Extension\AssetExtension: '@twig.extension.assets'
+    Symfony\Component\DependencyInjection\ContainerInterface: '@service_container'
+    Bolt\Cache\GetFormatCacher:
+        decorates: Bolt\Utils\ContentHelper
