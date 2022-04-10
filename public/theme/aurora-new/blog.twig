@@ -55,15 +55,17 @@
                                 </div>
                             {% endfor %}
                         </div>
+                        {#
                         <div class="blog-sidebar__bottom-box">
                             <div class="blog-sidebar__bottom-box-icon">
-                                <img src="assets/images/icon/blog-sidebar-bottom-box-icon.png" alt="">
+                                <img src="{{ asset('images/icon/blog-sidebar-bottom-box-icon.png') }}" alt="">
                             </div>
                             <p class="blog-sidebar__bottom-box-text">There are many variations of passages available
                                 but have alteration in some by inject humour or random words. There are many
                                 variations of passages of Lorem Ipsum available, but the majority have suffered
                                 alteration.</p>
                         </div>
+                        #}
                         <div class="blog-sidebar__delivering-services">
                             <div class="blog-sidebar__delivering-services-icon">
                                 <a href="blog-details.html"><img
@@ -74,8 +76,7 @@
                                     href="blog-details.html">Delivering the best web design agency.</a></h3>
                         </div>
                         <div class="blog-sidebar__load-more">
-                            <a href="blog-details.html" class="thm-btn blog-sidebar__load-more-btn">Load more
-                                posts</a>
+                            {{ pager(template='@theme/helpers/_pager.twig') }}
                         </div>
                     </div>
                 </div>

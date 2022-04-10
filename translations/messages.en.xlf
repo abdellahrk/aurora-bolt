@@ -139,5 +139,23 @@
         <target>Submit my message »</target>
       </segment>
     </unit>
+    <unit id="MLDppFq" name="Précédent">
+      <segment>
+        <source>Précédent</source>
+        <target>Précédent</target>
+      </segment>
+    </unit>
+    <unit id="pXsIpIC" name="Previous">
+      <segment>
+        <source>Previous</source>
+        <target>Previous</target>
+      </segment>
+    </unit>
+    <unit id="H.V6Kdf" name="Next">
+      <segment>
+        <source>Next</source>
+        <target>Next</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
