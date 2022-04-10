@@ -92,7 +92,7 @@ blog:
     taxonomy: [ categories, tags ]
     records_template: blog.twig
     record_template: blogitem.twig
-    listing_records: 2
+    listing_records: 5
     
 aurora:
     name: Aurora
