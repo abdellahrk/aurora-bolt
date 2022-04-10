@@ -14,8 +14,8 @@ main-en:
         - label: Web Design
           class: menu-item-class
           link: service/web-design
-        - label: Contact
-          link: contact
+  - label: Contact
+    link: contact
   - label: A Propos
     link: aurora/apropos
     class: apropos
@@ -32,13 +32,12 @@ main-fr:
   - label: Services
     link:  services
     submenu:
-        - label: Web Development
-          link: services/web-development
-        - label: Web Design
-          class: menu-item-class
-          link: service/web-design
-        - label: Contact
-          link: contact
+        - label: Services
+          link: 
+            contenttype: services 
+
+  - label: Contact
+    link: contact
   - label: A Propos
     link: aurora/apropos
     class: apropos
