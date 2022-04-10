@@ -32,11 +32,11 @@
 
 <ul class="main-menu__list">
     {% for item in menu %}
-        <li >
+        <li {% if item|current %} class="current " {% endif %}>
             <a href="{{ item.uri }}">{{ item.label }}</a>
         </li>
         {% if item.submenu %}
-            <li class="dropdown">
+            <li class="dropdown "  {% if item|current %} class="current " {% endif %}>
                 <a href="{{ item.uri }}">{{ item.label }}</a>
                 <ul>
                     {% for submenu in item.submenu %}

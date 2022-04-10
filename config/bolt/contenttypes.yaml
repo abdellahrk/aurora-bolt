@@ -270,6 +270,10 @@ whyus:
         link_title:
             type: text
             localize: true
+        image: 
+            type: image
+            group: "image settings"
+
     singleton: true
     viewless: true
     default_status: published
@@ -405,6 +409,9 @@ settings:
             type: image
         address:
             type: text
+        agency_background: 
+            type: image
+            group: home page settings
 
 others:
     name: Others
