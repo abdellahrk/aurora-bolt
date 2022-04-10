@@ -74,3 +74,4 @@ docker-compose.override.yaml
 
 /config/bolt/menu.yaml
 /.env
+/translations/messages.en.xlf
