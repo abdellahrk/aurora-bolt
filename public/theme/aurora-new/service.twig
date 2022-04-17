@@ -1,6 +1,8 @@
 {% extends 'partials/_master.twig' %}
 
 {% setcontent services = 'services' %}
+{% setcontent features = 'features' %}
+
 {% block content %}
     <!--Page Header Start-->
     <section class="page-header">
@@ -99,49 +101,25 @@
 									</div>
 								</div>
 							</div>
+
 							<div class="service-details__faq">
+
 								<div class="accrodion-grp" data-grp-name="faq-one-accrodion">
-									<div class="accrodion active">
-										<div class="accrodion-title">
-											<h4>We Help to Create Visual Strategies</h4>
-										</div>
-										<div class="accrodion-content">
-											<div class="inner">
-												<p>There are many variations of passages the majority have suffered
-													alteration in some fo injected humour, simply free text available in
-													the market of loram ipsum where it is not or randomised words
-													believable.</p>
-											</div><!-- /.inner -->
-										</div>
-									</div>
-									<div class="accrodion">
-										<div class="accrodion-title">
-											<h4>Motion Graphics & Animations</h4>
-										</div>
-										<div class="accrodion-content">
-											<div class="inner">
-												<p>There are many variations of passages the majority have suffered
-													alteration in some fo injected humour, simply free text available in
-													the market of loram ipsum where it is not or randomised words
-													believable.</p>
-											</div><!-- /.inner -->
-										</div>
-									</div>
-									<div class="accrodion last-chiled">
-										<div class="accrodion-title">
-											<h4>We Help to Achieve Mutual Goals</h4>
-										</div>
-										<div class="accrodion-content">
-											<div class="inner">
-												<p>There are many variations of passages the majority have suffered
-													alteration in some fo injected humour, simply free text available in
-													the market of loram ipsum where it is not or randomised words
-													believable.</p>
-											</div><!-- /.inner -->
-										</div>
-									</div>
+                                    {% for feature in features %}
+                                        <div class="accrodion ">
+                                            <div class="accrodion-title">
+                                                <h4>{{ feature.title }}</h4>
+                                            </div>
+                                            <div class="accrodion-content">
+                                                <div class="inner">
+                                                    <p>{{ feature.content }}</p>
+                                                </div><!-- /.inner -->
+                                            </div>
+                                        </div>
+                                    {% endfor %}
 								</div>
 							</div>
+
 						</div>
 					</div>
 				</div>
