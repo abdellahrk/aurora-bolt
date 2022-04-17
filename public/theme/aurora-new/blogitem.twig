@@ -137,7 +137,11 @@
             "image": "{{ blog.image }}",
             "name": "{{ blog.title }}",
             "url": "{{ blog|link }}",
-            "articleBody": "{{ blog.text|striptags }}"
+            "articleBody": "{{ blog.text|striptags }}",
+            "author": "{{ blog.author }}",
+            "editor": "{{ blog.author }}",
+            "text": "{{ blog.text|striptags }}",
+            "wordCount": "{{ blog.text|lenght }}"
         }
     </script>
 {% endblock %}
