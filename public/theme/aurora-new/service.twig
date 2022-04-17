@@ -2,18 +2,19 @@
 
 {% setcontent services = 'services' %}
 {% setcontent features = 'features' %}
+{% setcontent settings = 'settings' %}
 
 {% block content %}
     <!--Page Header Start-->
     <section class="page-header">
-        <div class="page-header-bg" style="background-image: url( {{ asset('images/backgrounds/page-header-bg.jpg') }})">
+        <div class="page-header-bg" style="background-image: url( {{ settings.services_background }})">
         </div>
         <div class="container">
             <div class="page-header__inner">
                 <ul class="thm-breadcrumb list-unstyled">
                     <li><a href="{{ path('homepage') }}">Home</a></li>
                     <li><a href="/services">Services</a></li>
-                    <li>Service Details</li>
+                    <li>{{ service.title }}</li>
                 </ul>
                 <h2>{{ service.title }}</h2>
             </div>
@@ -52,8 +53,7 @@
 									<div class="col-xl-6">
 										<div class="service-details__benefits-content">
 											<h3 class="service-details__benefits-title">Our Benefits</h3>
-											<p class="service-details__benefits-text">Duis aute irure dolor in simply
-												free text exist on reprehende voluptate velit esse cillum.</p>
+											<p class="service-details__benefits-text">Why you should choose us</p>
 
                                             {{ service.featureList }}
                                                 {#
@@ -96,7 +96,7 @@
 									</div>
 									<div class="col-xl-6">
 										<div class="service-details__benefits-img">
-											<img src="{{ asset('images/resources/service-details__benefits-img.jpg') }}" alt="">
+											<img src="{{ settings.our_benefits_image }}" alt="{{ service.title }}">
 										</div>
 									</div>
 								</div>

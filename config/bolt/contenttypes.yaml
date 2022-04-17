@@ -412,7 +412,9 @@ settings:
         agency_background: 
             type: image
             group: home page settings
-
+        our_benefits_image:
+            type: image
+            label: Our benefits image (370*301)
 others:
     name: Others
     singular_name: Other
