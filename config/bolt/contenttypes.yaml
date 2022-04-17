@@ -595,3 +595,13 @@ counters:
             type: number 
         name: 
             type: text 
+
+our_benefits: 
+    name: Our Benefits 
+    singular_name: Our Benefit 
+    viewless: true
+    fields: 
+        title: 
+            type: text
+        description: 
+            type: redactor
