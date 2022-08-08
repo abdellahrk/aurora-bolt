@@ -1,6 +1,6 @@
 {% extends 'partials/_master.twig' %}
 
-{% set about = record %}
+{% setcontent about = 'about' %}
 {% setcontent partners = 'partners' %}
 {% setcontent features = 'features' %}
 
@@ -12,10 +12,10 @@
             <div class="container">
                 <div class="page-header__inner">
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="{{ path('homepage') }}">Home</a></li>
-                        <li>About</li>
+                        <li><a href="{{ path('homepage') }}">Acceuil</a></li>
+                        <li>Apropos de nous</li>
                     </ul>
-                    <h2>About us</h2>
+                    <h2>Apropos de nous</h2>
                 </div>
             </div>
         </section>
@@ -47,10 +47,10 @@
                         <div class="about-page__right">
                             <div class="section-title text-left">
                                 <span class="section-title__tagline">about company</span>
-                                <h2 class="section-title__title">{{ about.title }}</h2>
+                                <h2 class="section-title__title">{{ about ? about.title }}</h2>
                             </div>
-                            <p class="about-page__right-text-1">{{ about.whyUs }}</p>
-                            <h4 class="about-page__right-text-2">{{ about.tag }}</h4>
+                            <p class="about-page__right-text-1">{{ about ? about.whyUs }}</p>
+                            <h4 class="about-page__right-text-2">{{ about ? about.tag }}</h4>
                             <a href="/contact" class="thm-btn abut-page__btn">Get a quote</a>
                         </div>
                     </div>

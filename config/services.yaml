@@ -1,6 +1,6 @@
 parameters:
-    locale: en
-    app_locales: en|fr
+    locale: fr
+    app_locales: fr|en
     app.notifications.email_sender: contact@aurora.cm
     bolt.table_prefix: bolt_
     bolt.backend_url: /bolt
