@@ -1,8 +1,10 @@
 {% extends 'partials/_master.twig' %}
 
 {% setcontent settings = 'settings' %}
-{% block content %}
 {% setcontent about = 'about' %}
+
+{% block content %}
+
 
 <!--Page Header Start-->
 <section class="page-header">
@@ -11,7 +13,7 @@
     <div class="container">
         <div class="page-header__inner">
             <ul class="thm-breadcrumb list-unstyled">
-                <li><a href="{{ path('homepage') }}">Home</a></li>
+                <li><a href="{{ path('homepage') }}">Acceuil</a></li>
                 <li>Contact</li>
             </ul>
             <h2>Contact</h2>
@@ -29,14 +31,14 @@
                     <!--Location Single-->
                     <div class="location__single">
                         <h3 class="location__title">about</h3>
-                        <p class="location__text">{{ about.tag }}</p>
+                        <p class="location__text">{{ about ? about.tag }}</p>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4">
                     <!--Location Single-->
                     <div class="location__single">
                         <h3 class="location__title">address</h3>
-                        <p class="location__text">{{ settings.address }}</p>
+                        <p class="location__text">{{ general.contact.address }}</p>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4">
@@ -44,8 +46,8 @@
                     <div class="location__single location__single-last">
                         <h3 class="location__title">contact</h3>
                         <h5 class="location__phone-email">
-                            <a href="tel:{{ settings.phone }}" class="location__phone">{{ settings.phone }}</a>
-                            <a href="mailto:{{ settings.email }}" class="location__email">{{ settings.email }}</a>
+                            <a href="tel:{{ general.contact.phone }}" class="location__phone">{{ general.contact.phone }}</a>
+                            <a href="mailto:{{ general.contact.email }}" class="location__email">{{ general.contact.email }}</a>
                         </h5>
                         <div class="location__social">
                             <a href="#"><i class="fab fa-twitter"></i></a>

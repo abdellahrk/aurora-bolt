@@ -71,10 +71,6 @@ docker-compose.override.yaml
 !/var/sessions/.gitkeep
 /vendor/
 .web-server-pid
-/config/bolt/menu.yaml
-/config/services_bolt.yaml
 ###< symfony/framework-bundle ###
 
-/config/bolt/menu.yaml
 /.env
-/translations/messages.en.xlf

@@ -13,5 +13,5 @@ doctrine:
             App: { is_bundle: false, type: annotation, dir: '%kernel.project_dir%/src/Entity', prefix: App\Entity, alias: App }
             Bolt: { is_bundle: false, type: annotation, dir: '%kernel.project_dir%/vendor/bolt/core/src/Entity', prefix: Bolt\Entity, alias: Bolt }
         dql:
-            string_functions: { JSON_EXTRACT: Bolt\Doctrine\Functions\JsonExtract, JSON_GET_TEXT: Scienta\DoctrineJsonFunctions\Query\AST\Functions\Postgresql\JsonGetText, CAST: Bolt\Doctrine\Query\Cast, JSON_SEARCH: Scienta\DoctrineJsonFunctions\Query\AST\Functions\Mysql\JsonSearch }
+            string_functions: { JSON_EXTRACT: Bolt\Doctrine\Functions\JsonExtract, JSON_GET_TEXT: Scienta\DoctrineJsonFunctions\Query\AST\Functions\Postgresql\JsonGetText, CAST: Bolt\Doctrine\Query\Cast, JSON_SEARCH: Scienta\DoctrineJsonFunctions\Query\AST\Functions\Mysql\JsonSearch, JSON_UNQUOTE: Bolt\Doctrine\Functions\JsonUnquote }
             numeric_functions: { RAND: Bolt\Doctrine\Functions\Rand }

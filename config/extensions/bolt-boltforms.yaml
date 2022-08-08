@@ -51,11 +51,13 @@ layout:
 # * `public_key` key will be labeled "Site key"
 # * `private_key` key will be labeled "Secret key"
 #
-#recaptcha:
-#    enabled: false
-#    public_key: ''
-#    private_key: ''
-#    theme: light|dark
+recaptcha:
+    enabled: true
+    public_key: '6LeBRFghAAAAAKX_S3aGi0IOKRJD5K7TytmIbSyq'
+    private_key: '6LeBRFghAAAAAGKd4yvqTrK0uYUzS8JmiAEZuFF6'
+    theme: light|dark
+    recaptcha_v3_threshold: 0.0 # A threshold of 0.0 allows all scores returned from Google to be submitted.
+    recaptcha_v3_fail_message: We've been unable to verify whether you're human! Please, try resubmitting the form or get in touch via an alternative contact method.
 
 ## hCaptcha set up
 #

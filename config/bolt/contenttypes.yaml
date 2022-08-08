@@ -7,31 +7,24 @@
 homepage:
     name: Homepage
     singular_name: Homepage
-    locales: ['en', 'fr']
     fields:
         title:
-            localize: true
             type: text
             class: large
             group: content
             label: Title
         small_title:
             type: text
-            localize: true
         cta1:
             type: text
-            localize: true
         cta2:
             type: text
-            localize: true
         image:
             type: image
         introduction:
             type: redactor
-            localize: true
         content:
             type: redactor
-            localize: true
         contentlink:
             type: text
             label: Link
@@ -51,23 +44,43 @@ homepage:
     icon_many: "fa:home"
     icon_one: "fa:home"
 
-global:
-    name: Global 
-    singular_name: Global 
-    viewless: true 
-    singleton: true
-    locales: ['en', 'fr']
+general:
+    name: General 
+    singular_name: General
     fields:
+        title:
+            type: text
         service_tagline:
             type: text
-            localize: true
             group: Service Page 
         service_caption:
             type: text
-            localize: true 
         service_description:
-            type: text 
-            localize: true       
+            type: text  
+        contact: 
+            type: set 
+            group: Contact
+            fields: 
+                phone:
+                    type: text
+                email:
+                    type: email
+                address: 
+                    type: text
+        socials:
+            type: set 
+            group: Social Media 
+            fields:
+                facebook:
+                    type: text
+                twitter:
+                    type: text
+                linkedin: 
+                    type: text
+    viewless: true 
+    singleton: true
+    icon_many: "fa:home"
+    icon_one: "fa:home" 
     
 # Blog
 blog:
@@ -93,6 +106,8 @@ blog:
     records_template: blog.twig
     record_template: blogitem.twig
     listing_records: 5
+    icon_many: "fa:blog"
+    icon_one: "fa:rss"
     
 aurora:
     name: Aurora
@@ -146,34 +161,26 @@ aurora:
 services:
     name: Services
     singular_name: Service
-    locales: ['en', 'fr']
     fields:
         title:
             type: text
-            localize: true
         description:
             type: redactor
-            localize: true
         headerBackground:
             type: image
         image:
             type: image
         innerTitle: 
             type: text
-            localize: true
         innerDescription:
             type: html
-            localize: true
         featuresList:
             type: redactor
-            localize: true
         slug:
             type: slug
             uses: title
-            localize: true
         excerpt:
             type: text
-            localize: true
         iconImage:
             type: text
         percentage:
@@ -184,6 +191,8 @@ services:
     record_template: service.twig
     listing_template: services.twig
     order: createdAt
+    icon_many: "fa:briefcase"
+    icon_one: "fa:briefcase"
 
 # Faq type
 Faqs:
@@ -573,6 +582,8 @@ contact:
     fields: 
         contact: 
             type: text
+    icon_many: "fa:phone"
+    icon_one: "fa:phone"
 
 partners: 
     name: Partners
