@@ -1,6 +1,6 @@
 parameters:
-    locale: en
-    app_locales: en|fr
+    locale: fr
+    app_locales: fr|en
     app.notifications.email_sender: contact@aurora.cm
     bolt.table_prefix: bolt_
     bolt.backend_url: /bolt
@@ -43,10 +43,6 @@ services:
         tags:
             - { name: doctrine.event_listener, event: postLoad }
             - { name: doctrine.event_listener, event: prePersist }
-            - { name: doctrine.event_listener, event: preUpdate }
-    Bolt\Event\Listener\FieldFillListener:
-        tags:
-            - { name: doctrine.event_listener, event: postLoad }
             - { name: doctrine.event_listener, event: preUpdate }
     Bolt\Event\Listener\FieldDiscriminatorListener:
         tags:
@@ -107,3 +103,8 @@ services:
     Symfony\Component\DependencyInjection\ContainerInterface: '@service_container'
     Bolt\Cache\GetFormatCacher:
         decorates: Bolt\Utils\ContentHelper
+    Bolt\Cache\FilesIndexCacher:
+        decorates: Bolt\Utils\FilesIndex
+    Bolt\Event\Listener\FieldFillListener:
+        tags:
+            - { name: doctrine.event_listener, event: preUpdate }

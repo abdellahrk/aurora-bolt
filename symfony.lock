@@ -1,4 +1,7 @@
 {
+    "abdellahrk/bolt-author": {
+        "version": "dev-main"
+    },
     "api-platform/core": {
         "version": "2.5",
         "recipe": {

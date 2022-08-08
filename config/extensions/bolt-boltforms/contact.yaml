@@ -46,6 +46,10 @@ fields:
             attr:
                 placeholder: Your message...
                 class: myclass
+    my_recaptcha_v3_field:
+            type: captcha
+            options:
+                captcha_type: recaptcha_v3
     submit:
         type: submit
         options:

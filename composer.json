@@ -13,7 +13,7 @@
         "bolt/core": "^5.0",
         "bolt/forms": "^1.4",
         "bolt/newswidget": "^1.1",
-        "bolt/redactor": "^1.0",
+        "bolt/redactor": "^2.0",
         "bolt/themes": "^3.3",
         "nelmio/security-bundle": "^2.10",
         "symfony/flex": "^1.7",
