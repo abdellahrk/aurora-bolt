@@ -79,14 +79,14 @@ general:
                     type: text
     viewless: true 
     singleton: true
-    icon_many: "fa:home"
-    icon_one: "fa:home" 
+    icon_many: "fa:bars"
+    icon_one: "fa:bars" 
     
 # Blog
 blog:
     name: Blog
     singular_name: Blog
-    locales: ['en', 'fr']
+    locales: ['fr', 'en']
     fields:
         title:
             type: text
@@ -294,7 +294,7 @@ whyus:
 sliders: 
     name: Sliders
     singular_name: Slider
-    locales: ['en', 'fr']
+    locales: ['fr', 'en']
     viewless: true
     order: createdAt
     fields:
@@ -311,6 +311,8 @@ sliders:
         link_title:
             type: text
             localize: true
+    icon_many: "fa:images"
+    icon_one: "fa:image"
             
 # Services sidebar call to action
 cta:
@@ -406,14 +408,6 @@ settings:
             type: text
         footer_text:
             type: text
-        phone:
-            type: text
-        email:
-            type: email
-        facebook:
-            type: text
-        twitter:
-            type: text
         services_background:
             type: image
         address:
@@ -508,7 +502,7 @@ features:
 about:
     name: About
     singular_name: About
-    locales: ['en', 'fr']
+    locales: ['fr', 'en']
     singleton: true  
     record_template: about.twig
     fields:
