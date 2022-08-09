@@ -12,9 +12,9 @@
             <div class="page-header__inner">
                 <ul class="thm-breadcrumb list-unstyled">
                     <li><a href="{{ path('homepage') }}">Acceuil</a></li>
-                    <li>Blog</li>
+                    <li>{{ slug }}</li>
                 </ul>
-                <h2>Blog</h2>
+                <h2>{{ slug|upper }}</h2>
             </div>
         </div>
     </section>
