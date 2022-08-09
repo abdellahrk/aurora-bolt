@@ -1,5 +1,8 @@
 {% extends 'partials/_master.twig' %}
 
+{% setcontent blog = 'blog' %}
+{% set categories = records %}
+
 {% block content %}
     <!--Page Header Start-->
     <section class="page-header">
@@ -25,7 +28,7 @@
                     <div class="blog-sidebar__left">
                         <div class="blog-sidebar__content">
                             <!--Blog Sidebar Content Single-->
-                            {% for article in blog %}
+                            {% for article in categories %}
                                 <div class="blog-sidebar__content-single">
                                     <div class="blog-sidebar__content-img">
                                         <img src="{{ article.image }}" alt="{{ article.title }}">
@@ -75,9 +78,9 @@
                             <h3 class="blog-sidebar__delivering-services-title"><a
                                     href="/services">Nous offrons les meilleurs services</a></h3>
                         </div>
-                        <div class="blog-sidebar__load-more">
+                        {#<div class="blog-sidebar__load-more">
                             {{ pager(template='@theme/helpers/_pager.twig') }}
-                        </div>
+                        </div>#}
                     </div>
                 </div>
                 {% include 'partials/blog/_sidebar.twig' with {'articles': blog} %}

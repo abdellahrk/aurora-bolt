@@ -7,7 +7,7 @@
             </form>
         </div>
         <div class="sidebar__single sidebar__post">
-            <h3 class="sidebar__title">Latest Posts</h3>
+            <h3 class="sidebar__title">Derniers Articles</h3>
             <ul class="sidebar__post-list list-unstyled">
                 {% for article in articles %}
                     <li>
@@ -25,9 +25,11 @@
             </ul>
         </div>
         <div class="sidebar__single sidebar__category">
-            <h3 class="sidebar__title">Categories</h3>
+            <h3 class="sidebar__title">Catégories</h3>
             <ul class="sidebar__category-list list-unstyled">
-                <li><a href="#">Web Development <span class="icon-arrow-right"></span></a></li>
+                {% for category in config.get('taxonomies/categories/options') %}
+                    <li><a href="/categories/{{ category|slug}}">{{ category|upper }} <span class="icon-arrow-right"></span></a></li>
+                {% endfor %}
             </ul>
         </div>
         {#
