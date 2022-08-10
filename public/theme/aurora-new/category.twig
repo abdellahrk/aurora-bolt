@@ -26,38 +26,44 @@
             <div class="row">
                 <div class="col-xl-8 col-lg-7">
                     <div class="blog-sidebar__left">
-                        <div class="blog-sidebar__content">
-                            <!--Blog Sidebar Content Single-->
-                            {% for article in categories %}
-                                <div class="blog-sidebar__content-single">
-                                    <div class="blog-sidebar__content-img">
-                                        <img src="{{ article.image }}" alt="{{ article.title }}">
-                                        <div class="blog-sidebar__date-box">
-                                            <p>{{ article.createdAt|date('d M y') }}</p>
+                        {% if categories is not empty %}
+                            <div class="blog-sidebar__content">
+                                <!--Blog Sidebar Content Single-->
+                                {% for article in categories %}
+                                    <div class="blog-sidebar__content-single">
+                                        <div class="blog-sidebar__content-img">
+                                            <img src="{{ article.image }}" alt="{{ article.title }}">
+                                            <div class="blog-sidebar__date-box">
+                                                <p>{{ article.createdAt|date('d M y') }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="blog-sidebar__content-box">
+                                            <ul class="list-unstyled blog-sidebar__meta">
+                                                <li><i class="far fa-user-circle"></i> By
+                                                        {{ article.author }}</li>
+                                                {#
+                                                <li><span>/</span></li>
+                                                <li><a href="blog-details.html"><i class="far fa-comments"></i> 2
+                                                        Comments</a>
+                                                </li>
+                                                #}
+                                            </ul>
+                                            <h3 class="blog-sidebar__title">
+                                                <a href="{{ article|link }}">{{ article.title }}</a>
+                                            </h3>
+                                            <p class="blog-sidebar__text">{{ article.text|excerpt(150) }}</p>
+                                            <div class="blog-sidebar__read-more-btn">
+                                                <a href="{{ article|link }}">Plus...</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="blog-sidebar__content-box">
-                                        <ul class="list-unstyled blog-sidebar__meta">
-                                            <li><i class="far fa-user-circle"></i> By
-                                                    {{ article.author }}</li>
-                                            {#
-                                            <li><span>/</span></li>
-                                            <li><a href="blog-details.html"><i class="far fa-comments"></i> 2
-                                                    Comments</a>
-                                            </li>
-                                            #}
-                                        </ul>
-                                        <h3 class="blog-sidebar__title">
-                                            <a href="{{ article|link }}">{{ article.title }}</a>
-                                        </h3>
-                                        <p class="blog-sidebar__text">{{ article.text|excerpt(150) }}</p>
-                                        <div class="blog-sidebar__read-more-btn">
-                                            <a href="{{ article|link }}">Plus...</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            {% endfor %}
-                        </div>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <h3 class="blog-sidebar__delivering-services-title">
+                                Vide ici
+                            </h3>
+                        {% endif %}
                         {#
                         <div class="blog-sidebar__bottom-box">
                             <div class="blog-sidebar__bottom-box-icon">

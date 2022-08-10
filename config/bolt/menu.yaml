@@ -30,11 +30,12 @@ main:
       #    link: '#'
             #contenttype: services 
 
+  
+  - label: A Propos
+    link: /apropos
+    class: apropos
   - label: Contact
     link: contact
-  - label: A Propos
-    link: aurora/apropos
-    class: apropos
   - label: Hébergement Web
     link: https://hebergement.aurora.cm
     class: bolt-site

@@ -57,16 +57,13 @@ general:
             type: text
         service_description:
             type: text  
-        contact: 
-            type: set 
+        phone:
+            type: text
             group: Contact
-            fields: 
-                phone:
-                    type: text
-                email:
-                    type: email
-                address: 
-                    type: text
+        email:
+            type: email
+        address: 
+            type: text
         socials:
             type: set 
             group: Social Media 
@@ -502,6 +499,7 @@ features:
 about:
     name: About
     singular_name: About
+    singular_slug: apropos
     locales: ['fr', 'en']
     singleton: true  
     record_template: about.twig
