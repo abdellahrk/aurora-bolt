@@ -180,8 +180,6 @@ services:
             type: text
         iconImage:
             type: text
-        percentage:
-            type: number
         seo:
            type: seo
            group: "SEO Settings"
@@ -195,7 +193,7 @@ services:
 Faqs:
     name: Faqs
     singular_name: Faq
-    locales: ['en', 'fr']
+    locales: ['fr', 'en']
     listing_template: faqs.twig
     fields:
         title:
