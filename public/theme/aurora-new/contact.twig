@@ -3,6 +3,19 @@
 {% setcontent settings = 'settings' %}
 {% setcontent about = 'about' %}
 
+{% block schema %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "headline": "Contactez nous",
+            "name": "Contactez Nous",
+            "url": "/contact",
+            "abstract": "{{ apropos.body }}"
+    }
+    </script>
+{% endblock %}
+
 {% block content %}
 
 

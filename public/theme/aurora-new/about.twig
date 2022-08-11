@@ -4,6 +4,19 @@
 {% setcontent partners = 'partners' %}
 {% setcontent features = 'features' %}
 
+{% block schema %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "headline": "{{ about.title }}",
+            "image": "{{ about.image }}",
+            "name": "{{ about.title }}",
+            "url": "/apropos",
+        }
+    </script>
+{% endblock %}
+
 {% block content %}
     <!--Page Header Start-->
         <section class="page-header">

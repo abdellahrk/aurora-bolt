@@ -24,18 +24,6 @@
         </div>
         <div class="services-one__bottom">
             <div class="row">
-                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="600ms">
-                    <!--Services One Single-->
-                    <div class="services-one__view-all">
-                        <div class="services-one__view-all-title-box">
-                            <h3 class="services-one__view-all-title"><a href="/services">Nos Services<br></a>
-                            </h3>
-                        </div>
-                        <div class="services-one__view-all-arrow">
-                            <a href="/services"><span class="icon-arrow-right"></span></a>
-                        </div>
-                    </div>
-                </div>
                 {% for service in services %}
                     <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="{{ loop.index }}00ms">
                         <!--Services One Single-->
@@ -48,6 +36,18 @@
                         </div>
                     </div>
                 {% endfor %}
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="600ms">
+                    <!--Services One Single-->
+                    <div class="services-one__view-all">
+                        <div class="services-one__view-all-title-box">
+                            <h3 class="services-one__view-all-title"><a href="/services">Nos Services<br></a>
+                            </h3>
+                        </div>
+                        <div class="services-one__view-all-arrow">
+                            <a href="/services"><span class="icon-arrow-right"></span></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

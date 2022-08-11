@@ -4,6 +4,27 @@
 {% setcontent features = 'features' %}
 {% setcontent settings = 'settings' %}
 
+{% block schema %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "brand": {
+                "@type": "Organization",
+                "email": "contact@aurora.cm",
+                "legalName": "{{ config.get("general/sitename") }}",
+                "slogan": "{{ config.get("general/payoff") }}"
+            },
+            "image": "{{ service.image }}",
+            "name": "{{ service.title }}",
+            "slogan": "Meilleure agence digitale au cameroun",
+            "url": "{{ service|link }}",
+            "description": "{{ service.description|striptags }}"
+
+        }
+    </script>
+{% endblock %}
+
 {% block content %}
     <!--Page Header Start-->
     <section class="page-header">
