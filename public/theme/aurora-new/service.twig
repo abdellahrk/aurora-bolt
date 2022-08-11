@@ -149,23 +149,3 @@
 		<!--Services Details End-->
 {% endblock %}
 
-{% block schema %}
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "brand": {
-                "@type": "Organization",
-                "email": "{{ config.get('theme/address/email') }}",
-                "legalName": "{{ config.get("general/sitename") }}",
-                "slogan": "{{ config.get("general/payoff") }}"
-            },
-            "image": "{{ service.image }}",
-            "name": "{{ service.title }}",
-            "slogan": "Meilleure agence digitale au cameroun",
-            "url": "{{ service|link }}",
-            "description": "{{ service.description|striptags }}"
-
-        }
-    </script>
-{% endblock %}
