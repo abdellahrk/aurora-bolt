@@ -48,8 +48,6 @@ general:
     name: General 
     singular_name: General
     fields:
-        title:
-            type: text
         service_tagline:
             type: text
             group: Service Page 
@@ -57,13 +55,17 @@ general:
             type: text
         service_description:
             type: text  
-        phone:
-            type: text
+        contact: 
+            type: set 
             group: Contact
-        email:
-            type: email
-        address: 
-            type: text
+            fields:
+                phone:
+                    type: text
+                    group: Contact
+                email:
+                    type: email
+                address: 
+                    type: text
         socials:
             type: set 
             group: Social Media 
@@ -173,13 +175,13 @@ services:
             type: html
         featuresList:
             type: redactor
-        slug:
-            type: slug
-            uses: title
         excerpt:
             type: text
         iconImage:
             type: text
+        slug:
+            type: slug
+            uses: title
         seo:
            type: seo
            group: "SEO Settings"
@@ -246,7 +248,7 @@ testimonials:
 whyus:
     name: Whyus
     singular_name: Whyus
-    locales: ['en', 'fr']
+    locales: ['fr', 'en']
     fields: 
         small_title:
             type: text
@@ -405,8 +407,6 @@ settings:
             type: text
         services_background:
             type: image
-        address:
-            type: text
         agency_background: 
             type: image
             group: home page settings
@@ -483,7 +483,7 @@ others:
 features:
     name: features
     singular_name: feature
-    locales: ['en', 'fr']
+    locales: ['fr', 'en']
     viewless: true
     fields:
         title:
@@ -508,7 +508,6 @@ about:
         whyUs:
             type: text
             localize: true
-
         tag:
             type: text
             localize: true
@@ -524,11 +523,21 @@ about:
             type: text
         background:
             type: image
+        ceo: 
+            type: set 
+            group: CEO
+            fields: 
+                name: 
+                    type: text 
+                image: 
+                    type: image
+
+
 resource:
     name: resource
     singular_name: resource
     singleton: false
-    locales: ['en', 'fr']
+    locales: ['fr', 'en']
     fields:
         title:
             type: text
@@ -553,7 +562,7 @@ resource:
 ads:
     name: Ads
     singular_name: Ad
-    locales: ['en', 'fr']
+    locales: ['fr', 'en']
     viewless: true
     fields:
         title:
