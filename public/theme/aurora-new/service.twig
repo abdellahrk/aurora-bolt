@@ -28,7 +28,7 @@
 {% block content %}
     <!--Page Header Start-->
     <section class="page-header">
-        <div class="page-header-bg" style="background-image: url( {{ settings.services_background }})">
+        <div class="page-header-bg" style="background-image: {{ asset('images/backgrounds/page-header-bg.jpg')}})">
         </div>
         <div class="container">
             <div class="page-header__inner">
@@ -58,7 +58,7 @@
 							<div class="service-details__content">
 								<h3 class="service-details__title">{{ service.title }}</h3>
 								<p class="service-details__text">{{ service.description|raw }}</p>
-							</div>
+							</div>{#
 							<ul class="service-details__points list-unstyled">
 								<li>
 									<h4>high quality project</h4>
@@ -68,13 +68,13 @@
 									<h4>Fast & relaible service</h4>
 									<div class="service-details__points-count"></div>
 								</li>
-							</ul>
+							</ul>#}
 							<div class="service-details__benefits">
 								<div class="row">
 									<div class="col-xl-6">
 										<div class="service-details__benefits-content">
-											<h3 class="service-details__benefits-title">Our Benefits</h3>
-											<p class="service-details__benefits-text">Why you should choose us</p>
+											{#<h3 class="service-details__benefits-title">Our Benefits</h3>
+											<p class="service-details__benefits-text">Why you should choose us</p>#}
 
                                             {{ service.featureList }}
                                                 {#
@@ -114,12 +114,12 @@
 											</ul>
                                             #}
 										</div>
-									</div>
+									</div>{#
 									<div class="col-xl-6">
 										<div class="service-details__benefits-img">
 											<img src="{{ settings.our_benefits_image }}" alt="{{ service.title }}">
 										</div>
-									</div>
+									</div>#}
 								</div>
 							</div>
 
