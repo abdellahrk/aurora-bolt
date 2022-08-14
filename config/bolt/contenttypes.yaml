@@ -343,7 +343,7 @@ cta:
 wemake:
     name: wemake
     singular_name: wemake
-    locales: ['en', 'fr']
+    locales: ['fr', 'en']
     singleton: true
     viewless: true
     fields:
@@ -479,19 +479,6 @@ others:
         service_background:
             type: image
   
-# Core features
-features:
-    name: features
-    singular_name: feature
-    locales: ['fr', 'en']
-    viewless: true
-    fields:
-        title:
-            type: text
-            localize: true
-        content:
-            type: redactor
-            localize: true
 
 # About
 about:
@@ -523,14 +510,24 @@ about:
             type: text
         background:
             type: image
-        ceo: 
-            type: set 
+       
+        ceo_name: 
+            type: text 
             group: CEO
-            fields: 
-                name: 
-                    type: text 
-                image: 
-                    type: image
+        ceo_image: 
+            type: image
+        # Core features
+        features:
+            type: collection 
+            group: Features
+            fields:
+                feature: 
+                    type: set
+                    fields:
+                        title:
+                            type: text
+                        content:
+                            type: redactor
 
 
 resource:
