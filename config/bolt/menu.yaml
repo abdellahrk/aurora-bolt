@@ -32,9 +32,6 @@ main:
 
   - label: Blog
     link: /blog
-  - label: A Propos
-    link: /apropos
-    class: apropos
   - label: Contact
     link: contact
   - label: Hébergement Web
