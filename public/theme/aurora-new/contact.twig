@@ -11,7 +11,7 @@
             "headline": "Contactez nous",
             "name": "Contactez Nous",
             "url": "/contact",
-            "abstract": "{{ apropos.body }}"
+            "abstract": "{{ about.body }}"
     }
     </script>
 {% endblock %}
@@ -19,21 +19,7 @@
 {% block content %}
 
 
-<!--Page Header Start-->
-<section class="page-header">
-    <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
-    </div>
-    <div class="container">
-        <div class="page-header__inner">
-            <ul class="thm-breadcrumb list-unstyled">
-                <li><a href="{{ path('homepage') }}">Acceuil</a></li>
-                <li>Contact</li>
-            </ul>
-            <h2>Contact</h2>
-        </div>
-    </div>
-</section>
-<!--Page Header End-->
+    {% include 'partials/_header_section.twig' with {'title': 'contact'}  %}
 
     <!--Location Start-->
     <section class="location">

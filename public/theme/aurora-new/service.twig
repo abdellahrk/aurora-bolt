@@ -1,7 +1,6 @@
 {% extends 'partials/_master.twig' %}
 
 {% setcontent services = 'services' %}
-{% setcontent general = 'general' %}
 {% setcontent settings = 'settings' %}
 
 {% block schema %}
@@ -26,129 +25,114 @@
 {% endblock %}
 
 {% block content %}
-    <!--Page Header Start-->
-    <section class="page-header">
-        <div class="page-header-bg" style="background-image: {{ asset('images/backgrounds/page-header-bg.jpg')}})">
-        </div>
+    {% include 'partials/_header_section.twig' with {'title': service.title, 'subsection': 'services'}  %}
+
+    <!--Services Details Start-->
+    <section class="service-details">
         <div class="container">
-            <div class="page-header__inner">
-                <ul class="thm-breadcrumb list-unstyled">
-                    <li><a href="{{ path('homepage') }}">Home</a></li>
-                    <li><a href="/services">Services</a></li>
-                    <li>{{ service.title }}</li>
-                </ul>
-                <h2>{{ service.title }}</h2>
+            <div class="row">
+                <div class="col-xl-4 col-lg-5">
+                    {% include 'partials/services/_sidebar.twig' with {'services': services} %}
+                </div>
+                <div class="col-xl-8 col-lg-7">
+                    <div class="service-details__right">
+                        <div class="service-details__img">
+                            <img src="{{ service.image }}" alt="">
+                        </div>
+                        <div class="service-details__content">
+                            <h3 class="service-details__title">{{ service.title }}</h3>
+                            <p class="service-details__text">{{ service.description|raw }}</p>
+                        </div>{#
+                        <ul class="service-details__points list-unstyled">
+                            <li>
+                                <h4>high quality project</h4>
+                                <div class="service-details__points-count"></div>
+                            </li>
+                            <li>
+                                <h4>Fast & relaible service</h4>
+                                <div class="service-details__points-count"></div>
+                            </li>
+                        </ul>#}
+                        <div class="service-details__benefits">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="service-details__benefits-content">
+                                        {#<h3 class="service-details__benefits-title">Our Benefits</h3>
+                                        <p class="service-details__benefits-text">Why you should choose us</p>#}
+
+                                        {{ service.featureList }}
+                                            {#
+                                        <ul class="list-unstyled service-details__benefits-list">
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="icon-check"></span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Nsectetur cing elit</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="icon-check"></span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Suspe ndisse suscip sagittis leo</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="icon-check"></span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Entum estib dignissim posuere</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="icon-check"></span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>If you are going to use a pass</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        #}
+                                    </div>
+                                </div>{#
+                                <div class="col-xl-6">
+                                    <div class="service-details__benefits-img">
+                                        <img src="{{ settings.our_benefits_image }}" alt="{{ service.title }}">
+                                    </div>
+                                </div>#}
+                            </div>
+                        </div>
+
+                        <div class="service-details__faq">
+
+                            <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
+                                {% if general.features is defined %}
+                                    {% set features = general.features %}
+                                    {% for feature in features %}
+                                        <div class="accrodion ">
+                                            <div class="accrodion-title">
+                                                <h4>{{ feature.title }}</h4>
+                                            </div>
+                                            <div class="accrodion-content">
+                                                <div class="inner">
+                                                    <p>{{ feature.content|raw }}</p>
+                                                </div><!-- /.inner -->
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <!--Page Header End-->
-
-		<!--Services Details Start-->
-		<section class="service-details">
-			<div class="container">
-				<div class="row">
-					<div class="col-xl-4 col-lg-5">
-						{% include 'partials/services/_sidebar.twig' with {'services': services} %}
-					</div>
-					<div class="col-xl-8 col-lg-7">
-						<div class="service-details__right">
-							<div class="service-details__img">
-								<img src="{{ service.image }}" alt="">
-							</div>
-							<div class="service-details__content">
-								<h3 class="service-details__title">{{ service.title }}</h3>
-								<p class="service-details__text">{{ service.description|raw }}</p>
-							</div>{#
-							<ul class="service-details__points list-unstyled">
-								<li>
-									<h4>high quality project</h4>
-									<div class="service-details__points-count"></div>
-								</li>
-								<li>
-									<h4>Fast & relaible service</h4>
-									<div class="service-details__points-count"></div>
-								</li>
-							</ul>#}
-							<div class="service-details__benefits">
-								<div class="row">
-									<div class="col-xl-6">
-										<div class="service-details__benefits-content">
-											{#<h3 class="service-details__benefits-title">Our Benefits</h3>
-											<p class="service-details__benefits-text">Why you should choose us</p>#}
-
-                                            {{ service.featureList }}
-                                                {#
-											<ul class="list-unstyled service-details__benefits-list">
-												<li>
-													<div class="icon">
-														<span class="icon-check"></span>
-													</div>
-													<div class="text">
-														<p>Nsectetur cing elit</p>
-													</div>
-												</li>
-												<li>
-													<div class="icon">
-														<span class="icon-check"></span>
-													</div>
-													<div class="text">
-														<p>Suspe ndisse suscip sagittis leo</p>
-													</div>
-												</li>
-												<li>
-													<div class="icon">
-														<span class="icon-check"></span>
-													</div>
-													<div class="text">
-														<p>Entum estib dignissim posuere</p>
-													</div>
-												</li>
-												<li>
-													<div class="icon">
-														<span class="icon-check"></span>
-													</div>
-													<div class="text">
-														<p>If you are going to use a pass</p>
-													</div>
-												</li>
-											</ul>
-                                            #}
-										</div>
-									</div>{#
-									<div class="col-xl-6">
-										<div class="service-details__benefits-img">
-											<img src="{{ settings.our_benefits_image }}" alt="{{ service.title }}">
-										</div>
-									</div>#}
-								</div>
-							</div>
-
-							<div class="service-details__faq">
-
-								<div class="accrodion-grp" data-grp-name="faq-one-accrodion">
-                                    {% if general.features is defined %}
-                                        {% set features = general.features %}
-                                        {% for feature in features %}
-                                            <div class="accrodion ">
-                                                <div class="accrodion-title">
-                                                    <h4>{{ feature.title }}</h4>
-                                                </div>
-                                                <div class="accrodion-content">
-                                                    <div class="inner">
-                                                        <p>{{ feature.content ? feature.content|raw : '' }}</p>
-                                                    </div><!-- /.inner -->
-                                                </div>
-                                            </div>
-                                        {% endfor %}
-                                    {% endif %}
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--Services Details End-->
+    <!--Services Details End-->
 {% endblock %}
 
