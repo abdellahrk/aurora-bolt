@@ -48,6 +48,8 @@ general:
     name: General 
     singular_name: General
     fields:
+        header_background:
+            type: image
         service_tagline:
             type: text
             group: Service Page 
@@ -86,10 +88,9 @@ general:
                     fields:
                         title:
                             type: text
-                            localize: true
                         content:
                             type: redactor
-                            localize: true
+        
  
     viewless: true 
     singleton: true
@@ -247,7 +248,7 @@ portfolio:
 testimonials:
     name: Testimonials
     singular_name: testimonial
-    locales: ['en', 'fr']
+    locales: ['fr', 'en']
     fields:
         client:
             type: text
@@ -399,7 +400,7 @@ stats:
 theylikeus:
     name: Theylikeus
     singular_name: Theylikeus
-    locales: ['en', 'fr']
+    locales: ['fr', 'en']
     viewless: true
     fields:
         title:
