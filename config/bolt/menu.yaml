@@ -23,14 +23,15 @@ main-en:
 main:
   - label: Acceuil
     link: homepage
-  - label: Services
+  - label: services
     link:  services
     #submenu:
      #   - label: Services
       #    link: '#'
             #contenttype: services 
 
-  
+  - label: Blog
+    link: /blog
   - label: A Propos
     link: /apropos
     class: apropos

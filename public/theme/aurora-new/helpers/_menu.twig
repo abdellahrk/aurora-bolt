@@ -30,10 +30,21 @@
 {% endmacro %}
 #}
 
+{% setcontent services = 'services' %}
+
 <ul class="main-menu__list">
     {% for item in menu %}
-        <li {% if item|current %} class="current " {% endif %}>
+        <li {% if item|current %} class="current " {% endif %} {% if item.label is same as ('services') %} class="dropdown "{% endif %}>
             <a href="{{ item.uri }}">{{ item.label }}</a>
+            {% if item.label is same as ('services') %}
+                <ul>
+                    {% for service in services %}
+                        <li>
+                            <a href="{{ service|link }}">{{ service.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </li>
         {% if item.submenu %}
             <li class="dropdown "  {% if item|current %} class="current " {% endif %}>
