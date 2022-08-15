@@ -3,12 +3,12 @@
 {% block content %}
     <!--Page Header Start-->
     <section class="page-header">
-        <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
+        <div class="page-header-bg" style="background-image: url( {#{ asset('images/backgrounds/page-header-bg.jpg') }#})">
         </div>
         <div class="container">
             <div class="page-header__inner">
                 <ul class="thm-breadcrumb list-unstyled">
-                    <li><a href="{{ path('homepage') }}">Home</a></li>
+                    <li><a href="{{ path('homepage') }}">Acceuil</a></li>
                     <li>Services</li>
                 </ul>
                 <h2>Services</h2>
@@ -23,8 +23,8 @@
             style="background-image: url(assets/images/shapes/services-three-shape.png)"></div>
         <div class="container">
             <div class="section-title text-center">
-                <span class="section-title__tagline">check our services list</span>
-                <h2 class="section-title__title">what we’re offering</h2>
+                <span class="section-title__tagline">Ce que nous faisons au quotidien</span>
+                <h2 class="section-title__title">Nos Services</h2>
             </div>
             <div class="services-three__top">
                 <div class="row">
@@ -46,8 +46,8 @@
                 </div>
             </div>
             <div class="services-three__bottom">
-                <p class="services-three__bottom-text">Aurora services built specifically for your business. <a
-                        href="/about">Find Your Solution</a></p>
+                <p class="services-three__bottom-text">Aurora est faites pour vous et éxiste pour vous servir le mieux<a
+                        href="/about">Nous connaître</a></p>
             </div>
         </div>
     </section>

@@ -1,7 +1,7 @@
 {% extends 'partials/_master.twig' %}
 
 {% setcontent services = 'services' %}
-{% setcontent features = 'features' %}
+{% setcontent general = 'general' %}
 {% setcontent settings = 'settings' %}
 
 {% block schema %}
@@ -126,18 +126,21 @@
 							<div class="service-details__faq">
 
 								<div class="accrodion-grp" data-grp-name="faq-one-accrodion">
-                                    {% for feature in features %}
-                                        <div class="accrodion ">
-                                            <div class="accrodion-title">
-                                                <h4>{{ feature.title }}</h4>
+                                    {% if general.features is defined %}
+                                        {% set features = general.features %}
+                                        {% for feature in features %}
+                                            <div class="accrodion ">
+                                                <div class="accrodion-title">
+                                                    <h4>{{ feature.title }}</h4>
+                                                </div>
+                                                <div class="accrodion-content">
+                                                    <div class="inner">
+                                                        <p>{{ feature.content ? feature.content|raw : '' }}</p>
+                                                    </div><!-- /.inner -->
+                                                </div>
                                             </div>
-                                            <div class="accrodion-content">
-                                                <div class="inner">
-                                                    <p>{{ feature.content }}</p>
-                                                </div><!-- /.inner -->
-                                            </div>
-                                        </div>
-                                    {% endfor %}
+                                        {% endfor %}
+                                    {% endif %}
 								</div>
 							</div>
 
