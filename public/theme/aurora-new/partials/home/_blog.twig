@@ -31,7 +31,7 @@
                                 #}
                             </ul>
                             <h3 class="blog-one__title">
-                                <a href="{{ article|link }}">{{ article.title }}</a>
+                                <a href="{{ article|link }}">{{ article.title|excerpt(30) }}</a>
                             </h3>
                             <div class="blog-one__read-btn">
                                 <a href="{{ article|link }}">Plus...</a>

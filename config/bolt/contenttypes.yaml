@@ -76,6 +76,21 @@ general:
                     type: text
                 linkedin: 
                     type: text
+        # Core features
+        features:
+            type: collection 
+            group: Features
+            fields:
+                feature: 
+                    type: set
+                    fields:
+                        title:
+                            type: text
+                            localize: true
+                        content:
+                            type: redactor
+                            localize: true
+ 
     viewless: true 
     singleton: true
     icon_many: "fa:bars"
@@ -516,18 +531,6 @@ about:
             group: CEO
         ceo_image: 
             type: image
-        # Core features
-        features:
-            type: collection 
-            group: Features
-            fields:
-                feature: 
-                    type: set
-                    fields:
-                        title:
-                            type: text
-                        content:
-                            type: redactor
 
 
 resource:

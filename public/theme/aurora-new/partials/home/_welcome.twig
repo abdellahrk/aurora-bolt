@@ -1,5 +1,6 @@
 {% setcontent about = 'about' %}
 {% setcontent whyus = 'whyus' %}
+{% setcontent general = 'general' %}
 
 <!--Welcome One Start-->
 <section class="welcome-one">
@@ -37,8 +38,8 @@
                                 <div class="welcome-one__bottom-left">
                                     <h4 class="welcome-one__bottom-title">Nous fournissons des services innovantes <br> et professionels.</h4>
                                     <ul class="list-unstyled welcome-one__points">
-                                    {% if about.features is defined %}
-                                        {% set features = about.features %}
+                                    {% if general.features is defined %}
+                                        {% set features = general.features %}
                                         {% for feature in features %}
                                             <li>
                                                 <div class="icon">
@@ -68,7 +69,7 @@
                                         <div class="welcome-one__bottom-right-icon">
                                             <span class="icon-help"></span>
                                         </div>
-                                        <h4 class="welcome-one__bottom-right-title">Aurora peut aider votre entreprise à se démarquer. Découvrez-nous</h4>
+                                        <h4 class="welcome-one__bottom-right-title">Découvrez-nous</h4>
                                         <a href="/apropos" class="thm-btn welcome-one__btn">Apropos </a>
                                     </div>
                                 </div>
