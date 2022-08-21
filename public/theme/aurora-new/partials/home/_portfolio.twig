@@ -1,0 +1,39 @@
+{% setcontent portfolios = 'portfolios' %}
+
+<!--Project One Start-->
+<section class="project-one">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="section-title__tagline">projets récents</span>
+            <h2 class="section-title__title">nos réalisations</h2>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <ul class="project-filter style1 post-filter has-dynamic-filters-counter list-unstyled">
+                    <li data-filter=".filter-item" class="active"><span class="filter-text">Tout</span></li>
+                    {% for cat in config.get('taxonomies/portfolios/options') %}
+                        <li data-filter=".{{ cat }}"><span class="filter-text">{{ cat }}</span></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="row filter-layout masonary-layout">
+            {% for portfolio in portfolios %}
+                <div class="col-xl-4 col-lg-6 col-md-6 filter-item {{ portfolio|taxonomies.portfolio|first.slug }}">
+                    <!--Portfolio One Single-->
+                    <div class="project-one__single">
+                        <div class="project-one__img">
+                            <img src="{{ portfolio.image|thumbnail(370, 410) }}" alt="{{ portfolio.title }}">
+                            <div class="project-one__hover">
+                                <p class="project-one__tagline">{{ portfolio.category }}</p>
+                                <h3 class="project-one__title"><a href="{{ portfolio|link }}">{{ portfolio.title }}</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!--Project One End-->

@@ -1,0 +1,127 @@
+{% extends "partials/_master.twig" %}
+{% set portfolio = record %}
+{% setcontent portfolios = 'portfolios' limit 3 random %}
+
+{% block content %}
+    {% include 'partials/_header_section.twig' with { 'title': portfolio.title, 'subsection': 'portfolios' }  %}
+    <!--Project Details Start-->
+    <section class="project-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="project-details__img">
+                        <img src="{{ portfolio.image|thumbnail(1170,546) }}" alt="{{ portfolio.title }}">
+                    </div>
+                </div>
+            </div>
+            <div class="project-details__content">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="project-details__content-left">
+                            <h3 class="project-details__content-title">{{ portfolio.title }}</h3>
+                            <p class="project-details__content-text-2">{{ portfolio.about|raw }}</p>
+                            <ul class="list-unstyled project-details__points">
+                                {% if portfolio.features is not empty %}
+                                    {% for f in portfolio.features %}
+                                        <li>
+                                            <div class="icon">
+                                                <span class="icon-check"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p>{{ f|raw }}</p>
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="project-details__content-right">
+                            <div class="project-details__details-box">
+                                <div class="project-details__details-info">
+                                    <div class="project-details__details-info-single">
+                                        <h5 class="project-details__details-info-client">Client:</h5>
+                                        <p class="project-details__details-info-name">{{ portfolio.client }}</p>
+                                    </div>
+                                    <div class="project-details__details-info-single">
+                                        <h5 class="project-details__details-info-client">Site Web:</h5>
+                                        <p class="project-details__details-info-name">{{ portfolio.website }}</p>
+                                    </div>
+                                    <div class="project-details__details-info-single">
+                                        <h5 class="project-details__details-info-client">Catégorie:</h5>
+                                        <p class="project-details__details-info-name">{{ portfolio.category }}</p>
+                                    </div>
+                                    <div class="project-details__details-info-single">
+                                        <h5 class="project-details__details-info-client">Date:</h5>
+                                        <p class="project-details__details-info-name">{{ portfolio.date|date('d, M Y') }}</p>
+                                    </div>
+                                </div>
+                                <div class="project-details__details-social-list">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="project-details__pagination-box">
+                        <ul class="project-details__pagination list-unstyled">
+                            {% if portfolio|previous is not empty %}
+                                {% set prev = portfolio|previous %}
+                                <li class="next">
+                                    <a href="{{ prev|link }}" aria-label="Previous"><i class="icon-arrow-left"></i>Précédent</a>
+                                </li>
+                            {% endif %}
+                            <li class="count"><a href="#"></a></li>
+                            <li class="count"><a href="#"></a></li>
+                            <li class="count"><a href="#"></a></li>
+                            <li class="count"><a href="#"></a></li>
+                            {% if portfolio|next is not empty %}
+                                {% set next = portfolio|next %}
+                                <li class="previous">
+                                    <a href="{{ next|link }}" aria-label="Next">Suivant<i class="icon-arrow-right"></i></a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Project Details End-->
+
+    <!--Similar Work Start-->
+    <section class="similar-work">
+        <div class="container">
+            <div class="section-title text-center">
+                <span class="section-title__tagline">projets récents</span>
+                <h2 class="section-title__title">nos réalisations</h2>
+            </div>
+            <div class="row">
+                {% for portfolio in portfolios %}
+                    <div class="col-xl-4 col-lg-4">
+                        <!--Portfolio One Single-->
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="{{ portfolio.image|thumbnail(470,410) }}" alt="{{ portfolio.title }}">
+                                <div class="project-one__hover">
+                                    <p class="project-one__tagline">{{ portfolio.category }}</p>
+                                    <h3 class="project-one__title"><a href="{{ portfolio|link }}">{{ portfolio.title }}</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!--Similar Work End-->
+
+{% endblock %}
