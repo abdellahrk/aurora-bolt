@@ -38,7 +38,7 @@ portfolios:
     singular_slug: portfolio
     behaves_like: categories
     multiple: false
-    options: [ business, ong, université, entreprise ]
+    options: [ business, Non Lucratif, université, entreprise ]
     required: true
     listing_template: portfolios
     

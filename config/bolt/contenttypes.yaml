@@ -253,6 +253,7 @@ portfolios:
             type: text
         image:
             type: image
+            upload: portfolios
         client:
             type: text
         about:
@@ -264,7 +265,7 @@ portfolios:
             type: date
         category: 
             type: select
-            values: [ONG, Entreprise, Université, E-commerce]
+            values: [Non Lucratif, Entreprise, Université, E-commerce]
         features: 
             type: collection
             fields: 
