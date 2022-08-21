@@ -32,13 +32,13 @@ categories:
     listing_records: 4
 
 portfolios:
-    name: Portfolio
-    slug: work-done
+    name: Portfolios
+    slug: portfolio
     singular_name: portfolio
-    singular_slug: work-done
+    singular_slug: portfolio
     behaves_like: categories
-    multiple: true
-    options: [ business, school, university, ngo ]
+    multiple: false
+    options: [ business, ong, université, entreprise ]
     required: true
     listing_template: portfolios
     

@@ -90,12 +90,35 @@ general:
                             type: text
                         content:
                             type: redactor
-        
- 
     viewless: true 
     singleton: true
     icon_many: "fa:bars"
     icon_one: "fa:bars" 
+
+# sliders
+sliders: 
+    name: Sliders
+    singular_name: Slider
+    locales: ['fr', 'en']
+    viewless: true
+    order: createdAt
+    fields:
+        title:
+            type: text
+            localize: true
+        background:
+            type: image
+        sub_title:
+            type: text
+            localize: true
+        link:
+            type: text
+        link_title:
+            type: text
+            localize: true
+    icon_many: "fa:images"
+    icon_one: "fa:image"
+ 
     
 # Blog
 blog:
@@ -165,8 +188,8 @@ aurora:
     viewless: false
     default_status: published
     searchable: false
-    icon_many: "fa:persons"
-    icon_one: "fa:person"
+    icon_many: "fa:building"
+    icon_one: "fa:building"
 
 # The 'Blocks' ContentType is a so-called 'resource ContentType'. This means
 # that it can be used to manage smaller pieces of content, like the 'about us'
@@ -222,28 +245,38 @@ Faqs:
             localize: true
 
 #Portfolio
-portfolio:
+portfolios:
     name: Portfolios
     singular_name: Porfolio
-    taxonomy: portfolios
-    locales: ['en', 'fr']
     fields:
         title:
             type: text
-            localize: true
         image:
-            type: image
-        image2: 
             type: image
         client:
             type: text
-            localize: true
         about:
             type: redactor
-            localize: true
+        website: 
+            type: text
+            required: true
+        date:
+            type: date
+        category: 
+            type: select
+            values: [ONG, Entreprise, Université, E-commerce]
+        features: 
+            type: collection
+            fields: 
+                feature: 
+                    type: text
         slug:
             type: slug
-            localize: true
+    taxonomy: portfolios
+    icon_many: "fa:book"
+    icon_icon: "fa:book"
+    record_template: portfolio.twig
+
 # Testimonials
 testimonials:
     name: Testimonials
@@ -302,31 +335,7 @@ whyus:
     sort: -id
     icon_many: "fa:cogs"
     icon_one: "fa:cog"
-   
-# sliders
-sliders: 
-    name: Sliders
-    singular_name: Slider
-    locales: ['fr', 'en']
-    viewless: true
-    order: createdAt
-    fields:
-        title:
-            type: text
-            localize: true
-        background:
-            type: image
-        sub_title:
-            type: text
-            localize: true
-        link:
-            type: text
-        link_title:
-            type: text
-            localize: true
-    icon_many: "fa:images"
-    icon_one: "fa:image"
-            
+              
 # Services sidebar call to action
 cta:
     name: cta
@@ -596,6 +605,8 @@ partners:
             type: image
         website: 
             type: text
+    icon_many: "fa:handshake"
+    icon_one: "fa:handshake"
 
 counters: 
     name: Counters 
